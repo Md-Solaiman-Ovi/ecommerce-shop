@@ -18,9 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
+      <body className={` bg-[rgba(250,250,250,1)] ${poppins.className}`}>
         <NavBar />
-        <div className="container mx-auto px-4">{children}</div>
+        <div className="container mx-auto px-4 ">{children}</div>
         <Footer />
       </body>
     </html>
