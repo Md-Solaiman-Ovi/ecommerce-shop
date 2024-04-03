@@ -41,7 +41,7 @@ const Footer = () => {
       <div className=" bg-[rgba(35,47,62,1)] flex flex-col gap-10 items-center py-20">
         <div className=" flex  justify-between gap-8 items-center container text-white font-normal text-sm py-10">
           <div className=" flex flex-col gap-4 w-full ">
-            <div className="font-family-forte text-[30px]">e-commerce</div>
+            <div className="font-family-forte text-[30px]">E-commerce</div>
             <div>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac
               scelerisque leo vel morbi morbi laoreet pulvinar volutpat. Morbi

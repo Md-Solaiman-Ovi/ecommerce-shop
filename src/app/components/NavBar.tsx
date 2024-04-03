@@ -2,9 +2,9 @@ import React from "react";
 import { BiLogoFacebook } from "react-icons/bi";
 import { BsCart3, BsSearch } from "react-icons/bs";
 import { FaInstagram, FaRegUser } from "react-icons/fa";
+import { FiPhone } from "react-icons/fi";
 import { GrTwitter } from "react-icons/gr";
-
-import { MdOutlineNotificationsActive } from "react-icons/md";
+import { MdOutlineEmail, MdOutlineNotificationsActive } from "react-icons/md";
 import { PiHeartBold } from "react-icons/pi";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { TfiWorld } from "react-icons/tfi";
@@ -16,8 +16,13 @@ const NavBar = () => {
       <div className="h-[40px] bg-[rgba(43,59,77,1)] flex items-center">
         <div className="flex justify-between items-center container text-white font-normal text-sm    ">
           <div className="flex gap-24 ">
-            <div>youremail@gmail.com</div>
-            <div>+12 34 56789 1011</div>
+            <div className="flex items-center gap-4">
+              <MdOutlineEmail className="w-4 h-4 " />
+              <div>youremail@gmail.com</div>
+            </div>
+            <div className="flex items-center gap-4">
+              <FiPhone className="w-4 h-4" /> <div>+12 34 56789 1011</div>
+            </div>
           </div>
           <div className="flex gap-10">
             <div className="flex gap-2 items-center">
@@ -41,7 +46,7 @@ const NavBar = () => {
       </div>
       <div className="h-[70px] bg-[rgba(35,47,62,1)] flex items-center">
         <div className=" flex justify-between items-center container text-white font-normal text-sm  ">
-          <div className="font-family-forte text-[30px] ">e-commerce</div>
+          <div className="font-family-forte text-[30px] ">E-commerce</div>
           <div className="lg:flex hidden w-full max-w-[500px] border-[1px] border-white rounded ">
             <input
               className=" px-6 py-2 w-full"
