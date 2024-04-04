@@ -12,7 +12,7 @@ import { TiSocialLinkedin } from "react-icons/ti";
 
 const NavBar = () => {
   return (
-    <div className="">
+    <div className="top-0 sticky z-50">
       <div className="h-[40px] bg-[rgba(43,59,77,1)] flex items-center">
         <div className="flex justify-between items-center container text-white font-normal text-sm    ">
           <div className="flex gap-24 ">

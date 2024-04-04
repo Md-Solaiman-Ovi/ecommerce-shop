@@ -3,14 +3,14 @@ import Image from "next/image";
 import { MdArrowForwardIos } from "react-icons/md";
 const HeroSection = () => {
   return (
-    <div className="flex flex-col gap-10">
+    <div className="flex flex-col gap-10 mb-14">
       <div className="flex gap-4 justify-between">
-        <div className=" w-72 ">
+        <div className=" w-72 font-semibold ">
           <div className="bg-[rgba(35,47,62,1)] text-white p-3 rounded text-base text-center">
             Selected Category
           </div>
-          <div className="bg-white text-base">
-            <div className="flex justify-between items-center  p-3 border-b">
+          <div className="bg-white text-base font-normal ">
+            <div className="flex justify-between items-center  p-3 border-b ">
               <div>Macbook</div>
               <MdArrowForwardIos />
             </div>

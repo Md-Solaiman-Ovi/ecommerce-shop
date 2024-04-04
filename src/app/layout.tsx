@@ -4,7 +4,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
-const poppins = Poppins({ weight: "300", subsets: ["latin"] });
+const poppins = Poppins({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,7 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={` bg-[rgba(250,250,250,1)] ${poppins.className}`}>
+      <body
+        className={` no-scrollbar bg-[rgba(250,250,250,1)] ${poppins.className}`}
+      >
         <NavBar />
         <div className="container mx-auto px-4 ">{children}</div>
         <Footer />
