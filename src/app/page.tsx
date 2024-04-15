@@ -4,7 +4,7 @@ import CategoryLayout from "./components/CategoryLayout";
 // import { Image } from "next/image";
 export default function Home() {
   return (
-    <div className="font-normal text-sm py-[50px] w-full flex flex-col gap-4 ">
+    <div className="font-normal text-sm py-[50px] w-full flex flex-col gap-4 scrollbar-hide">
       <HeroSection />
       <CategoryLayout title={"Best selling product"} />
       <CategoryLayout title={"Products"} />

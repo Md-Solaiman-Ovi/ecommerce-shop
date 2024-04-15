@@ -15,8 +15,8 @@ import Container from "./Container";
 const Footer = () => {
   return (
     <div className="">
-      <div className="h-[150px] bg-[rgba(43,59,77,1)] flex items-center">
-        <Container className="flex justify-between items-center  text-white font-normal text-sm    ">
+      <div className="md:h-[150px] bg-[rgba(43,59,77,1)] flex flex-col md:flex-row items-center p-4 ">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-0 items-center text-white font-normal text-sm  container  ">
           <div className="flex flex-col items-center gap-4 ">
             <TbTruckDelivery className="w-10 h-10" />
             <div className="text-[18px]">Fast Delivery</div>
@@ -37,10 +37,10 @@ const Footer = () => {
             <FaSearchLocation className="w-10 h-10" />
             <div className="text-[18px]">Order Tracking</div>
           </div>
-        </Container>
+        </div>
       </div>
-      <div className=" bg-[rgba(35,47,62,1)] flex flex-col gap-10 items-center py-20">
-        <div className=" flex  justify-between gap-8 items-center container text-white font-normal text-sm py-10">
+      <div className=" bg-[rgba(35,47,62,1)] flex flex-col gap-10 items-center py-4 md:py-20">
+        <div className=" flex flex-col md:flex-row justify-between gap-8 items-center container text-white font-normal text-sm py-10">
           <div className=" flex flex-col gap-4 w-full ">
             <div className="font-family-forte text-[30px]">E-commerce</div>
             <div>
@@ -106,15 +106,15 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="flex gap-24 container ">
+        <div className="flex flex-col md:flex-row gap-4  md:gap-24 container ">
           <div className="w-full flex flex-col justify-between">
-            <div className="flex gap-2 text-white items-center w-full border-y border-gray-500 pt-4 pb-10">
+            <div className="flex gap-2 text-white items-center w-full border-y border-gray-500 pt-4 pb-4 md:pb-10">
               <BiLogoFacebook className="w-7 h-7" />
               <GrTwitter className="w-7 h-7" />
               <TiSocialLinkedin className="w-7 h-7" />
               <FaInstagram className="w-7 h-7" />
             </div>
-            <div className="flex gap-10 text-white py-4">
+            <div className="flex  flex-col md:flex-row gap-4 md:gap-10 text-white py-4">
               <div>PAYMENTS ACCEPTED</div>
               <div className="flex gap-4">
                 <Image
@@ -151,9 +151,9 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex flex-col gap-4  text-white w-full">
+          <div className="flex flex-col  gap-4 text-white w-full">
             <div className="text-[18px]">Get The Latest Deals And More.</div>
-            <div className="lg:flex hidden w-full max-w-[500px] border-[1px] border-none rounded ">
+            <div className="flex w-full max-w-[500px] border-[1px] border-none rounded ">
               <input
                 className=" px-6 py-2 w-full rounded-l"
                 type="text"

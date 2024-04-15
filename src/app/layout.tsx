@@ -19,11 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={` no-scrollbar bg-[rgba(250,250,250,1)] ${poppins.className}`}
-      >
+      <body className={` bg-[rgba(250,250,250,1)] ${poppins.className}`}>
         <NavBar />
-        <div className=" ">{children}</div>
+        <div className="">{children}</div>
         <Footer />
       </body>
     </html>

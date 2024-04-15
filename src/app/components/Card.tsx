@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 const Card = () => {
   return (
-    <div className="h-[415px] w-[285px]  rounded group">
+    <div className="w-full h-[415px]  md:w-[285px]  rounded group">
       <div className="bg-[rgba(233,243,255,0.5)] h-[280px] flex flex-col justify-center items-center cursor-pointer">
         <Image
           src={"/images/productImg1.png"}

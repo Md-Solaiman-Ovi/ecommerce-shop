@@ -7,7 +7,7 @@ import { GrTwitter } from "react-icons/gr";
 import { MdOutlineEmail, MdOutlineNotificationsActive } from "react-icons/md";
 import { PiHeartBold } from "react-icons/pi";
 import { RiArrowDropDownLine } from "react-icons/ri";
-import { TfiWorld } from "react-icons/tfi";
+import { TfiMenuAlt, TfiWorld } from "react-icons/tfi";
 import { TiSocialLinkedin } from "react-icons/ti";
 import Container from "./Container";
 import { IoSearchOutline } from "react-icons/io5";
@@ -17,8 +17,8 @@ import { IoIosLogOut } from "react-icons/io";
 const NavBar = () => {
   return (
     <div className="top-0 sticky z-50">
-      <div className="h-[40px]  bg-[rgba(43,59,77,1)] flex items-center">
-        <Container className="flex justify-between items-center text-white font-normal text-sm  ">
+      <div className="h-[40px]  bg-[rgba(43,59,77,1)]  items-center hidden md:flex">
+        <div className="flex justify-center gap-4 lg:justify-between items-center text-white font-normal text-sm container ">
           <div className="flex gap-24 ">
             <div className="flex items-center gap-4">
               <MdOutlineEmail className="w-4 h-4 " />
@@ -46,10 +46,10 @@ const NavBar = () => {
               <div>Sign In</div>
             </div>
           </div>
-        </Container>
+        </div>
       </div>
       <div className="h-[70px] bg-[rgba(35,47,62,1)] flex items-center ">
-        <Container className="flex justify-between items-center  text-white font-normal text-sm w-full">
+        <div className="flex justify-between items-center  text-white font-normal text-sm container">
           <div className="font-family-forte text-[30px] ">E-commerce</div>
           <div className="lg:flex hidden w-full max-w-xl border-[1px] border-white rounded ">
             <input
@@ -61,7 +61,7 @@ const NavBar = () => {
               <BsSearch className="w-5 h-5 text-black" />
             </div>
           </div>
-          <div className="flex gap-8 text-xs font-light">
+          <div className="md:flex gap-8 text-xs font-light hidden ">
             <div className="flex flex-col gap-1 items-center cursor-pointer">
               <PiHeartBold className="w-5 h-5 " />
               <div> Wishlist</div>
@@ -75,7 +75,10 @@ const NavBar = () => {
               <div className="cursor-pointer">Notifications</div>
             </div>
           </div>
-        </Container>
+          <div className="block md:hidden">
+            <TfiMenuAlt className="w-5 h-5" />
+          </div>
+        </div>
       </div>
     </div>
   );
