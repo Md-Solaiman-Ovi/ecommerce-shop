@@ -11,11 +11,12 @@ import { RiCustomerService2Fill, RiSecurePaymentLine } from "react-icons/ri";
 import { TbTruckDelivery } from "react-icons/tb";
 import { TiSocialLinkedin } from "react-icons/ti";
 import Image from "next/image";
+import Container from "./Container";
 const Footer = () => {
   return (
     <div className="">
       <div className="h-[150px] bg-[rgba(43,59,77,1)] flex items-center">
-        <div className="flex justify-between items-center container text-white font-normal text-sm    ">
+        <Container className="flex justify-between items-center  text-white font-normal text-sm    ">
           <div className="flex flex-col items-center gap-4 ">
             <TbTruckDelivery className="w-10 h-10" />
             <div className="text-[18px]">Fast Delivery</div>
@@ -36,7 +37,7 @@ const Footer = () => {
             <FaSearchLocation className="w-10 h-10" />
             <div className="text-[18px]">Order Tracking</div>
           </div>
-        </div>
+        </Container>
       </div>
       <div className=" bg-[rgba(35,47,62,1)] flex flex-col gap-10 items-center py-20">
         <div className=" flex  justify-between gap-8 items-center container text-white font-normal text-sm py-10">

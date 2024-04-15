@@ -5,6 +5,7 @@ import "./globals.css";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 const poppins = Poppins({ weight: "400", subsets: ["latin"] });
+//www.youtube.com/
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,7 +23,7 @@ export default function RootLayout({
         className={` no-scrollbar bg-[rgba(250,250,250,1)] ${poppins.className}`}
       >
         <NavBar />
-        <div className="container mx-auto px-4 ">{children}</div>
+        <div className=" ">{children}</div>
         <Footer />
       </body>
     </html>

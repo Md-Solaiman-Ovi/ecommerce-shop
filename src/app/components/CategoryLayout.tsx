@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "./Card";
+import Container from "./Container";
 
 interface CategoryLayoutProps {
   title: string;
@@ -8,7 +9,7 @@ interface CategoryLayoutProps {
 const CategoryLayout: React.FC<CategoryLayoutProps> = (props) => {
   console.log("title ", props.title);
   return (
-    <div className="flex flex-col gap-4 mb-10 ">
+    <Container className="flex flex-col gap-4 mb-10 ">
       <div className="text-3xl font-semibold text-center py-4 border-b text-[rgba(24,41,59,1)] relative">
         {props.title}
         <span className="absolute left-0 bottom-[-2px] w-70 h-3 bg-blue-500 rounded-[3px]"></span>
@@ -31,7 +32,7 @@ const CategoryLayout: React.FC<CategoryLayoutProps> = (props) => {
           Load More
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
 

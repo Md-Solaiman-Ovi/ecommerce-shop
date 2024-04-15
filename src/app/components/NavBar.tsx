@@ -1,6 +1,6 @@
 import React from "react";
 import { BiLogoFacebook } from "react-icons/bi";
-import { BsCart3, BsSearch } from "react-icons/bs";
+import { BsCart, BsCart3, BsSearch } from "react-icons/bs";
 import { FaInstagram, FaRegUser } from "react-icons/fa";
 import { FiPhone } from "react-icons/fi";
 import { GrTwitter } from "react-icons/gr";
@@ -9,12 +9,16 @@ import { PiHeartBold } from "react-icons/pi";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { TfiWorld } from "react-icons/tfi";
 import { TiSocialLinkedin } from "react-icons/ti";
+import Container from "./Container";
+import { IoSearchOutline } from "react-icons/io5";
+import { LuUser2 } from "react-icons/lu";
+import { IoIosLogOut } from "react-icons/io";
 
 const NavBar = () => {
   return (
     <div className="top-0 sticky z-50">
-      <div className="h-[40px] bg-[rgba(43,59,77,1)] flex items-center">
-        <div className="flex justify-between items-center container text-white font-normal text-sm    ">
+      <div className="h-[40px]  bg-[rgba(43,59,77,1)] flex items-center">
+        <Container className="flex justify-between items-center text-white font-normal text-sm  ">
           <div className="flex gap-24 ">
             <div className="flex items-center gap-4">
               <MdOutlineEmail className="w-4 h-4 " />
@@ -42,14 +46,14 @@ const NavBar = () => {
               <div>Sign In</div>
             </div>
           </div>
-        </div>
+        </Container>
       </div>
-      <div className="h-[70px] bg-[rgba(35,47,62,1)] flex items-center">
-        <div className=" flex justify-between items-center container text-white font-normal text-sm  ">
+      <div className="h-[70px] bg-[rgba(35,47,62,1)] flex items-center ">
+        <Container className="flex justify-between items-center  text-white font-normal text-sm w-full">
           <div className="font-family-forte text-[30px] ">E-commerce</div>
-          <div className="lg:flex hidden w-full max-w-[500px] border-[1px] border-white rounded ">
+          <div className="lg:flex hidden w-full max-w-xl border-[1px] border-white rounded ">
             <input
-              className=" px-6 py-2 w-full"
+              className=" px-6 py-2 w-full flex-1"
               type="text"
               placeholder="Search "
             />
@@ -71,7 +75,7 @@ const NavBar = () => {
               <div className="cursor-pointer">Notifications</div>
             </div>
           </div>
-        </div>
+        </Container>
       </div>
     </div>
   );

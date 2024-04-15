@@ -1,9 +1,10 @@
 import React from "react";
 import Image from "next/image";
 import { MdArrowForwardIos } from "react-icons/md";
+import Container from "./Container";
 const HeroSection = () => {
   return (
-    <div className="flex flex-col gap-10 mb-14">
+    <Container className="flex flex-col gap-10 mb-14">
       <div className="flex gap-4 justify-between">
         <div className=" w-72 font-semibold ">
           <div className="bg-[rgba(35,47,62,1)] text-white p-3 rounded text-base text-center">
@@ -64,7 +65,7 @@ const HeroSection = () => {
           <Image src={"/images/HeroImg3.png"} width={380} height={225} alt="" />
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
 
