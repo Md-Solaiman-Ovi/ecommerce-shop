@@ -19,7 +19,7 @@ const Card = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col p-4 gap-4 select-none">
+      <div className="flex flex-col p-4 gap-4 ">
         <div>Apple iPhone 14 Pro Max</div>
         <div className="flex justify-between">
           <div>Tk 0.00</div>

@@ -12,7 +12,11 @@ const CategoryLayout: React.FC<CategoryLayoutProps> = (props) => {
     <Container className="flex flex-col gap-4 mb-10  ">
       <div className="text-3xl font-semibold text-center py-4 border-b text-[rgba(24,41,59,1)] relative">
         {props.title}
+
         <span className="absolute left-0 bottom-[-2px] w-70 h-3 bg-blue-500 rounded-[3px]"></span>
+      </div>
+      <div className="relative border-b-2 border-gray-500">
+        <span className="absolute inset-x-96 top-0 h-1 bg-red-500"></span>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
         <Card />
