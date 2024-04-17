@@ -13,6 +13,7 @@ import Container from "./Container";
 import { IoSearchOutline } from "react-icons/io5";
 import { LuUser2 } from "react-icons/lu";
 import { IoIosLogOut } from "react-icons/io";
+import Link from "next/link";
 
 const NavBar = () => {
   return (
@@ -22,26 +23,27 @@ const NavBar = () => {
           <div className="flex gap-24 ">
             <div className="flex items-center gap-4">
               <MdOutlineEmail className="w-4 h-4 " />
-              <div>youremail@gmail.com</div>
+              <div className="cursor-text">youremail@gmail.com</div>
             </div>
             <div className="flex items-center gap-4">
-              <FiPhone className="w-4 h-4" /> <div>+12 34 56789 1011</div>
+              <FiPhone className="w-4 h-4 cursor-text" />{" "}
+              <div>+12 34 56789 1011</div>
             </div>
           </div>
           <div className="flex gap-10">
             <div className="flex gap-2 items-center">
-              <BiLogoFacebook className="w-4 h-4" />
-              <GrTwitter className="w-4 h-4" />
-              <TiSocialLinkedin className="w-5 h-5" />
-              <FaInstagram className="w-4 h-4" />
+              <BiLogoFacebook className="w-4 h-4 cursor-pointer" />
+              <GrTwitter className="w-4 h-4 cursor-pointer" />
+              <TiSocialLinkedin className="w-5 h-5 cursor-pointer" />
+              <FaInstagram className="w-4 h-4 cursor-pointer" />
             </div>
 
-            <div className="flex gap-2 items-center">
+            <div className="flex gap-2 items-center cursor-pointer">
               <TfiWorld className="w-4 h-4 " />
               <div>English</div>
               <RiArrowDropDownLine className="w-5 h-5 " />
             </div>
-            <div className="flex gap-2 items-center">
+            <div className="flex gap-2 items-center cursor-pointer">
               <FaRegUser className="w-4 h-4 " />
               <div>Sign In</div>
             </div>
@@ -50,7 +52,12 @@ const NavBar = () => {
       </div>
       <div className="h-[70px] bg-[rgba(35,47,62,1)] flex items-center ">
         <div className="flex justify-between items-center  text-white font-normal text-sm container">
-          <div className="font-family-forte text-[30px] ">E-commerce</div>
+          <Link
+            href="/"
+            className="font-family-forte text-[30px] cursor-pointer "
+          >
+            E-commerce
+          </Link>
           <div className="lg:flex hidden w-full max-w-xl border-[1px] border-white rounded ">
             <input
               className=" px-6 py-2 w-full flex-1"
@@ -62,18 +69,27 @@ const NavBar = () => {
             </div>
           </div>
           <div className="md:flex gap-8 text-xs font-light hidden ">
-            <div className="flex flex-col gap-1 items-center cursor-pointer">
+            <Link
+              href="/wishlist"
+              className="flex flex-col gap-1 items-center cursor-pointer"
+            >
               <PiHeartBold className="w-5 h-5 " />
               <div> Wishlist</div>
-            </div>
-            <div className="flex flex-col gap-1 items-center cursor-pointer">
+            </Link>
+            <Link
+              href="/cart"
+              className="flex flex-col gap-1 items-center cursor-pointer"
+            >
               <BsCart3 className="w-5 h-5 " />
               <div>Cart</div>
-            </div>
-            <div className="flex flex-col gap-1 items-center cursor-pointer">
+            </Link>
+            <Link
+              href="/notifications"
+              className="flex flex-col gap-1 items-center cursor-pointer"
+            >
               <MdOutlineNotificationsActive className="w-5 h-5 " />
               <div className="cursor-pointer">Notifications</div>
-            </div>
+            </Link>
           </div>
           <div className="block md:hidden">
             <TfiMenuAlt className="w-5 h-5" />

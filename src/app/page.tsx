@@ -8,7 +8,6 @@ export default function Home() {
       <HeroSection />
       <CategoryLayout title={"Best selling product"} />
       <CategoryLayout title={"Products"} />
-
       <Image
         className="object-cover w-full"
         src={"/images/Banner1.jpg"}
