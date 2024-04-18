@@ -4,6 +4,8 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
+import Provider from "./redux/Provider";
+
 const poppins = Poppins({ weight: "400", subsets: ["latin"] });
 //www.youtube.com/
 
@@ -18,12 +20,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={` bg-[rgba(250,250,250,1)] ${poppins.className}`}>
-        <NavBar />
-        <div className="">{children}</div>
-        <Footer />
-      </body>
-    </html>
+    <Provider>
+      <html lang="en">
+        <body className={` bg-[rgba(250,250,250,1)] ${poppins.className}`}>
+          <NavBar />
+          <div className="">{children}</div>
+          <Footer />
+        </body>
+      </html>
+    </Provider>
   );
 }

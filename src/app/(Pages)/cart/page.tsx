@@ -1,11 +1,20 @@
+"use client";
 import PageLayout from "@/app/(Custom)/pageLayout/PageLayout";
 import Card from "@/app/components/Card";
 import CategoryLayout from "@/app/components/CategoryLayout";
-import React from "react";
+import React, { useState } from "react";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import Image from "next/image";
 import { MdClear } from "react-icons/md";
+import { useDispatch, useSelector } from "react-redux";
+import { decrement, increment } from "@/app/redux/counterSlice";
+import { Divide } from "lucide";
 const Cart = () => {
+  const count = useSelector((state: any) => state.counter.value);
+  const dispatch = useDispatch();
+
+  const [vouchar, setVouchar] = useState(false);
+
   return (
     <PageLayout title="Shopping Cart" className="py-10  ">
       <div className="flex flex-col md:flex-row gap-8 w-full p-4">
@@ -149,8 +158,26 @@ const Cart = () => {
             </div>
             <div className="flex justify-between items-center text-sm border-b-[1px] py-4">
               <div>Add promo code or vouchar</div>
-              <RiArrowDropDownLine className="w-7 h-7" />
+              <RiArrowDropDownLine
+                className="w-7 h-7 cursor-pointer"
+                onClick={() => setVouchar(!vouchar)}
+              />
             </div>
+            {vouchar && (
+              <div className="flex border-[1px] my-4">
+                <input
+                  type="text "
+                  placeholder=" Enter promo code "
+                  className="w-full px-4"
+                />
+                <div className="bg-black text-white p-2">Apply</div>
+              </div>
+            )}
+            {/* <div>
+              <div>Counter: {count}</div>
+              <button onClick={() => dispatch(increment())}>Increment</button>
+              <button onClick={() => dispatch(decrement())}>Decrement</button>
+            </div> */}
 
             <div className="bg-[rgba(24,41,59,1)] my-4  py-2 rounded items-center text-white text-center">
               checkout
