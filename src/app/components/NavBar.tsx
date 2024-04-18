@@ -18,7 +18,7 @@ import Link from "next/link";
 const NavBar = () => {
   return (
     <div className="top-0 sticky z-50">
-      <div className="h-[40px]  bg-[rgba(43,59,77,1)]  items-center hidden md:flex">
+      <div className="h-[40px] bg-[rgba(43,59,77,1)] border-b-[1px] border-gray-600 items-center hidden md:flex">
         <div className="flex justify-center gap-4 lg:justify-between items-center text-white font-normal text-sm container ">
           <div className="flex gap-24 ">
             <div className="flex items-center gap-4">
