@@ -9,6 +9,7 @@ import { MdClear } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
 import { decrement, increment } from "@/app/redux/counterSlice";
 import { Divide } from "lucide";
+import Link from "next/link";
 const Cart = () => {
   const count = useSelector((state: any) => state.counter.value);
   const dispatch = useDispatch();
@@ -17,7 +18,7 @@ const Cart = () => {
 
   return (
     <PageLayout title="Shopping Cart" className="py-10  ">
-      <div className="flex flex-col md:flex-row gap-8 w-full p-4">
+      <div className="flex flex-col md:flex-row gap-5 w-full p-4">
         <div className="w-full md:w-2/3 bg-white rounded p-4">
           <table className="w-full">
             <thead className=" table-auto text-center">
@@ -45,7 +46,7 @@ const Cart = () => {
                 <td>1</td>
                 <td>TK 149,999</td>
                 <td>
-                  <MdClear className="w-5 h-5" />
+                  <MdClear className="w-5 h-5 cursor-pointer" />
                 </td>
               </tr>
               <tr className="border-t-[1px] text-center ">
@@ -62,7 +63,7 @@ const Cart = () => {
                 <td>1</td>
                 <td>TK 149,999</td>
                 <td>
-                  <MdClear className="w-5 h-5" />
+                  <MdClear className="w-5 h-5 cursor-pointer" />
                 </td>
               </tr>
               <tr className="border-t-[1px] text-center">
@@ -79,7 +80,7 @@ const Cart = () => {
                 <td>1</td>
                 <td>TK 149,999</td>
                 <td>
-                  <MdClear className="w-5 h-5" />
+                  <MdClear className="w-5 h-5 cursor-pointer" />
                 </td>
               </tr>
               <tr className="border-t-[1px] text-center">
@@ -96,7 +97,7 @@ const Cart = () => {
                 <td>1</td>
                 <td>TK 149,999</td>
                 <td>
-                  <MdClear className="w-5 h-5" />
+                  <MdClear className="w-5 h-5 cursor-pointer" />
                 </td>
               </tr>
               <tr className="border-t-[1px] text-center">
@@ -113,7 +114,7 @@ const Cart = () => {
                 <td>1</td>
                 <td>TK 149,999</td>
                 <td>
-                  <MdClear className="w-5 h-5" />
+                  <MdClear className="w-5 h-5 cursor-pointer" />
                 </td>
               </tr>
 
@@ -131,7 +132,7 @@ const Cart = () => {
                 <td>1</td>
                 <td>TK 149,999</td>
                 <td>
-                  <MdClear className="w-5 h-5" />
+                  <MdClear className="w-5 h-5 cursor-pointer" />
                 </td>
               </tr>
             </tbody>
@@ -139,7 +140,9 @@ const Cart = () => {
         </div>
         <div className="w-full md:w-1/3">
           <div className="bg-white p-4  rounded-lg max-h-[558px] flex flex-col ">
-            <div className="p-4  border-b-[1px]">Order Summary</div>
+            <div className="py-4  border-b-[1px] text-xl font-semibold">
+              Order Summary
+            </div>
             <div className="flex justify-between  border-b-[1px] py-4">
               <div>Subtotal</div>
               <div>00 TK.</div>
@@ -168,7 +171,7 @@ const Cart = () => {
                 <input
                   type="text "
                   placeholder=" Enter promo code "
-                  className="w-full px-4"
+                  className="w-full px-4 text-sm font-light"
                 />
                 <div className="bg-black text-white p-2">Apply</div>
               </div>
@@ -179,9 +182,12 @@ const Cart = () => {
               <button onClick={() => dispatch(decrement())}>Decrement</button>
             </div> */}
 
-            <div className="bg-[rgba(24,41,59,1)] my-4  py-2 rounded items-center text-white text-center">
+            <Link
+              href="/checkout"
+              className="bg-[rgba(24,41,59,1)] my-4  py-2 rounded items-center text-white text-center"
+            >
               checkout
-            </div>
+            </Link>
           </div>
         </div>
       </div>

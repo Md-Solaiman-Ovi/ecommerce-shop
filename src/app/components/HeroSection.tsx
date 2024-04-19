@@ -51,18 +51,37 @@ const HeroSection = () => {
             width={866}
             height={434}
             alt=""
+            className="h-auto w-auto"
           />
         </div>
       </div>
       <div className="flex gap-4">
         <div>
-          <Image src={"/images/HeroImg1.png"} width={380} height={225} alt="" />
+          <Image
+            src={"/images/HeroImg1.png"}
+            width={380}
+            height={225}
+            alt=""
+            className="h-auto w-auto"
+          />
         </div>
         <div>
-          <Image src={"/images/HeroImg2.png"} width={380} height={225} alt="" />
+          <Image
+            src={"/images/HeroImg2.png"}
+            width={380}
+            height={225}
+            alt=""
+            className="h-auto w-auto"
+          />
         </div>
         <div>
-          <Image src={"/images/HeroImg3.png"} width={380} height={225} alt="" />
+          <Image
+            src={"/images/HeroImg3.png"}
+            width={380}
+            height={225}
+            alt=""
+            className="h-auto w-auto"
+          />
         </div>
       </div>
     </Container>
