@@ -23,6 +23,25 @@ const Checkout = () => {
         <div className="w-full md:w-2/3 flex flex-col gap-10 ">
           <CustomerInfo />
           <PaymentMethod />
+          <div className="flex justify-between items-center">
+            <div className="flex items-center gap-2">
+              <input
+                id="radio-1"
+                type="checkbox"
+                name="location"
+                placeholder="Select Sub-District"
+                className="text-xs focus:outline-none cursor-pointer "
+              />
+              <label htmlFor="radio-1 text-xs">
+                {" "}
+                I have read and agree to the Terms and Conditions
+              </label>
+            </div>
+
+            <div className="text-lg py-2 bg-[rgba(24,41,59,1)] rounded text-white w-72 text-center cursor-pointer">
+              Confirm Order
+            </div>
+          </div>
         </div>
         <div className="w-full md:w-1/3 ">
           <div className="bg-white p-4  rounded-lg max-h-[558px] flex flex-col ">
