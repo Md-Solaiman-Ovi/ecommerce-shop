@@ -10,6 +10,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { decrement, increment } from "@/app/redux/counterSlice";
 import { Divide } from "lucide";
 import CustomerInfo from "@/app/components/CustomerInfo";
+import PaymentMethod from "@/app/components/PaymentMethod";
 const Checkout = () => {
   const count = useSelector((state: any) => state.counter.value);
   const dispatch = useDispatch();
@@ -18,13 +19,14 @@ const Checkout = () => {
 
   return (
     <PageLayout title="Checkout" className="py-10  ">
-      <div className="flex flex-col md:flex-row gap-5 w-full p-4">
-        <div className="w-full md:w-2/3 bg-white rounded-lg p-4">
+      <div className="flex flex-col md:flex-row gap-5 w-full my-10">
+        <div className="w-full md:w-2/3 flex flex-col gap-10 ">
           <CustomerInfo />
+          <PaymentMethod />
         </div>
-        <div className="w-full md:w-1/3">
+        <div className="w-full md:w-1/3 ">
           <div className="bg-white p-4  rounded-lg max-h-[558px] flex flex-col ">
-            <div className="py-4 border-b-[1px] text-xl font-semibold">
+            <div className="py-4 border-b-[1px] text-xl font-medium">
               Order Summary
             </div>
             <div className="flex justify-between  border-b-[1px] py-4">

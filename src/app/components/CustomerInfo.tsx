@@ -5,8 +5,8 @@ import React, { useState } from "react";
 const CustomerInfo = () => {
   const [selctDivision, setSelectDivision] = useState(false);
   return (
-    <div className="flex flex-col gap-6">
-      <div>Customer Information</div>
+    <div className="flex flex-col gap-6 bg-white rounded-lg p-4 ">
+      <div className="text-xl font-bold">Customer Information</div>
       <div className="flex flex-col gap-6">
         <div className="border-[1px] border-black rounded p-2">
           <span className="absolute -translate-y-[17px] translate-x-4 bg-white px-1 text-xs ">
@@ -83,9 +83,7 @@ const CustomerInfo = () => {
             {/* {selctDivision && ( */}
             <select className="text-sm focus:outline-none w-full ">
               {" "}
-              <option value="" disabled={true}>
-                Select Category
-              </option>
+              <option value="">Select Category</option>
               <option>Dhaka</option>
               <option>Sylhet</option>
               <option>Rajshahi</option>
@@ -143,7 +141,7 @@ const CustomerInfo = () => {
           <input
             type="text"
             placeholder="Address"
-            className="text-xs w-full h-full focus:outline-none "
+            className="text-xs w-full h-full focus:outline-none pb-8"
           />
         </div>
       </div>
