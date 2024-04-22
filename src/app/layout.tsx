@@ -24,7 +24,7 @@ export default function RootLayout({
       <html lang="en">
         <body className={` bg-[rgba(250,250,250,1)] ${poppins.className}`}>
           <NavBar />
-          <div className="">{children}</div>
+          <div className="">{children}</div> hello layout
           <Footer />
         </body>
       </html>

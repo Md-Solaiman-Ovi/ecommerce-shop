@@ -162,7 +162,9 @@ const Cart = () => {
             <div className="flex justify-between items-center text-sm border-b-[1px] py-4">
               <div>Add promo code or vouchar</div>
               <RiArrowDropDownLine
-                className="w-7 h-7 cursor-pointer"
+                className={`w-7 h-7 cursor-pointer ${
+                  vouchar ? "rotate-180" : ""
+                }`}
                 onClick={() => setVouchar(!vouchar)}
               />
             </div>

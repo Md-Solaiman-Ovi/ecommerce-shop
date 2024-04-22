@@ -15,7 +15,7 @@ export default function Home() {
         height={400}
         alt=""
       />
-      <CategoryLayout title={"Mac Book"} />
+
       <CategoryLayout title={"iPad Pro"} />
       <CategoryLayout title={"iPhone"} />
       <CategoryLayout title={"iPad Air"} />
@@ -26,3 +26,4 @@ export default function Home() {
     </div>
   );
 }
+<CategoryLayout title={"Mac Book"} />;

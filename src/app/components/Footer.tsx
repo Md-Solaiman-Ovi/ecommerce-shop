@@ -12,6 +12,7 @@ import { TbTruckDelivery } from "react-icons/tb";
 import { TiSocialLinkedin } from "react-icons/ti";
 import Image from "next/image";
 import Container from "./Container";
+import Link from "next/link";
 const Footer = () => {
   return (
     <div className="">
@@ -70,18 +71,24 @@ const Footer = () => {
           <div className="flex flex-col gap-4 w-full">
             <div className="text-xl font-medium">Get to Know Us:</div>
             <div className="flex flex-col gap-4">
-              <div className="flex gap-2 items-center">
+              <Link href={"/about-us"} className="flex gap-2 items-center">
                 <MdArrowForwardIos />
                 <div>About Us</div>
-              </div>
-              <div className="flex gap-2 items-center">
+              </Link>
+              <Link
+                href={"/privacy-policy"}
+                className="flex gap-2 items-center"
+              >
                 <MdArrowForwardIos />
                 <div>Privacy & Policy</div>
-              </div>
-              <div className="flex gap-2 items-center">
+              </Link>
+              <Link
+                href={"/terms-conditions"}
+                className="flex gap-2 items-center"
+              >
                 <MdArrowForwardIos />
                 <div>Terms & Conditions</div>
-              </div>
+              </Link>
             </div>
           </div>
           <div className="flex flex-col gap-4 w-full">
@@ -91,18 +98,18 @@ const Footer = () => {
                 <MdArrowForwardIos />
                 <div>Order Tracking</div>
               </div>
-              <div className="flex gap-2 items-center">
+              <Link href={"/fqa"} className="flex gap-2 items-center">
                 <MdArrowForwardIos />
                 <div>FAQ</div>
-              </div>
-              <div className="flex gap-2 items-center">
+              </Link>
+              <Link href={"/how-to-order"} className="flex gap-2 items-center">
                 <MdArrowForwardIos />
                 <div>How To Order</div>
-              </div>
-              <div className="flex gap-2 items-center">
+              </Link>
+              <Link href={"/payment-guide"} className="flex gap-2 items-center">
                 <MdArrowForwardIos />
                 <div>Payment Guide</div>
-              </div>
+              </Link>
             </div>
           </div>
         </div>
