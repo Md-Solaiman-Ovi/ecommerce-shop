@@ -8,7 +8,6 @@ export default function Home() {
       <HeroSection />
       <CategoryLayout title={"Best selling product"} />
       <CategoryLayout title={"Products"} />
-
       <Image
         className="object-cover w-full"
         src={"/images/Banner1.jpg"}
@@ -16,7 +15,7 @@ export default function Home() {
         height={400}
         alt=""
       />
-      <CategoryLayout title={"Mac Book"} />
+
       <CategoryLayout title={"iPad Pro"} />
       <CategoryLayout title={"iPhone"} />
       <CategoryLayout title={"iPad Air"} />
@@ -27,3 +26,4 @@ export default function Home() {
     </div>
   );
 }
+<CategoryLayout title={"Mac Book"} />;

@@ -11,35 +11,35 @@ const HeroSection = () => {
             Selected Category
           </div>
           <div className="bg-white text-base font-normal ">
-            <div className="flex justify-between items-center  p-3 border-b ">
+            <div className="flex justify-between items-center  p-3 border-b cursor-pointer ">
               <div>Macbook</div>
               <MdArrowForwardIos />
             </div>
-            <div className="flex justify-between items-center p-3 border-b">
+            <div className="flex justify-between items-center p-3 border-b cursor-pointer">
               <div>iPad Pro</div>
               <MdArrowForwardIos />
             </div>
-            <div className="flex justify-between items-center p-3 border-b">
+            <div className="flex justify-between items-center p-3 border-b cursor-pointer">
               <div>iPhone</div>
               <MdArrowForwardIos />
             </div>
-            <div className="flex justify-between items-center p-3 border-b">
+            <div className="flex justify-between items-center p-3 border-b cursor-pointer">
               <div>iPad Air</div>
               <MdArrowForwardIos />
             </div>
-            <div className="flex justify-between items-center p-3 border-b">
+            <div className="flex justify-between items-center p-3 border-b cursor-pointer">
               <div>Apple Watch</div>
               <MdArrowForwardIos />
             </div>
-            <div className="flex justify-between items-center p-3 border-b">
+            <div className="flex justify-between items-center p-3 border-b cursor-pointer">
               <div>iMac</div>
               <MdArrowForwardIos />
             </div>
-            <div className="flex justify-between items-center p-3 border-b">
+            <div className="flex justify-between items-center p-3 border-b cursor-pointer">
               <div>Airpods</div>
               <MdArrowForwardIos />
             </div>
-            <div className="flex justify-between items-center p-3 border-b ">
+            <div className="flex justify-between items-center p-3 border-b cursor-pointer ">
               <div>Computer Accessories</div>
               <MdArrowForwardIos />
             </div>
@@ -51,18 +51,37 @@ const HeroSection = () => {
             width={866}
             height={434}
             alt=""
+            className="h-auto w-auto"
           />
         </div>
       </div>
       <div className="flex gap-4">
         <div>
-          <Image src={"/images/HeroImg1.png"} width={380} height={225} alt="" />
+          <Image
+            src={"/images/HeroImg1.png"}
+            width={380}
+            height={225}
+            alt=""
+            className="h-auto w-auto"
+          />
         </div>
         <div>
-          <Image src={"/images/HeroImg2.png"} width={380} height={225} alt="" />
+          <Image
+            src={"/images/HeroImg2.png"}
+            width={380}
+            height={225}
+            alt=""
+            className="h-auto w-auto"
+          />
         </div>
         <div>
-          <Image src={"/images/HeroImg3.png"} width={380} height={225} alt="" />
+          <Image
+            src={"/images/HeroImg3.png"}
+            width={380}
+            height={225}
+            alt=""
+            className="h-auto w-auto"
+          />
         </div>
       </div>
     </Container>

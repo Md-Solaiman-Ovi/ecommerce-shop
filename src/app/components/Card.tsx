@@ -1,9 +1,16 @@
 import React from "react";
 import Image from "next/image";
+import { PiHeartBold, PiHeartFill } from "react-icons/pi";
 const Card = () => {
   return (
-    <div className="w-full h-[415px]  md:w-[285px]  rounded group">
-      <div className="bg-[rgba(233,243,255,0.5)] h-[280px] flex flex-col justify-center items-center cursor-pointer">
+    <div className="w-full h-[415px]  md:w-[285px] bg-white  rounded-[10px] group">
+      <div className="bg-[rgba(233,243,255,0.5)] h-[280px]  flex flex-col justify-center items-center cursor-pointer rounded">
+        <div className="bg-white rounded-full items-end self-end mr-4 p-1">
+          <PiHeartBold className="w-4 h-4" />
+        </div>
+        {/* <div className="bg-white rounded-full items-end self-end mr-4 p-1">
+          <PiHeartFill className="w-4 h-4 fill-black " />
+        </div> */}
         <Image
           src={"/images/productImg1.png"}
           width={200}
@@ -19,7 +26,7 @@ const Card = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col p-4 gap-4 select-none">
+      <div className="flex flex-col p-4 gap-4 ">
         <div>Apple iPhone 14 Pro Max</div>
         <div className="flex justify-between">
           <div>Tk 0.00</div>
