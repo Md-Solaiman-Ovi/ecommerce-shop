@@ -1,4 +1,3 @@
-import PageLayout from "@/app/(Custom)/pageLayout/PageLayout";
 import Card from "@/app/components/site/Card";
 import CategoryTitle from "@/app/components/site/CategoryTitle";
 import NotificationCard from "@/app/components/site/NotificationCard";

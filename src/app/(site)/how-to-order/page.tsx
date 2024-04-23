@@ -1,4 +1,3 @@
-import PageLayout from "@/app/(Custom)/pageLayout/PageLayout";
 import React from "react";
 
 const HowToOrder = () => {

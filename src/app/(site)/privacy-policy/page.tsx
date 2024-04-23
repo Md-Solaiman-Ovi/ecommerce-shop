@@ -1,4 +1,3 @@
-import PageLayout from "@/app/(Custom)/pageLayout/PageLayout";
 import CategoryTitle from "@/app/components/site/CategoryTitle";
 import React from "react";
 

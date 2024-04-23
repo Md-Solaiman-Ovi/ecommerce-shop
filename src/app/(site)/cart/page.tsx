@@ -1,5 +1,4 @@
 "use client";
-import PageLayout from "@/app/(Custom)/pageLayout/PageLayout";
 import Card from "@/app/components/site/Card";
 import CategoryLayout from "@/app/components/site/CategoryLayout";
 import React, { useState } from "react";

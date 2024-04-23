@@ -1,4 +1,3 @@
-import PageLayout from "@/app/(Custom)/pageLayout/PageLayout";
 import React from "react";
 import Image from "next/image";
 import CategoryTitle from "@/app/components/site/CategoryTitle";

@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 
-import "./globals.css";
-import NavBar from "./components/site/NavBar";
-import Footer from "./components/site/Footer";
-import Provider from "./redux/Provider";
+import "./../globals.css";
+import NavBar from "../components/site/NavBar";
+import Footer from "../components/site/Footer";
+import Provider from "../redux/Provider";
 
 const poppins = Poppins({ weight: "400", subsets: ["latin"] });
 //www.youtube.com/
