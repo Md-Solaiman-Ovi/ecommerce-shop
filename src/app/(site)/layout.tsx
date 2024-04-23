@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 
-import "./globals.css";
-import NavBar from "./components/NavBar";
-import Footer from "./components/Footer";
-import Provider from "./redux/Provider";
+import "./../globals.css";
+import NavBar from "../components/site/NavBar";
+import Footer from "../components/site/Footer";
+import Provider from "../redux/Provider";
 
 const poppins = Poppins({ weight: "400", subsets: ["latin"] });
 //www.youtube.com/
@@ -16,15 +16,21 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  className,
 }: Readonly<{
   children: React.ReactNode;
+  className?: string;
 }>) {
   return (
     <Provider>
       <html lang="en">
         <body className={` bg-[rgba(250,250,250,1)] ${poppins.className}`}>
           <NavBar />
-          <div className="">{children}</div> hello layout
+          <div
+            className={`${className} max-w-screen-xl md:mx-auto mx-0 px-4 md:px-14`}
+          >
+            {children}
+          </div>
           <Footer />
         </body>
       </html>

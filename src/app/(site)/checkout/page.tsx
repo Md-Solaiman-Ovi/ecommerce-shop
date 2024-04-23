@@ -1,7 +1,7 @@
 "use client";
-import PageLayout from "@/app/(Custom)/pageLayout/PageLayout";
-import Card from "@/app/components/Card";
-import CategoryLayout from "@/app/components/CategoryLayout";
+
+import Card from "@/app/components/site/Card";
+import CategoryLayout from "@/app/components/site/CategoryLayout";
 import React, { useState } from "react";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import Image from "next/image";
@@ -9,8 +9,9 @@ import { MdClear } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
 import { decrement, increment } from "@/app/redux/counterSlice";
 import { Divide } from "lucide";
-import CustomerInfo from "@/app/components/CustomerInfo";
-import PaymentMethod from "@/app/components/PaymentMethod";
+import CustomerInfo from "@/app/components/site/CustomerInfo";
+import PaymentMethod from "@/app/components/site/PaymentMethod";
+import CategoryTitle from "@/app/components/site/CategoryTitle";
 const Checkout = () => {
   const count = useSelector((state: any) => state.counter.value);
   const dispatch = useDispatch();
@@ -18,7 +19,8 @@ const Checkout = () => {
   const [vouchar, setVouchar] = useState(false);
 
   return (
-    <PageLayout title="Checkout" className="py-10  ">
+    <div className="py-10  ">
+      <CategoryTitle title="Checkout" />
       <div className="flex flex-col md:flex-row gap-5 w-full my-10">
         <div className="w-full md:w-2/3 flex flex-col gap-10 ">
           <CustomerInfo />
@@ -67,7 +69,7 @@ const Checkout = () => {
           </div>
         </div>
       </div>
-    </PageLayout>
+    </div>
   );
 };
 

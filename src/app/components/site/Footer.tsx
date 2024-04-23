@@ -16,8 +16,8 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <div className="">
-      <div className="md:h-[150px] bg-[rgba(43,59,77,1)] flex flex-col md:flex-row items-center p-4 ">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-0 items-center text-white font-normal text-sm  container  ">
+      <div className="md:h-[150px] bg-[rgba(43,59,77,1)] flex flex-col md:flex-row items-center  ">
+        <div className="grid  grid-cols-2 md:grid-cols-5 gap-8 md:gap-0 items-center text-white font-normal text-sm container  ">
           <div className="flex flex-col items-center gap-4 ">
             <TbTruckDelivery className="w-10 h-10" />
             <div className="text-[18px]">Fast Delivery</div>
@@ -98,7 +98,7 @@ const Footer = () => {
                 <MdArrowForwardIos />
                 <div>Order Tracking</div>
               </div>
-              <Link href={"/fqa"} className="flex gap-2 items-center">
+              <Link href={"/faq"} className="flex gap-2 items-center">
                 <MdArrowForwardIos />
                 <div>FAQ</div>
               </Link>

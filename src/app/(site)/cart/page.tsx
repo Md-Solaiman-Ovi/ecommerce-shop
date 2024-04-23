@@ -1,7 +1,6 @@
 "use client";
-import PageLayout from "@/app/(Custom)/pageLayout/PageLayout";
-import Card from "@/app/components/Card";
-import CategoryLayout from "@/app/components/CategoryLayout";
+import Card from "@/app/components/site/Card";
+import CategoryLayout from "@/app/components/site/CategoryLayout";
 import React, { useState } from "react";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import Image from "next/image";
@@ -10,6 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { decrement, increment } from "@/app/redux/counterSlice";
 import { Divide } from "lucide";
 import Link from "next/link";
+import CategoryTitle from "@/app/components/site/CategoryTitle";
 const Cart = () => {
   const count = useSelector((state: any) => state.counter.value);
   const dispatch = useDispatch();
@@ -17,18 +17,19 @@ const Cart = () => {
   const [vouchar, setVouchar] = useState(false);
 
   return (
-    <PageLayout title="Shopping Cart" className="py-10  ">
-      <div className="flex flex-col md:flex-row gap-5 w-full p-4">
+    <div className="py-10  ">
+      <CategoryTitle title="Shopping Cart" />
+      <div className="flex flex-col md:flex-row gap-5 w-full py-10">
         <div className="w-full md:w-2/3 bg-white rounded p-4">
           <table className="w-full">
-            <thead className=" table-auto text-center">
-              <tr className="">
+            <thead className=" table-auto text-center ">
+              <tr className="m-4">
                 <th></th>
-                <th className="text-center">Product</th>
-                <th className="text-center">Unit Price</th>
-                <th className="text-center">Quantity</th>
-                <th className="text-center">Total Price</th>
-                <th className="text-center"></th>
+                <th className="text-center p-4">Product</th>
+                <th className="text-center p-4">Unit Price</th>
+                <th className="text-center p-4">Quantity</th>
+                <th className="text-center p-4">Total Price</th>
+                <th className="text-center p-4"></th>
               </tr>
             </thead>
             <tbody>
@@ -193,7 +194,7 @@ const Cart = () => {
           </div>
         </div>
       </div>
-    </PageLayout>
+    </div>
   );
 };
 
