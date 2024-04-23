@@ -1,4 +1,4 @@
-import Container from "@/app/components/Container";
+import Container from "@/app/components/site/Container";
 import React from "react";
 
 interface Props {
@@ -18,12 +18,6 @@ const PageLayout: React.FC<Props> = ({ children, className, title }: Props) => {
       </div>
 
       <div className="">{children}</div>
-
-      {/* <div className="flex justify-center md:justify-end w-full">
-        <div className="px-10 py-2 text-sm font-bold rounded border-[1px] border-black cursor-pointer">
-          Load More
-        </div>
-      </div> */}
     </div>
   );
 };

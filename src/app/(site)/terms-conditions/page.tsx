@@ -1,9 +1,11 @@
 import PageLayout from "@/app/(Custom)/pageLayout/PageLayout";
+import CategoryTitle from "@/app/components/site/CategoryTitle";
 import React from "react";
 
 const TermsConditions = () => {
   return (
-    <PageLayout title="Terms & Confitions" className="py-10  ">
+    <div className="py-10 ">
+      <CategoryTitle title="Terms & Confitions" />
       <div>
         <div className="flex flex-col gap-5 p-4">
           <div className="text-xl font-bold border-b-[1px] py-4">
@@ -66,7 +68,7 @@ const TermsConditions = () => {
           </div>
         </div>
       </div>
-    </PageLayout>
+    </div>
   );
 };
 

@@ -1,9 +1,11 @@
 import PageLayout from "@/app/(Custom)/pageLayout/PageLayout";
+import CategoryTitle from "@/app/components/site/CategoryTitle";
 import React from "react";
 
 const PaymentGuide = () => {
   return (
-    <PageLayout title="Payment Guide" className="py-10  ">
+    <div className="py-10  ">
+      <CategoryTitle title="Payment Guide" />
       <div className="flex flex-col gap-5 p-4">
         <div className="text-xl font-bold border-b-[1px] py-4">
           Introduction
@@ -29,7 +31,7 @@ const PaymentGuide = () => {
           et sed orci eu, nisl egestas.
         </div>
       </div>
-    </PageLayout>
+    </div>
   );
 };
 
