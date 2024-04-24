@@ -1,7 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import { MdArrowForwardIos } from "react-icons/md";
-import Container from "./Container";
+import Container from "../../Container";
+import CategoryLinkIcon from "./CategoryLinkIcon";
 const HeroSection = () => {
   return (
     <div className="flex flex-col gap-10 mb-14 s">
@@ -11,38 +12,14 @@ const HeroSection = () => {
             Selected Category
           </div>
           <div className="bg-white text-base font-normal ">
-            <div className="flex justify-between items-center  p-3 border-b cursor-pointer ">
-              <div>Macbook</div>
-              <MdArrowForwardIos />
-            </div>
-            <div className="flex justify-between items-center p-3 border-b cursor-pointer">
-              <div>iPad Pro</div>
-              <MdArrowForwardIos />
-            </div>
-            <div className="flex justify-between items-center p-3 border-b cursor-pointer">
-              <div>iPhone</div>
-              <MdArrowForwardIos />
-            </div>
-            <div className="flex justify-between items-center p-3 border-b cursor-pointer">
-              <div>iPad Air</div>
-              <MdArrowForwardIos />
-            </div>
-            <div className="flex justify-between items-center p-3 border-b cursor-pointer">
-              <div>Apple Watch</div>
-              <MdArrowForwardIos />
-            </div>
-            <div className="flex justify-between items-center p-3 border-b cursor-pointer">
-              <div>iMac</div>
-              <MdArrowForwardIos />
-            </div>
-            <div className="flex justify-between items-center p-3 border-b cursor-pointer">
-              <div>Airpods</div>
-              <MdArrowForwardIos />
-            </div>
-            <div className="flex justify-between items-center p-3 border-b cursor-pointer ">
-              <div>Computer Accessories</div>
-              <MdArrowForwardIos />
-            </div>
+            <CategoryLinkIcon linkpath="" title="Macbook" />
+            <CategoryLinkIcon linkpath="" title="iPad Pro" />
+            <CategoryLinkIcon linkpath="" title="iPhone" />
+            <CategoryLinkIcon linkpath="" title="iPad Air" />
+            <CategoryLinkIcon linkpath="" title="Apple Watch" />
+            <CategoryLinkIcon linkpath="" title="iMac" />
+            <CategoryLinkIcon linkpath="" title="Airpods" />
+            <CategoryLinkIcon linkpath="" title="Computer Accessories" />
           </div>
         </div>
         <div className="">

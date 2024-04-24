@@ -9,26 +9,29 @@ import { PiHeartBold } from "react-icons/pi";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { TfiMenuAlt, TfiWorld } from "react-icons/tfi";
 import { TiSocialLinkedin } from "react-icons/ti";
-import Container from "./Container";
+import Container from "../Container";
 import { IoSearchOutline } from "react-icons/io5";
 import { LuUser2 } from "react-icons/lu";
 import { IoIosLogOut } from "react-icons/io";
 import Link from "next/link";
+import IconButton from "./IconButton";
+import ContactIcon from "./ContactIcon";
 
 const NavBar = () => {
+  const linkPath = "/wishlist";
   return (
     <div className="top-0 sticky z-50">
       <div className="h-[40px] bg-[rgba(43,59,77,1)] border-b-[1px] border-gray-600 items-center hidden md:flex">
         <div className="flex justify-center gap-4 lg:justify-between items-center text-white font-normal text-sm container ">
           <div className="flex gap-24 ">
-            <div className="flex items-center gap-4">
-              <MdOutlineEmail className="w-4 h-4 " />
-              <div className="cursor-text">youremail@gmail.com</div>
-            </div>
-            <div className="flex items-center gap-4">
-              <FiPhone className="w-4 h-4 cursor-text" />{" "}
-              <div>+12 34 56789 1011</div>
-            </div>
+            <ContactIcon
+              icon={<MdOutlineEmail className="w-4 h-4 " />}
+              title="youremail@gmail.com"
+            />
+            <ContactIcon
+              icon={<FiPhone className="w-4 h-4 " />}
+              title="+12 34 56789 1011"
+            />
           </div>
           <div className="flex gap-10">
             <div className="flex gap-2 items-center">
@@ -69,27 +72,21 @@ const NavBar = () => {
             </div>
           </div>
           <div className="md:flex gap-8 text-xs font-light hidden ">
-            <Link
-              href="/wishlist"
-              className="flex flex-col gap-1 items-center cursor-pointer"
-            >
-              <PiHeartBold className="w-5 h-5 " />
-              <div> Wishlist</div>
-            </Link>
-            <Link
-              href="/cart"
-              className="flex flex-col gap-1 items-center cursor-pointer"
-            >
-              <BsCart3 className="w-5 h-5 " />
-              <div>Cart</div>
-            </Link>
-            <Link
-              href="/notifications"
-              className="flex flex-col gap-1 items-center cursor-pointer"
-            >
-              <MdOutlineNotificationsActive className="w-5 h-5 " />
-              <div className="cursor-pointer">Notifications</div>
-            </Link>
+            <IconButton
+              linkpath="/wishlist"
+              icon={<PiHeartBold className="w-5 h-5" />}
+              title="Wishlist"
+            />
+            <IconButton
+              linkpath="/cart"
+              icon={<BsCart3 className="w-5 h-5" />}
+              title="Cart"
+            />
+            <IconButton
+              linkpath="/notifications"
+              icon={<MdOutlineNotificationsActive className="w-5 h-5" />}
+              title="Notifications"
+            />
           </div>
           <div className="block md:hidden">
             <TfiMenuAlt className="w-5 h-5" />
