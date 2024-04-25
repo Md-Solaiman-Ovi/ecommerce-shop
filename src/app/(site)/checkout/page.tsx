@@ -1,7 +1,7 @@
 "use client";
 
 import Card from "@/app/components/site/Product/ProductCard";
-import CategoryLayout from "@/app/components/site/home/CategoryLayout";
+import CategoryLayout from "@/app/components/site/common-component/CategoryLayout";
 import React, { useState } from "react";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import Image from "next/image";

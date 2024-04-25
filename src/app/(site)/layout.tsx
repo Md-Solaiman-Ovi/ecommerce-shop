@@ -27,7 +27,8 @@ export default function RootLayout({
         <body className={` bg-[rgba(250,250,250,1)] ${poppins.className}`}>
           <NavBar />
           <div
-            className={`${className} max-w-screen-xl md:mx-auto mx-0 px-4 md:px-14`}
+            // className={`${className} max-w-screen-xl md:mx-auto mx-0 px-4 md:px-14`}
+            className={`${className}`}
           >
             {children}
           </div>

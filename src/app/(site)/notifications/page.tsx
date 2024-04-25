@@ -1,4 +1,4 @@
-import Card from "@/app/components/site/Card";
+import Card from "@/app/components/site/Product/ProductCard";
 import CategoryTitle from "@/app/components/site/CategoryTitle";
 import NotificationCard from "@/app/components/site/NotificationCard";
 import React from "react";

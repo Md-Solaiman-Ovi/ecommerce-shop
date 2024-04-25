@@ -91,24 +91,28 @@ const CustomerInfo = () => {
             {/* )} */}
           </div>
           <div className="flex gap-8  p-2 w-full ">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 hover:cursor-pointer">
               <input
                 id="radio-1"
                 type="radio"
-                name="location"
+                name="location1"
                 placeholder="Select Sub-District"
-                className="text-xs focus:outline-none "
+                className="text-xs focus:outline-none cursor-pointer "
               />
-              <label htmlFor="radio-1 text-xs">Inside City</label>
+              <label htmlFor="radio-1 text-xs cursor-pointer">
+                Inside City
+              </label>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 ">
               <input
                 id="radio-2"
                 type="radio"
-                name="location"
+                name="location1"
                 className="text-xs focus:outline-none rounded-full"
               />
-              <label htmlFor="radio-1 text-xs">Outside City</label>
+              <label htmlFor="radio-1 text-xs cursor-pointer">
+                Outside City
+              </label>
             </div>
           </div>
         </div>

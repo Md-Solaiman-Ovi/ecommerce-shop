@@ -1,9 +1,10 @@
 import CategoryTitle from "@/app/components/site/CategoryTitle";
+import Container from "@/app/components/site/Container";
 import React from "react";
 
 const TermsConditions = () => {
   return (
-    <div className="py-10 ">
+    <Container className="py-10 ">
       <CategoryTitle title="Terms & Confitions" />
       <div>
         <div className="flex flex-col gap-5 p-4">
@@ -67,7 +68,7 @@ const TermsConditions = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
 

@@ -1,18 +1,14 @@
 import ProductCard from "@/app/components/site/Product/ProductCard";
 import CategoryTitle from "@/app/components/site/CategoryTitle";
 import React from "react";
+import CategoryLayout from "@/app/components/site/common-component/CategoryLayout";
+import Container from "@/app/components/site/Container";
 
 const Wishlist = () => {
   return (
-    <div className="py-10">
-      <CategoryTitle title="Wish List" />
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 py-10">
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-      </div>
-    </div>
+    <Container className="py-10">
+      <CategoryLayout title={"Wishlist"} />
+    </Container>
   );
 };
 

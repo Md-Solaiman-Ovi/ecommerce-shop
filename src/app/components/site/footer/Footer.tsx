@@ -18,6 +18,8 @@ import ContactIcon from "../navbar/ContactIcon";
 
 import { title } from "process";
 import LinkIcon from "./LinkIcon";
+import SocialIcon from "../common-component/SocialIcon";
+import PaymentImage from "../common-component/PaymentImage";
 const Footer = () => {
   return (
     <div className="">
@@ -25,7 +27,7 @@ const Footer = () => {
         <ServiceDetails />
       </div>
       <div className=" bg-[rgba(35,47,62,1)] flex flex-col gap-10 items-center py-4 md:py-20">
-        <div className=" flex flex-col md:flex-row justify-between gap-8 items-center container text-white font-normal text-sm py-10">
+        <div className=" flex flex-col md:flex-row justify-between gap-8 container text-white font-normal text-sm py-10">
           <div className=" flex flex-col gap-4 w-full ">
             <div className="font-family-forte text-[30px]">E-commerce</div>
             <div className="">
@@ -98,56 +100,46 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row gap-4  md:gap-24 container ">
           <div className="w-full flex flex-col justify-between">
             <div className="flex gap-2 text-white items-center w-full border-y border-gray-500 pt-4 pb-4 md:pb-10">
-              <BiLogoFacebook className="w-7 h-7" />
-              <GrTwitter className="w-7 h-7" />
-              <TiSocialLinkedin className="w-7 h-7" />
-              <FaInstagram className="w-7 h-7" />
+              <SocialIcon
+                linkpath="/"
+                icon={<BiLogoFacebook className="w-7 h-7 cursor-pointer" />}
+              />
+              <SocialIcon
+                linkpath="/"
+                icon={<GrTwitter className="w-7 h-7 cursor-pointer" />}
+              />
+              <SocialIcon
+                linkpath="/"
+                icon={<TiSocialLinkedin className="w-7 h-7 cursor-pointer" />}
+              />
+              <SocialIcon
+                linkpath="/"
+                icon={<FaInstagram className="w-7 h-7 cursor-pointer" />}
+              />
             </div>
             <div className="flex  flex-col md:flex-row gap-4 md:gap-10 text-white py-4">
               <div>PAYMENTS ACCEPTED</div>
               <div className="flex gap-4">
-                <div>
-                  <Image
-                    src={"/images/Rectangle66.png"}
-                    width={40}
-                    height={5}
-                    alt=""
-                  />
-                </div>
-                <div>
-                  {" "}
-                  <Image
-                    src={"/images/Rectangle67.png"}
-                    width={40}
-                    height={5}
-                    alt=""
-                  />
-                </div>
-                <div>
-                  {" "}
-                  <Image
-                    src={"/images/Rectangle68.png"}
-                    width={40}
-                    height={5}
-                    alt=""
-                  />
-                </div>
-                <div>
-                  <Image
-                    src={"/images/Rectangle69.png"}
-                    width={40}
-                    height={5}
-                    alt=""
-                  />
-                </div>
-                <div>
-                  <Image
-                    src={"/images/Rectangle70.png"}
-                    width={40}
-                    height={5}
-                    alt=""
-                  />
-                </div>
+                <PaymentImage
+                  imageSource="/images/Rectangle66.png"
+                  width={40}
+                />
+                <PaymentImage
+                  imageSource="/images/Rectangle67.png"
+                  width={40}
+                />
+                <PaymentImage
+                  imageSource="/images/Rectangle68.png"
+                  width={40}
+                />
+                <PaymentImage
+                  imageSource="/images/Rectangle69.png"
+                  width={40}
+                />
+                <PaymentImage
+                  imageSource="/images/Rectangle70.png"
+                  width={40}
+                />
               </div>
             </div>
           </div>

@@ -16,6 +16,7 @@ import { IoIosLogOut } from "react-icons/io";
 import Link from "next/link";
 import IconButton from "./IconButton";
 import ContactIcon from "./ContactIcon";
+import SocialIcon from "../common-component/SocialIcon";
 
 const NavBar = () => {
   const linkPath = "/wishlist";
@@ -35,10 +36,22 @@ const NavBar = () => {
           </div>
           <div className="flex gap-10">
             <div className="flex gap-2 items-center">
-              <BiLogoFacebook className="w-4 h-4 cursor-pointer" />
-              <GrTwitter className="w-4 h-4 cursor-pointer" />
-              <TiSocialLinkedin className="w-5 h-5 cursor-pointer" />
-              <FaInstagram className="w-4 h-4 cursor-pointer" />
+              <SocialIcon
+                linkpath="/"
+                icon={<BiLogoFacebook className="w-4 h-4 cursor-pointer" />}
+              />
+              <SocialIcon
+                linkpath="/"
+                icon={<GrTwitter className="w-4 h-4 cursor-pointer" />}
+              />
+              <SocialIcon
+                linkpath="/"
+                icon={<TiSocialLinkedin className="w-4 h-4 cursor-pointer" />}
+              />
+              <SocialIcon
+                linkpath="/"
+                icon={<FaInstagram className="w-4 h-4 cursor-pointer" />}
+              />
             </div>
 
             <div className="flex gap-2 items-center cursor-pointer">

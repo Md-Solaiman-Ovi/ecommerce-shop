@@ -1,6 +1,6 @@
 import Image from "next/image";
 import HeroSection from "../components/site/home/hero-section/HeroSection";
-import CategoryLayout from "../components/site/home/CategoryLayout";
+import CategoryLayout from "../components/site/common-component/CategoryLayout";
 import React from "react";
 
 const Home = () => {

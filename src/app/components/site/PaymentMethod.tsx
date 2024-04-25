@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import PaymentImage from "./common-component/PaymentImage";
 const PaymentMethod = () => {
   return (
     <div className="flex flex-col gap-5">
@@ -19,7 +20,7 @@ const PaymentMethod = () => {
                 className="group-hover:cursor-pointer"
                 src={"/images/CashDeliveryIcon.png"}
                 width={50}
-                height={50}
+                height={5}
                 alt=""
               />
               <div>Cash on delivery</div>
@@ -94,36 +95,11 @@ const PaymentMethod = () => {
               className="text-xs focus:outline-none w-5 h-5 group-hover:cursot-pointer "
             />
             <div className="flex gap-4">
-              <Image
-                src={"/images/Rectangle66.png"}
-                width={40}
-                height={30}
-                alt=""
-              />
-              <Image
-                src={"/images/Rectangle67.png"}
-                width={40}
-                height={30}
-                alt=""
-              />
-              <Image
-                src={"/images/Rectangle68.png"}
-                width={40}
-                height={30}
-                alt=""
-              />
-              <Image
-                src={"/images/Rectangle69.png"}
-                width={40}
-                height={30}
-                alt=""
-              />
-              <Image
-                src={"/images/Rectangle70.png"}
-                width={40}
-                height={30}
-                alt=""
-              />
+              <PaymentImage imageSource="/images/Rectangle66.png" width={40} />
+              <PaymentImage imageSource="/images/Rectangle67.png" width={40} />
+              <PaymentImage imageSource="/images/Rectangle68.png" width={40} />
+              <PaymentImage imageSource="/images/Rectangle69.png" width={40} />
+              <PaymentImage imageSource="/images/Rectangle70.png" width={40} />
             </div>
           </div>
         </label>

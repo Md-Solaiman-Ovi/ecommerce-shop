@@ -1,6 +1,6 @@
 "use client";
-import Card from "@/app/components/site/Card";
-import CategoryLayout from "@/app/components/site/CategoryLayout";
+
+import Card from "@/app/components/site/Product/ProductCard";
 import React, { useState } from "react";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import Image from "next/image";
@@ -10,6 +10,7 @@ import { decrement, increment } from "@/app/redux/counterSlice";
 import { Divide } from "lucide";
 import Link from "next/link";
 import CategoryTitle from "@/app/components/site/CategoryTitle";
+import CartItem from "@/app/components/site/CartItem";
 const Cart = () => {
   const count = useSelector((state: any) => state.counter.value);
   const dispatch = useDispatch();
@@ -33,109 +34,11 @@ const Cart = () => {
               </tr>
             </thead>
             <tbody>
-              <tr className="border-t-[1px] text-center">
-                <td>
-                  <Image
-                    src={"/images/productImg1.png"}
-                    width={100}
-                    height={100}
-                    alt=""
-                  />
-                </td>
-                <td>Apple iPhone 14 Pro</td>
-                <td>TK 149,999</td>
-                <td>1</td>
-                <td>TK 149,999</td>
-                <td>
-                  <MdClear className="w-5 h-5 cursor-pointer" />
-                </td>
-              </tr>
-              <tr className="border-t-[1px] text-center ">
-                <td>
-                  <Image
-                    src={"/images/productImg1.png"}
-                    width={100}
-                    height={100}
-                    alt=""
-                  />
-                </td>
-                <td>Apple iPhone 14 Pro</td>
-                <td>TK 149,999</td>
-                <td>1</td>
-                <td>TK 149,999</td>
-                <td>
-                  <MdClear className="w-5 h-5 cursor-pointer" />
-                </td>
-              </tr>
-              <tr className="border-t-[1px] text-center">
-                <td>
-                  <Image
-                    src={"/images/productImg1.png"}
-                    width={100}
-                    height={100}
-                    alt=""
-                  />
-                </td>
-                <td>Apple iPhone 14 Pro</td>
-                <td>TK 149,999</td>
-                <td>1</td>
-                <td>TK 149,999</td>
-                <td>
-                  <MdClear className="w-5 h-5 cursor-pointer" />
-                </td>
-              </tr>
-              <tr className="border-t-[1px] text-center">
-                <td>
-                  <Image
-                    src={"/images/productImg1.png"}
-                    width={100}
-                    height={100}
-                    alt=""
-                  />
-                </td>
-                <td>Apple iPhone 14 Pro</td>
-                <td>TK 149,999</td>
-                <td>1</td>
-                <td>TK 149,999</td>
-                <td>
-                  <MdClear className="w-5 h-5 cursor-pointer" />
-                </td>
-              </tr>
-              <tr className="border-t-[1px] text-center">
-                <td>
-                  <Image
-                    src={"/images/productImg1.png"}
-                    width={100}
-                    height={100}
-                    alt=""
-                  />
-                </td>
-                <td>Apple iPhone 14 Pro</td>
-                <td>TK 149,999</td>
-                <td>1</td>
-                <td>TK 149,999</td>
-                <td>
-                  <MdClear className="w-5 h-5 cursor-pointer" />
-                </td>
-              </tr>
-
-              <tr className="border-t-[1px] text-center">
-                <td>
-                  <Image
-                    src={"/images/productImg1.png"}
-                    width={100}
-                    height={100}
-                    alt=""
-                  />
-                </td>
-                <td>Apple iPhone 14 Pro</td>
-                <td>TK 149,999</td>
-                <td>1</td>
-                <td>TK 149,999</td>
-                <td>
-                  <MdClear className="w-5 h-5 cursor-pointer" />
-                </td>
-              </tr>
+              <CartItem />
+              <CartItem />
+              <CartItem />
+              <CartItem />
+              <CartItem />
             </tbody>
           </table>
         </div>
@@ -179,11 +82,6 @@ const Cart = () => {
                 <div className="bg-black text-white p-2">Apply</div>
               </div>
             )}
-            {/* <div>
-              <div>Counter: {count}</div>
-              <button onClick={() => dispatch(increment())}>Increment</button>
-              <button onClick={() => dispatch(decrement())}>Decrement</button>
-            </div> */}
 
             <Link
               href="/checkout"
