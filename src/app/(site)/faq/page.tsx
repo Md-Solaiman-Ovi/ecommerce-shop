@@ -2,6 +2,7 @@
 "use client";
 
 import CategoryTitle from "@/app/components/site/CategoryTitle";
+import Container from "@/app/components/site/Container";
 import React from "react";
 import { useState } from "react";
 import { RiArrowDropDownLine } from "react-icons/ri";
@@ -45,7 +46,7 @@ const FQA = () => {
   }
 
   return (
-    <div className="py-10  ">
+    <Container className="py-10  ">
       <CategoryTitle title="Frequently Asked Questions (FAQ)" />
       <div className=" flex flex-col pb-10">
         <div className="leading-[30px] font-normal py-10 ">
@@ -313,7 +314,7 @@ const FQA = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
 

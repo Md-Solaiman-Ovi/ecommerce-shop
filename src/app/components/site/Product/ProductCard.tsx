@@ -25,8 +25,9 @@ const ProductCard = () => {
             title="Add to Cart"
             cssClass=" bg-black text-white"
           />
+
           <ProductCardButton
-            linkpath=""
+            linkpath="/product-details"
             title="Quick View"
             cssClass="bg-white"
           />

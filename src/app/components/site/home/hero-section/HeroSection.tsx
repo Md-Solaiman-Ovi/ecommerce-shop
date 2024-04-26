@@ -5,7 +5,7 @@ import Container from "../../Container";
 import CategoryLinkIcon from "./CategoryLinkIcon";
 const HeroSection = () => {
   return (
-    <div className="flex flex-col gap-10 mb-14 s">
+    <Container className="flex flex-col gap-10 mb-14 s">
       <div className="flex flex-col md:flex-row gap-4 justify-between">
         <div className=" w-72 font-semibold hidden md:block">
           <div className="bg-[rgba(35,47,62,1)] text-white p-3 rounded text-base text-center">
@@ -61,7 +61,7 @@ const HeroSection = () => {
           />
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
 

@@ -4,10 +4,11 @@ import NotificationCard from "@/app/components/site/NotificationCard";
 import React from "react";
 import { IoCheckmarkDoneSharp } from "react-icons/io5";
 import { RiDeleteBin6Line } from "react-icons/ri";
+import Container from "@/app/components/site/Container";
 
 const Notifications = () => {
   return (
-    <div className="py-10 ">
+    <Container className="py-10 ">
       <CategoryTitle title="Notifications" />
       <div className="flex flex-col gap-8 py-10">
         <div className="flex gap-4">
@@ -27,7 +28,7 @@ const Notifications = () => {
           <NotificationCard />
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
 

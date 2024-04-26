@@ -2,9 +2,10 @@ import React from "react";
 import Image from "next/image";
 import CategoryTitle from "@/app/components/site/CategoryTitle";
 import WhyChooseCard from "@/app/components/site/WhyChooseCard";
+import Container from "@/app/components/site/Container";
 const AboutUs = () => {
   return (
-    <div className="py-10 flex flex-col ">
+    <Container className="py-10 flex flex-col ">
       <div className="mb-10">
         <CategoryTitle title="About Us" />
         <div className="flex gap-8 py-10">
@@ -41,7 +42,7 @@ const AboutUs = () => {
           />
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
 
