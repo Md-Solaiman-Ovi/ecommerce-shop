@@ -12,6 +12,7 @@ import { Divide } from "lucide";
 import CustomerInfo from "@/app/components/site/CustomerInfo";
 import PaymentMethod from "@/app/components/site/PaymentMethod";
 import CategoryTitle from "@/app/components/site/CategoryTitle";
+import Container from "@/app/components/site/Container";
 const Checkout = () => {
   const count = useSelector((state: any) => state.counter.value);
   const dispatch = useDispatch();
@@ -19,7 +20,7 @@ const Checkout = () => {
   const [vouchar, setVouchar] = useState(false);
 
   return (
-    <div className="py-10  ">
+    <Container className="py-10  ">
       <CategoryTitle title="Checkout" />
       <div className="flex flex-col md:flex-row gap-5 w-full my-10">
         <div className="w-full md:w-2/3 flex flex-col gap-10 ">
@@ -69,7 +70,7 @@ const Checkout = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
 

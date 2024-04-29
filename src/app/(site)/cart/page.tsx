@@ -11,6 +11,7 @@ import { Divide } from "lucide";
 import Link from "next/link";
 import CategoryTitle from "@/app/components/site/CategoryTitle";
 import CartItem from "@/app/components/site/CartItem";
+import Container from "@/app/components/site/Container";
 const Cart = () => {
   const count = useSelector((state: any) => state.counter.value);
   const dispatch = useDispatch();
@@ -18,7 +19,7 @@ const Cart = () => {
   const [vouchar, setVouchar] = useState(false);
 
   return (
-    <div className="py-10  ">
+    <Container className="py-10  ">
       <CategoryTitle title="Shopping Cart" />
       <div className="flex flex-col md:flex-row gap-5 w-full py-10">
         <div className="w-full md:w-2/3 bg-white rounded p-4">
@@ -92,7 +93,7 @@ const Cart = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
 
