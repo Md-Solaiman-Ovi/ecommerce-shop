@@ -22,7 +22,7 @@ const ProductDetailsInfo = () => {
       </div>
       <div className="flex flex-col gap-5 ">
         <div className="text-lg font-bold">Key Feature</div>
-        <ul className="text-sm leading-[28px] list-outside list-disc">
+        <ul className="text-sm leading-[28px] list-outside list-disc p-4">
           <li>Apple ProMotion 120Hz 6.7-inch 2000 nits Always-On Display</li>
           <li>All new A16 Bionic chip</li>
           <li>48MP main camera</li>

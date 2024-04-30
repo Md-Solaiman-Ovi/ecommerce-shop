@@ -1,6 +1,6 @@
 import React from "react";
 import CategoryTitle from "../CategoryTitle";
-import ProductCard from "../Product/ProductCard";
+import ProductCard from "../Product/product-card/ProductCard";
 import Container from "../Container";
 
 interface CategoryLayoutProps {

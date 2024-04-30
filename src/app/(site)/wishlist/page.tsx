@@ -1,4 +1,4 @@
-import ProductCard from "@/app/components/site/Product/ProductCard";
+import ProductCard from "@/app/components/site/Product/product-card/ProductCard";
 import CategoryTitle from "@/app/components/site/CategoryTitle";
 import React from "react";
 import CategoryLayout from "@/app/components/site/common-component/CategoryLayout";

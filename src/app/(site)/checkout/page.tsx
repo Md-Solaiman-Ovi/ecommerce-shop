@@ -1,6 +1,6 @@
 "use client";
 
-import Card from "@/app/components/site/Product/ProductCard";
+import Card from "@/app/components/site/Product/product-card/ProductCard";
 import CategoryLayout from "@/app/components/site/common-component/CategoryLayout";
 import React, { useState } from "react";
 import { RiArrowDropDownLine } from "react-icons/ri";

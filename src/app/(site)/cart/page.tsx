@@ -1,6 +1,6 @@
 "use client";
 
-import Card from "@/app/components/site/Product/ProductCard";
+import Card from "@/app/components/site/Product/product-card/ProductCard";
 import React, { useState } from "react";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import Image from "next/image";
