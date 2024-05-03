@@ -12,7 +12,7 @@ const ProductImageSelector = () => {
   const [imageSource, setImageSource] = useState<any>(product_img1);
   console.log("image source", imageSource);
   return (
-    <div className="w-1/2 flex flex-col gap-5">
+    <div className=" flex flex-col gap-5">
       <div className="flex flex-col bg-white p-4 gap-4">
         <div className="p-2 bg-[rgba(254,196,0,1)] rounded text-center w-24 font-bold">
           -16%

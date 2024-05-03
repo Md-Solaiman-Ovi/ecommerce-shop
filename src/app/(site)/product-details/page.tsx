@@ -25,9 +25,13 @@ const ProductDetails = () => {
   const [selectOption, setSelectOption] = useState("Specification");
   return (
     <Container className="py-10">
-      <div className="flex gap-12  ">
-        <ProductImageSelector />
-        <ProductDetailsInfo />
+      <div className="flex flex-col md:flex-row gap-12  ">
+        <div className="w-full md:w-1/2 ">
+          <ProductImageSelector />
+        </div>
+        <div className="w-full md:w-1/2 ">
+          <ProductDetailsInfo />
+        </div>
       </div>
       <div className="flex items-center justify-center gap-4 p-4 mt-10">
         <div

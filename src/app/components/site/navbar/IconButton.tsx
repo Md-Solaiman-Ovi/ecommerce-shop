@@ -5,13 +5,14 @@ interface IconButtonProps {
   linkpath?: string;
   icon?: ReactElement;
   title?: string;
+  cssClass?: string;
 }
 
-const IconButton = ({ linkpath, icon, title }: IconButtonProps) => {
+const IconButton = ({ linkpath, icon, title, cssClass }: IconButtonProps) => {
   return (
     <Link
       href={`${linkpath}`}
-      className="flex flex-col gap-1 items-center cursor-pointer"
+      className={`flex ${cssClass}  items-center cursor-pointer`}
     >
       <div>{icon}</div>
       <div> {title}</div>

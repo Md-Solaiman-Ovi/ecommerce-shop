@@ -23,7 +23,7 @@ import PaymentImage from "../common-component/PaymentImage";
 const Footer = () => {
   return (
     <div className="">
-      <div className="md:h-[150px] bg-[rgba(43,59,77,1)] flex flex-col md:flex-row items-center  ">
+      <div className="h-full py-4 md:py-0 md:h-[150px] bg-[rgba(43,59,77,1)] flex flex-col md:flex-row items-center  ">
         <ServiceDetails />
       </div>
       <div className=" bg-[rgba(35,47,62,1)] flex flex-col gap-10 items-center py-4 md:py-20">

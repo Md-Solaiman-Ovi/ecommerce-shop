@@ -4,7 +4,7 @@ import PaymentOption from "../common-component/PaymentOption";
 
 const ProductDetailsInfo = () => {
   return (
-    <div className="w-1/2 flex flex-col gap-8">
+    <div className="w-full flex flex-col gap-8">
       <div className="flex gap-5">
         <div className="text-sm p-2 bg-[rgba(254,196,0,1)] rounded text-center w-24 font-bold">
           15 In Stock

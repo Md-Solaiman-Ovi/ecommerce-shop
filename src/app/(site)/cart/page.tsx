@@ -22,16 +22,16 @@ const Cart = () => {
     <Container className="py-10  ">
       <CategoryTitle title="Shopping Cart" />
       <div className="flex flex-col md:flex-row gap-5 w-full py-10">
-        <div className="w-full md:w-2/3 bg-white rounded p-4">
-          <table className="w-full">
+        <div className="w-full md:w-2/3 bg-white rounded p-4 overflow-auto md:overflow-hidden">
+          <table className="w-full ">
             <thead className=" table-auto text-center ">
               <tr className="m-4">
                 <th></th>
-                <th className="text-center p-4">Product</th>
-                <th className="text-center p-4">Unit Price</th>
-                <th className="text-center p-4">Quantity</th>
-                <th className="text-center p-4">Total Price</th>
-                <th className="text-center p-4"></th>
+                <th className="text-center p-1 ">Product</th>
+                <th className="text-center p-1 ">Unit Price</th>
+                <th className="text-center p-1 ">Quantity</th>
+                <th className="text-center p-1 ">Total Price</th>
+                {/* <th className="text-center p-1 md:p-4 text-sm"></th> */}
               </tr>
             </thead>
             <tbody>

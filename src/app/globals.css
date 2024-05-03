@@ -52,5 +52,5 @@
   user-select: none;
 } */
 .compact-sidebar {
-  transition: height 1s;
+  transition: width 5s;
 }

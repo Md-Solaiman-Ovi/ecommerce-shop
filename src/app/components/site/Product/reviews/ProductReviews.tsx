@@ -7,7 +7,7 @@ import AddReview from "./AddReview";
 const ProductReviews = () => {
   return (
     <div className=" flex flex-col gap-[100px] my-10 ">
-      <div className="flex  gap-[100px]">
+      <div className="flex flex-col md:flex-row gap-[100px]">
         <CustomerReviews />
         <div className="w-full">
           <div className="w-full flex flex-col gap-4">
@@ -27,7 +27,7 @@ const ProductReviews = () => {
           <ReviewCard />
         </div>
         <div className="flex justify-center md:justify-start w-full">
-          <div className="px-10 py-2 text-sm font-bold rounded border-[1px] border-black cursor-pointer">
+          <div className="px-10 py-2 text-sm font-bold rounded border-[1px] border-black cursor-pointer ">
             Load More
           </div>
         </div>

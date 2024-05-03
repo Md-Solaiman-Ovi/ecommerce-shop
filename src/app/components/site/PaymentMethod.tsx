@@ -14,7 +14,7 @@ const PaymentMethod = () => {
                 type="radio"
                 name="location"
                 placeholder="Select Sub-District"
-                className="text-xs focus:outline-none w-5 h-5 group-hover:cursot-pointer "
+                className="text-xs focus:outline-none w-5 h-5 group-hover:cursor-pointer  accent-black"
               />
               <Image
                 className="group-hover:cursor-pointer"
@@ -34,7 +34,7 @@ const PaymentMethod = () => {
                 type="radio"
                 name="location"
                 placeholder="Select Sub-District"
-                className="text-xs focus:outline-none w-5 h-5 group-hover:cursot-pointer "
+                className="text-xs focus:outline-none w-5 h-5 group-hover:cursor-pointer accent-black"
               />
               <Image
                 className="group-hover:cursor-pointer"
@@ -54,7 +54,7 @@ const PaymentMethod = () => {
                 type="radio"
                 name="location"
                 placeholder="Select Sub-District"
-                className="text-xs focus:outline-none w-5 h-5 group-hover:cursot-pointer "
+                className="text-xs focus:outline-none w-5 h-5 group-hover:cursor-pointer accent-black"
               />
               <Image
                 className="group-hover:cursor-pointer"
@@ -73,7 +73,7 @@ const PaymentMethod = () => {
                 type="radio"
                 name="location"
                 placeholder="Select Sub-District"
-                className="text-xs focus:outline-none w-5 h-5 group-hover:cursot-pointer  "
+                className="text-xs focus:outline-none w-5 h-5 group-hover:cursor-pointer  accent-black"
               />
               <Image
                 className="group-hover:cursor-pointer"
@@ -92,7 +92,7 @@ const PaymentMethod = () => {
               type="radio"
               name="location"
               placeholder="Select Sub-District"
-              className="text-xs focus:outline-none w-5 h-5 group-hover:cursot-pointer "
+              className="text-xs focus:outline-none w-5 h-5 group-hover:cursor-pointer accent-black"
             />
             <div className="flex gap-4">
               <PaymentImage imageSource="/images/Rectangle66.png" width={40} />
