@@ -10,7 +10,7 @@ import product_img3 from "/public/images/productImg3.png";
 import product_img4 from "/public/images/productImg4.png";
 const ProductImageSelector = () => {
   const [imageSource, setImageSource] = useState<any>(product_img1);
-  console.log("image source", imageSource);
+
   return (
     <div className=" flex flex-col gap-5">
       <div className="flex flex-col bg-white p-4 gap-4">

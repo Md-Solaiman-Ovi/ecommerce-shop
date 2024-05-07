@@ -9,18 +9,19 @@ import ProductReviews from "@/app/components/site/Product/reviews/ProductReviews
 import ProductDescription from "@/app/components/site/Product/specifications/ProductDescription";
 import ProductSpecifications from "@/app/components/site/Product/specifications/ProductSpecifications";
 import React, { useEffect, useState } from "react";
+interface Options {
+  Colors: string[];
+  Storage: string[];
+}
 
 const ProductDetails = () => {
-  const Options = {
+  const options: Options = {
     Colors: ["Red", "Gray", "Black", "White"],
     Storage: ["128GB", "256GB", "512GB", "1TB"],
   };
-  useEffect(() => {
-    console.log("type of colors", typeof Options.Colors);
-  });
 
-  const Colors = ["Red", "Gray", "Black", "White"];
-  const Storage = ["128GB", "256GB", "512GB", "1TB"];
+  // const Colors = ["Red", "Gray", "Black", "White"];
+  // const Storage = ["128GB", "256GB", "512GB", "1TB"];
 
   const [selectOption, setSelectOption] = useState("Specification");
   return (
@@ -30,7 +31,7 @@ const ProductDetails = () => {
           <ProductImageSelector />
         </div>
         <div className="w-full md:w-1/2 ">
-          <ProductDetailsInfo />
+          <ProductDetailsInfo options={options} />
         </div>
       </div>
       <div className="flex items-center justify-center gap-4 p-4 mt-10">

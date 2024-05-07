@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import RatingIcon from "./RatingIcon";
 const ReviewCard = () => {
   return (
     <div className="">
@@ -19,7 +20,13 @@ const ReviewCard = () => {
             <div className="text-xs">20 April 2022</div>
           </div>
         </div>
-        <div>Rating icon</div>
+        <div className="flex gap-1">
+          <RatingIcon fill="#FEC400" height="13" width="14" />
+          <RatingIcon fill="#FEC400" height="13" width="14" />
+          <RatingIcon fill="#FEC400" height="13" width="14" />
+          <RatingIcon fill="#FEC400" height="13" width="14" />
+          <RatingIcon fill="#E7EAEF" height="13" width="14" />
+        </div>
       </div>
       <div className="text-sm leading-6">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at

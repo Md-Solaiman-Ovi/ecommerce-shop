@@ -1,9 +1,10 @@
 import CategoryTitle from "@/app/components/site/CategoryTitle";
+import Container from "@/app/components/site/Container";
 import React from "react";
 
 const PaymentGuide = () => {
   return (
-    <div className="py-10  ">
+    <Container className="py-10  ">
       <CategoryTitle title="Payment Guide" />
       <div className="flex flex-col gap-5 p-4">
         <div className="text-xl font-bold border-b-[1px] py-4">
@@ -30,7 +31,7 @@ const PaymentGuide = () => {
           et sed orci eu, nisl egestas.
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
 

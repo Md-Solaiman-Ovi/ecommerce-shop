@@ -1,10 +1,17 @@
 import React from "react";
+import RatingIcon from "./RatingIcon";
 
 const AddReview = () => {
   return (
     <div className="flex flex-col gap-[30px]">
       <div className="text-[30px]">Add a review</div>
-      <div>stars </div>
+      <div className="flex gap-4">
+        <RatingIcon fill="#E7EAEF" height="20" width="21" />
+        <RatingIcon fill="#E7EAEF" height="20" width="21" />
+        <RatingIcon fill="#E7EAEF" height="20" width="21" />
+        <RatingIcon fill="#E7EAEF" height="20" width="21" />
+        <RatingIcon fill="#E7EAEF" height="20" width="21" />
+      </div>
       <div className="flex flex-col gap-5">
         <div className="flex gap-4">
           <div className="border-[1px] border-black rounded p-2 w-full h-[56px]">

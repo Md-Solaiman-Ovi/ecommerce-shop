@@ -1,8 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-interface GlobalState {
-  isSomething: boolean;
-}
 const counterSlice = createSlice({
   name: "counter",
   initialState: {

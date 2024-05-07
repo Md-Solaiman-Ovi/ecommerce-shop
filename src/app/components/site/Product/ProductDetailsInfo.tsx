@@ -2,7 +2,15 @@ import React from "react";
 import OptionSelector from "./OptionSelector";
 import PaymentOption from "../common-component/PaymentOption";
 
-const ProductDetailsInfo = () => {
+interface Props {
+  options: {
+    Colors: string[];
+    Storage: string[];
+  };
+}
+const ProductDetailsInfo = (props: Props) => {
+  const { Colors, Storage } = props.options;
+
   return (
     <div className="w-full flex flex-col gap-8">
       <div className="flex gap-5">
@@ -34,8 +42,8 @@ const ProductDetailsInfo = () => {
         </ul>
       </div>
       <div className="flex flex-col gap-4">
-        <OptionSelector title="Color" />
-        <OptionSelector title="Storage" />
+        <OptionSelector title="Color" option={Colors} />
+        <OptionSelector title="Storage" option={Storage} />
       </div>
 
       <div className="flex flex-col gap-4">
