@@ -6,9 +6,9 @@ import Container from "@/app/components/site/Container";
 
 const Wishlist = () => {
   return (
-    <Container className="py-10">
+    <div className="py-10">
       <CategoryLayout title={"Wishlist"} />
-    </Container>
+    </div>
   );
 };
 

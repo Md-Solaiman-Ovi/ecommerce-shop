@@ -1,11 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import counterSlice from "./counterSlice";
-import globalStateSlice from "./globalStateSlice";
+import globalStateSliceReducer from "./globalStateSlice";
 
 export const store = configureStore({
   reducer: {
     counter: counterSlice,
-    globalState: globalStateSlice,
+    globalState: globalStateSliceReducer,
   },
 });
 

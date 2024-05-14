@@ -3,13 +3,21 @@ import Image from "next/image";
 import { MdArrowForwardIos } from "react-icons/md";
 import Container from "../../Container";
 import CategoryLinkIcon from "./CategoryLinkIcon";
+
+import { GiHamburgerMenu } from "react-icons/gi";
 const HeroSection = () => {
   return (
     <Container className="flex flex-col gap-10 mb-14 s">
       <div className="flex flex-col md:flex-row gap-4 justify-between">
         <div className=" w-72 font-semibold hidden md:block">
-          <div className="bg-[rgba(35,47,62,1)] text-white p-3 rounded text-base text-center">
-            Selected Category
+          <div className="flex justify-between items-center bg-[rgba(35,47,62,1)] text-white p-3 rounded text-base text-center px-4">
+            <div>
+              <GiHamburgerMenu className="w-5 h-5 " />
+            </div>
+            <div> Selected Category</div>
+            <div>
+              <MdArrowForwardIos className="w-5 h-5 rotate-90" />
+            </div>
           </div>
           <div className="bg-white text-base font-normal ">
             <CategoryLinkIcon linkpath="" title="Macbook" />

@@ -4,10 +4,12 @@ interface Props {
   fill: string;
   width: string;
   height: string;
+  cssClass: string;
 }
-const RatingIcon = ({ fill, width, height }: Props) => {
+const RatingIcon = ({ fill, width, height, cssClass }: Props) => {
   return (
     <svg
+      className={`${cssClass}`}
       width={`${width}`}
       height={`${height}`}
       viewBox="0 0 28 26"

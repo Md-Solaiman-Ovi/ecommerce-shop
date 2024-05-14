@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
-
 import "./../globals.css";
 import NavBar from "../components/site/navbar/NavBar";
 import Footer from "../components/site/footer/Footer";
 import Provider from "../redux/Provider";
+import { useDispatch, useSelector } from "react-redux";
+import { AppDispatch, RootState } from "../redux/store";
+import { toggleVisibility } from "../redux/globalStateSlice";
+import SignIn from "../components/site/login/SignIn";
 
 const poppins = Poppins({ weight: "400", subsets: ["latin"] });
 //www.youtube.com/
@@ -26,12 +29,7 @@ export default function RootLayout({
       <html lang="en">
         <body className={` bg-[rgba(250,250,250,1)] ${poppins.className}`}>
           <NavBar />
-          <div
-            // className={`${className} max-w-screen-xl md:mx-auto mx-0 px-4 md:px-14`}
-            className={`${className}`}
-          >
-            {children}
-          </div>
+          <div className={`${className}`}>{children}</div>
           <Footer />
         </body>
       </html>

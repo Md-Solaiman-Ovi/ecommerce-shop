@@ -21,11 +21,11 @@ const ReviewCard = () => {
           </div>
         </div>
         <div className="flex gap-1">
-          <RatingIcon fill="#FEC400" height="13" width="14" />
-          <RatingIcon fill="#FEC400" height="13" width="14" />
-          <RatingIcon fill="#FEC400" height="13" width="14" />
-          <RatingIcon fill="#FEC400" height="13" width="14" />
-          <RatingIcon fill="#E7EAEF" height="13" width="14" />
+          <RatingIcon fill="#FEC400" height="13" width="14" cssClass="" />
+          <RatingIcon fill="#FEC400" height="13" width="14" cssClass="" />
+          <RatingIcon fill="#FEC400" height="13" width="14" cssClass="" />
+          <RatingIcon fill="#FEC400" height="13" width="14" cssClass="" />
+          <RatingIcon fill="#E7EAEF" height="13" width="14" cssClass="" />
         </div>
       </div>
       <div className="text-sm leading-6">

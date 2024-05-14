@@ -6,11 +6,36 @@ const AddReview = () => {
     <div className="flex flex-col gap-[30px]">
       <div className="text-[30px]">Add a review</div>
       <div className="flex gap-4">
-        <RatingIcon fill="#E7EAEF" height="20" width="21" />
-        <RatingIcon fill="#E7EAEF" height="20" width="21" />
-        <RatingIcon fill="#E7EAEF" height="20" width="21" />
-        <RatingIcon fill="#E7EAEF" height="20" width="21" />
-        <RatingIcon fill="#E7EAEF" height="20" width="21" />
+        <RatingIcon
+          fill="#E7EAEF"
+          height="20"
+          width="21"
+          cssClass="cursor-pointer"
+        />
+        <RatingIcon
+          cssClass="cursor-pointer"
+          fill="#E7EAEF"
+          height="20"
+          width="21"
+        />
+        <RatingIcon
+          fill="#E7EAEF"
+          height="20"
+          width="21"
+          cssClass="cursor-pointer"
+        />
+        <RatingIcon
+          fill="#E7EAEF"
+          height="20"
+          width="21"
+          cssClass="cursor-pointer"
+        />
+        <RatingIcon
+          fill="#E7EAEF"
+          height="20"
+          width="21"
+          cssClass="cursor-pointer"
+        />
       </div>
       <div className="flex flex-col gap-5">
         <div className="flex gap-4">

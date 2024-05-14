@@ -16,16 +16,20 @@ import ContactIcon from "./ContactIcon";
 import SocialIcon from "../common-component/SocialIcon";
 import SignIn from "../login/SignIn";
 import { usePathname } from "next/navigation";
-
+import { useDispatch, useSelector } from "react-redux";
+import { RootState, AppDispatch } from "@/app/redux/store";
+import { toggleVisibility } from "@/app/redux/globalStateSlice";
 const NavBar = () => {
-  const [menu, setMenu] = useState(false);
-  const [isSignInOpen, setIsSignInOpen] = useState(false);
-  // const isSignInOpen = useSelector((state: any) => {
-  //   console.log(state.globalState.isSignInOpen);
-  // });
-  // const dispatch = useDispatch();
-
   const pathname = usePathname();
+  const [menu, setMenu] = useState(false);
+  const isVisible = useSelector(
+    (state: RootState) => state.globalState.isVisible
+  );
+  const dispatch: AppDispatch = useDispatch();
+
+  const handleToggle = () => {
+    dispatch(toggleVisibility());
+  };
 
   return (
     <>
@@ -90,7 +94,6 @@ const NavBar = () => {
                   icon={<FaInstagram className="w-4 h-4 cursor-pointer" />}
                 />
               </div>
-
               <div className="flex gap-2 items-center cursor-pointer">
                 <svg
                   width="14"
@@ -110,8 +113,7 @@ const NavBar = () => {
               </div>
               <div
                 className="flex gap-2 items-center cursor-pointer"
-                // onClick={() => dispatch(toggleIsSignInOpen())}
-                onClick={() => setIsSignInOpen(!isSignInOpen)}
+                onClick={handleToggle}
               >
                 <FaRegUser className="w-4 h-4 " />
                 <div>Sign In</div>
@@ -266,8 +268,11 @@ const NavBar = () => {
           </div>
         </div>
       </div>
-      {isSignInOpen && (
-        <div className="absolute w-screen h-screen bg-[rgba(0,0,0,0.6)] flex justify-center ">
+      {isVisible && (
+        <div
+          className="w-screen h-screen top-0 bottom-0 bg-[rgba(0,0,0,0.6)] flex justify-center  items-center fixed z-50"
+          onClick={handleToggle}
+        >
           <SignIn />
         </div>
       )}

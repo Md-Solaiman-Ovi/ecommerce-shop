@@ -27,7 +27,7 @@ const ProductReviews = () => {
           <ReviewCard />
         </div>
         <div className="flex justify-center md:justify-start w-full">
-          <div className="px-10 py-2 text-sm font-bold rounded border-[1px] border-black cursor-pointer ">
+          <div className="px-10 py-2 text-sm font-bold rounded border-[1px] border-[#18293B] cursor-pointer hover:bg-[rgba(24,41,59,1)] hover:text-white  hover:duration-300 hover:ease-in-out hover:delay-150  ">
             Load More
           </div>
         </div>
