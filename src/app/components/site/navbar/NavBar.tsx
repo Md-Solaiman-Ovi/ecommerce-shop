@@ -18,17 +18,34 @@ import SignIn from "../login/SignIn";
 import { usePathname } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState, AppDispatch } from "@/app/redux/store";
-import { toggleVisibility } from "@/app/redux/globalStateSlice";
+import {
+  toggleVisibility,
+  signInVisibility,
+  signUpVisibility,
+} from "@/app/redux/globalStateSlice";
+import SignUp from "../login/SignUp";
+import EnterEmailResetPassword from "../password/EnterEmailResetPassword";
+import CreateNewPassword from "../password/CreateNewPassword";
+import CheckEmail from "../password/CheckEmail";
+import SignInAlert from "../login/SignInAlert";
 const NavBar = () => {
   const pathname = usePathname();
   const [menu, setMenu] = useState(false);
   const isVisible = useSelector(
     (state: RootState) => state.globalState.isVisible
   );
+  const isSignInVisible = useSelector(
+    (state: RootState) => state.globalState.isSignInVisible
+  );
+  const isSignUpVisible = useSelector(
+    (state: RootState) => state.globalState.isSignUpVisible
+  );
   const dispatch: AppDispatch = useDispatch();
 
   const handleToggle = () => {
     dispatch(toggleVisibility());
+    dispatch(signInVisibility(true));
+    dispatch(signUpVisibility(false));
   };
 
   return (
@@ -273,7 +290,19 @@ const NavBar = () => {
           className="w-screen h-screen top-0 bottom-0 bg-[rgba(0,0,0,0.6)] flex justify-center  items-center fixed z-50"
           onClick={handleToggle}
         >
-          <SignIn />
+          <div
+            onClick={(e) => {
+              e.stopPropagation();
+            }}
+          >
+            {isSignInVisible && <SignIn />}
+            {isSignUpVisible && <SignUp />}
+
+            {/* <EnterEmailResetPassword /> */}
+            {/* <CreateNewPassword /> */}
+            {/* <CheckEmail /> */}
+            {/* <SignInAlert /> */}
+          </div>
         </div>
       )}
     </>
