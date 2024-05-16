@@ -1,13 +1,26 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import IconButton from "../navbar/IconButton";
+import { AppDispatch } from "@/app/redux/store";
+import { useDispatch } from "react-redux";
+import {
+  signInVisibility,
+  signUpVisibility,
+} from "@/app/redux/globalStateSlice";
 
 const SignUp = () => {
+  const dispatch: AppDispatch = useDispatch();
+  const handleSignInToggle = () => {
+    dispatch(signInVisibility(true));
+    dispatch(signUpVisibility(false));
+  };
   return (
     <div className="bg-white px-[100px] py-[50px] w-[700px]  flex flex-col gap-[60px] rounded-xl">
       <div className="flex justify-center gap-10 items-center text-xl font-bold">
-        <div>SIGN IN </div>
-        <div>SIGN UP</div>
+        <div className="cursor-pointer" onClick={handleSignInToggle}>
+          SIGN IN{" "}
+        </div>
+        <div className="cursor-pointer  underline">SIGN UP</div>
       </div>
       <div className="flex flex-col gap-[30px]">
         <div className="border-[1px] border-black rounded p-2">
@@ -163,7 +176,13 @@ const SignUp = () => {
 
         <div className="text-center">
           Already have an account?
-          <span className="font-bold text-lg"> Sign In now!</span>
+          <span
+            className="font-bold text-lg cursor-pointer"
+            onClick={handleSignInToggle}
+          >
+            {" "}
+            Sign In now!
+          </span>
         </div>
       </div>
     </div>

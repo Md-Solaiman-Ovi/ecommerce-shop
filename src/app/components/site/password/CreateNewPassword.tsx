@@ -1,6 +1,18 @@
+import {
+  newPasswordVisibility,
+  signInVisibility,
+  signUpVisibility,
+} from "@/app/redux/globalStateSlice";
+import { AppDispatch } from "@/app/redux/store";
 import React from "react";
+import { useDispatch } from "react-redux";
 
 const CreateNewPassword = () => {
+  const dispatch: AppDispatch = useDispatch();
+  const handleSignInToggle = () => {
+    dispatch(signInVisibility(true));
+    dispatch(newPasswordVisibility(false));
+  };
   return (
     <div className="bg-white px-[100px] py-[50px] w-[700px]  mx-5 flex flex-col gap-[60px] rounded-xl ">
       <div className="flex flex-col justify-center gap-5 items-center">
@@ -32,7 +44,10 @@ const CreateNewPassword = () => {
         </div>
 
         <div className="flex flex-col ">
-          <div className="text-lg py-2 bg-[rgba(24,41,59,1)] rounded text-white  text-center cursor-pointer w-full">
+          <div
+            className="text-lg py-2 bg-[rgba(24,41,59,1)] rounded text-white  text-center cursor-pointer w-full"
+            onClick={handleSignInToggle}
+          >
             Reset Password
           </div>
         </div>

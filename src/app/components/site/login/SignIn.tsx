@@ -2,32 +2,39 @@
 import React from "react";
 import IconButton from "../navbar/IconButton";
 // import Container from "../Container";
-// import { useDispatch, useSelector } from "react-redux";
-// import { AppDispatch, RootState } from "@/app/redux/store";
-// import {
-//   toggleSignUpVisibility,
-//   toggleVisibility,
-// } from "@/app/redux/globalStateSlice";
-// import SignUp from "./SignUp";
+import { useDispatch, useSelector } from "react-redux";
+import { AppDispatch, RootState } from "@/app/redux/store";
+import {
+  toggleVisibility,
+  signInVisibility,
+  signUpVisibility,
+  resetPasswordVisibility,
+} from "@/app/redux/globalStateSlice";
+import Link from "next/link";
 
 const SignIn = () => {
-  // const isSignUpVisible = useSelector(
-  //   (state: RootState) => state.globalState.isSignUpVisible
-  // );
-  // const dispatch: AppDispatch = useDispatch();
+  const dispatch: AppDispatch = useDispatch();
 
-  // const handleSignUpToggle = () => {
-  //   dispatch(toggleSignUpVisibility());
-  // };
+  const handleSignUpToggle = () => {
+    dispatch(signInVisibility(false));
+    dispatch(signUpVisibility(true));
+    dispatch(resetPasswordVisibility(false));
+  };
+  const handleSignInToggle = () => {
+    dispatch(signInVisibility(false));
+    dispatch(toggleVisibility());
+  };
+  const handleResetPasswordToggle = () => {
+    dispatch(signInVisibility(false));
+    dispatch(resetPasswordVisibility(true));
+  };
+
   return (
     <>
       <div className="bg-white px-[100px] py-[50px] w-[700px] h-[660px] mx-5 flex flex-col gap-[60px] rounded-xl ">
         <div className="flex justify-center gap-10 items-center text-xl font-bold">
-          <div className="cursor-pointer">SIGN IN </div>
-          <div
-            className="cursor-pointer"
-            // onClick={handleSignUpToggle}
-          >
+          <div className="cursor-pointer underline">SIGN IN </div>
+          <div className="cursor-pointer " onClick={handleSignUpToggle}>
             SIGN UP
           </div>
         </div>
@@ -63,12 +70,18 @@ const SignIn = () => {
               />
               <label htmlFor="radio-1 text-sm">Remember me</label>
             </div>
-            <div>Forgot Password?</div>
+            <div className="cursor-pointer" onClick={handleResetPasswordToggle}>
+              Forgot Password?
+            </div>
           </div>
           <div className="flex flex-col ">
-            <div className="text-lg py-2 bg-[rgba(24,41,59,1)] rounded text-white  text-center cursor-pointer w-full">
+            <Link
+              href="/my-account"
+              className="text-lg py-2 bg-[rgba(24,41,59,1)] rounded text-white  text-center cursor-pointer w-full"
+              onClick={handleSignInToggle}
+            >
               Sign In
-            </div>
+            </Link>
             <div className="text-xl font-bold border-b-[1px] py-4 text-center  w-full">
               Or
             </div>
@@ -154,20 +167,21 @@ const SignIn = () => {
 
           <div className="text-center">
             Don't have an account?
-            <span className="font-bold text-lg"> Sign Up now!</span>
+            <span
+              className="font-bold text-lg cursor-pointer"
+              onClick={handleSignUpToggle}
+            >
+              {" "}
+              Sign Up now!
+            </span>
           </div>
         </div>
       </div>
-      {/* {isSignUpVisible && (
-        <div
-          className="w-screen h-screen top-0 bottom-0 bg-[rgba(0,0,0,0.6)] flex justify-center  items-center fixed z-50"
-          onClick={handleSignUpToggle}
-        >
-          <SignUp />
-        </div>
-      )} */}
     </>
   );
 };
 
 export default SignIn;
+function toggleSignUpVisibility(arg0: boolean): any {
+  throw new Error("Function not implemented.");
+}
