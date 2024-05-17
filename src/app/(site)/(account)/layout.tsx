@@ -10,9 +10,9 @@ interface UserLayoutProps {
 const UserLayout = ({ children }: UserLayoutProps) => {
   return (
     <Container>
-      <div className="flex gap-5 my-[50px]">
+      <div className="flex gap-10 my-[50px]">
         <ProfileInformation />
-        <div className="w-3/4 bg-white">{children}</div>
+        <div className="w-3/4 ">{children}</div>
       </div>
     </Container>
   );

@@ -10,6 +10,7 @@ import ReturnSvgIcon from "../svg-icons/ReturnSvgIcon";
 import SecurityPaymentSvgIcon from "../svg-icons/SecurityPaymentSvgIcon";
 import CustomerServiceSvgIcon from "../svg-icons/CustomerServiceSvgIcon";
 import OrderTrackingSvgIcon from "../svg-icons/OrderTrackingSvgIcon";
+import OrderTrackingSvgIcon2 from "../svg-icons/OrderTrackingSvgIcon2";
 
 const ServiceDetails = () => {
   return (
@@ -19,7 +20,7 @@ const ServiceDetails = () => {
       <ServiceIcon icon={<SecurityPaymentSvgIcon />} title="Security Payment" />
       <ServiceIcon icon={<CustomerServiceSvgIcon />} title="Customer Service" />
       <ServiceIcon
-        icon={<OrderTrackingSvgIcon width="40" height="40" />}
+        icon={<OrderTrackingSvgIcon2 width="40" height="40" />}
         title="Order Tracking"
       />
     </div>

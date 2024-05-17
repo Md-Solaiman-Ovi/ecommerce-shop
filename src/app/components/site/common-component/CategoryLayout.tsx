@@ -8,7 +8,6 @@ interface CategoryLayoutProps {
 }
 
 const CategoryLayout: React.FC<CategoryLayoutProps> = (props) => {
-  console.log("title ", props.title);
   return (
     <Container className="flex flex-col gap-4  ">
       <CategoryTitle title={props.title} />

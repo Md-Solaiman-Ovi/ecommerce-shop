@@ -9,6 +9,7 @@ import AddressSvgIcon from "./svg-icons/AddressSvgIcon";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { MdOutlineLogout } from "react-icons/md";
+import OrderCartSvgIcon from "./svg-icons/OrderCartSvgIcon";
 const ProfileInformation = () => {
   const pathname = usePathname();
   return (
@@ -18,9 +19,9 @@ const ProfileInformation = () => {
           <Image
             src="/images/Ovi.jpg"
             className="rounded-full"
-            alt=""
             width={60}
             height={40}
+            alt=""
           />
         </div>
         <div>Md Solaiman Ovi</div>
@@ -39,7 +40,7 @@ const ProfileInformation = () => {
         />
         <IconButton
           linkpath="/my-orders"
-          icon={<CartSvgIcon pathname="/my-orders" />}
+          icon={<OrderCartSvgIcon pathname={pathname} />}
           title="My Orders"
           cssClass={`gap-5 rounded p-2 ${
             pathname == "/my-orders"
@@ -49,7 +50,9 @@ const ProfileInformation = () => {
         />
         <IconButton
           linkpath="/order-tracking"
-          icon={<OrderTrackingSvgIcon width="20" height="20" />}
+          icon={
+            <OrderTrackingSvgIcon width="20" height="20" pathname={pathname} />
+          }
           title="Order Tracking"
           cssClass={`gap-5 rounded p-2 ${
             pathname == "/order-tracking"
@@ -59,7 +62,7 @@ const ProfileInformation = () => {
         />
         <IconButton
           linkpath="/change-password"
-          icon={<ChangePasswordSvgIcon />}
+          icon={<ChangePasswordSvgIcon pathname={pathname} />}
           title="Chnange Password"
           cssClass={`gap-5 rounded  p-2 ${
             pathname == "/change-password"
@@ -69,7 +72,7 @@ const ProfileInformation = () => {
         />
         <IconButton
           linkpath="/address"
-          icon={<AddressSvgIcon />}
+          icon={<AddressSvgIcon pathname={pathname} />}
           title="Address"
           cssClass={`gap-5 rounded p-2 ${
             pathname == "/address"

@@ -25,6 +25,7 @@ import EmailSvgIcon from "../svg-icons/EmailSvgIcon";
 import ContactSvgIcon from "../svg-icons/ContactSvgIcon";
 import LocationSvgIcon from "../svg-icons/LocationSvgIcon";
 import OrderTrackingSvgIcon from "../svg-icons/OrderTrackingSvgIcon";
+import OrderTrackingSvgIcon2 from "../svg-icons/OrderTrackingSvgIcon2";
 const Footer = () => {
   return (
     <div className="">
@@ -84,7 +85,7 @@ const Footer = () => {
             <div className="flex flex-col gap-4">
               <LinkIcon
                 linkpath="/order-tracking"
-                icon={<OrderTrackingSvgIcon width="24" height="24" />}
+                icon={<OrderTrackingSvgIcon2 width="24" height="24" />}
                 title="Order Tracking"
               />
               <LinkIcon
