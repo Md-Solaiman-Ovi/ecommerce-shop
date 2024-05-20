@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 interface OrderedProductCardProps {
   orderedId: string;
   date: string;
@@ -32,9 +33,12 @@ const OrderedProductCard = ({
         <div className="flex text-center items-center w-full">
           <div className="text-center w-full">{status} </div>
           <div className="text-center w-full">{amount}</div>
-          <div className="text-center text-white  cursor-pointer text-sm px-[10px] py-[6px] rounded-md bg-[rgba(43,59,77,1)]">
+          <Link
+            href="/order-details"
+            className="text-center text-white  cursor-pointer text-sm px-[10px] py-[6px] rounded-md bg-[rgba(43,59,77,1)]"
+          >
             View
-          </div>
+          </Link>
         </div>
       </div>
     </div>

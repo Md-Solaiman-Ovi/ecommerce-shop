@@ -1,10 +1,12 @@
 import Container from "@/app/components/site/Container";
+import IconButton from "@/app/components/site/navbar/IconButton";
 import ProfileInformation from "@/app/components/site/ProfileInformation";
 import DeleteSvgIcon from "@/app/components/site/svg-icons/DeleteSvgIcon";
 import EditSvgIcon from "@/app/components/site/svg-icons/EditSvgIcon";
 import HomeSvgIcon from "@/app/components/site/svg-icons/HomeSvgIcon";
 import OfficeSvgIcon from "@/app/components/site/svg-icons/OfficeSvgIcon";
 import React from "react";
+import { HiPlus } from "react-icons/hi";
 
 const Address = () => {
   return (
@@ -56,6 +58,14 @@ const Address = () => {
             <DeleteSvgIcon />
           </div>
         </div>
+      </div>
+      <div className="flex justify-end items-center">
+        <IconButton
+          linkpath="/address/add-new-address"
+          icon={<HiPlus />}
+          title="Add New Address"
+          cssClass="gap-5 justify-center bg-[rgba(24,41,59,1)] py-3 text-lg text-white rounded-lg w-1/3  px-1"
+        />
       </div>
     </div>
   );
