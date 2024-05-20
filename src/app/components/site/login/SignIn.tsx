@@ -11,6 +11,7 @@ import {
   resetPasswordVisibility,
 } from "@/app/redux/globalStateSlice";
 import Link from "next/link";
+import HidePasswordSvgIcon from "../svg-icons/HidePasswordSvgIcon";
 
 const SignIn = () => {
   const dispatch: AppDispatch = useDispatch();
@@ -45,19 +46,20 @@ const SignIn = () => {
             </span>
             <input
               type="text"
-              placeholder="Your Name"
-              className="text-sm w-full h-full focus:outline-none  "
+              placeholder="Enter your email or phone number"
+              className="text-sm w-full h-full focus:outline-none my-1 "
             />
           </div>
-          <div className="border-[1px] border-black rounded p-2">
-            <span className="absolute -translate-y-[17px] translate-x-4 bg-white px-1 text-sm ">
+          <div className="flex items-center  border-[1px] border-black rounded p-2">
+            <span className="absolute -translate-y-[24px] translate-x-4 bg-white px-1 text-sm ">
               Password <span className="text-red-500">*</span>
             </span>
             <input
               type="text"
-              placeholder="Your Name"
-              className="text-sm w-full h-full focus:outline-none  "
+              placeholder="Enter your password"
+              className="text-sm w-full h-full focus:outline-none my-1 "
             />
+            <HidePasswordSvgIcon />
           </div>
           <div className="flex justify-between">
             <div className="flex items-center gap-2">

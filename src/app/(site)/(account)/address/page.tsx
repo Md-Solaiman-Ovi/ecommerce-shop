@@ -19,9 +19,9 @@ const Address = () => {
         </div>
       </div>
       <div className="flex justify-between py-[18px]">
-        <div className="flex gap-2 ">
+        <div className="flex gap-[10px] ">
           <div className="translate-y-1 ">
-            <HomeSvgIcon />
+            <OfficeSvgIcon />
           </div>
           <div>
             <div className="text-xl font-bold">Home</div>
@@ -38,9 +38,9 @@ const Address = () => {
         </div>
       </div>
       <div className="flex justify-between border-t-[1px] py-5 ">
-        <div className="flex gap-2 ">
+        <div className="flex gap-[10px] ">
           <div className="translate-y-1 ">
-            <OfficeSvgIcon />
+            <HomeSvgIcon />
           </div>
           <div>
             <div className="text-xl font-bold">Office</div>

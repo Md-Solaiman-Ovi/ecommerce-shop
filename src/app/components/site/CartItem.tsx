@@ -5,16 +5,29 @@ const CartItem = () => {
   return (
     <tr className="border-t-[1px] text-center">
       <td>
-        <Image
-          src={"/images/productImg1.png"}
-          width={100}
-          height={100}
-          alt=""
-        />
+        <div className="flex items-center justify-center">
+          {" "}
+          <Image
+            src={"/images/productImg1.png"}
+            width={90}
+            height={100}
+            alt=""
+          />
+        </div>
       </td>
-      <td>Apple iPhone 14 Pro</td>
+      <td className="text-start">Apple iPhone 14 Pro</td>
       <td>TK 149,999</td>
-      <td>1</td>
+      <td>
+        <div className="flex items-center justify-center gap-2">
+          <div className="border-[1px] border-black  px-2 rounded-full cursor-pointer ">
+            -
+          </div>
+          <div className=" ">1</div>
+          <div className="border-[1px] border-black px-2 rounded-full cursor-pointer">
+            +
+          </div>
+        </div>
+      </td>
       <td>TK 149,999</td>
       <td>
         <MdClear className="w-5 h-5 cursor-pointer" />

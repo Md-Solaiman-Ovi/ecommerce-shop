@@ -12,14 +12,16 @@ const Notifications = () => {
       <CategoryTitle title="Notifications" />
       <div className="flex flex-col gap-8 py-10">
         <div className="flex gap-4">
-          <div className=" flex gap-2 items-center text-[rgba(10,122,255,1)]">
-            <IoCheckmarkDoneSharp className="w-5 h-5" />
-            <div>Mark as read</div>
+          <div className=" flex gap-2 items-center text-[rgba(10,122,255,1)] group">
+            <IoCheckmarkDoneSharp className="w-5 h-5 group-hover:cursor-pointer" />
+            <div className="group-hover:cursor-pointer">Mark as read</div>
           </div>
 
-          <div className="flex gap-2 items-center px-4 py-1  bg-red-500 text-white rounded">
-            <RiDeleteBin6Line className="w-5 h-5" />
-            <div className="font-light"> Clear all</div>
+          <div className="flex gap-2 items-center px-4 py-1  bg-red-500 text-white rounded group">
+            <RiDeleteBin6Line className="w-5 h-5 group-hover:cursor-pointer " />
+            <div className="font-light group-hover:cursor-pointer">
+              Clear all
+            </div>
           </div>
         </div>
         <div className="flex flex-col bg-white w-full">

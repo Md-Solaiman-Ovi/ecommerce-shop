@@ -58,13 +58,13 @@ const OrderTracking = () => {
           </div>
         </div>
         <div className="flex justify-between text-xl ">
-          <div className=" text-start">Order</div>
+          <div className=" text-start ">Order</div>
           <div className="flex gap-2 items-center text-center">
             <TrackingLocationSvgIcon />
             <div>In Transit</div>
           </div>
-          <div className=" text-center ">Pick Up</div>
-          <div className=" text-end">Delivered</div>
+          <div className=" text-center text-gray-400">Pick Up</div>
+          <div className=" text-end text-gray-400">Delivered</div>
         </div>
       </div>
     </div>

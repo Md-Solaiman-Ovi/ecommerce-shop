@@ -1,6 +1,7 @@
 import React from "react";
 import OrderInformationProductCard from "./OrderInfomationProductCard";
 import OrderInfoOrderSummary from "./OrderInfoOrderSummary";
+import Link from "next/link";
 
 const OrderInformation = () => {
   return (
@@ -47,9 +48,12 @@ const OrderInformation = () => {
         <div className="text-sm">Lorem ipsum dolor sit amet consectetur.</div>
       </div>
       <div className="flex justify-end items-center">
-        <div className="w-1/4 text-sm bg-[rgba(24,41,59,1)] text-white text-center py-2 rounded cursor-pointer">
+        <Link
+          href="/my-orders"
+          className="w-1/4 text-sm bg-[rgba(24,41,59,1)] text-white text-center py-2 rounded cursor-pointer"
+        >
           Go Back Home
-        </div>
+        </Link>
       </div>
     </div>
   );

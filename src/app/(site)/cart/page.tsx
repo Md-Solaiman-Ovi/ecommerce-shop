@@ -25,9 +25,9 @@ const Cart = () => {
         <div className="w-full md:w-2/3 bg-white rounded p-4 overflow-auto md:overflow-hidden">
           <table className="w-full ">
             <thead className=" table-auto text-center ">
-              <tr className="m-4">
+              <tr className="m-4 text-sm">
                 <th></th>
-                <th className="text-center p-1 ">Product</th>
+                <th className="text-start p-1 ">Product</th>
                 <th className="text-center p-1 ">Unit Price</th>
                 <th className="text-center p-1 ">Quantity</th>
                 <th className="text-center p-1 ">Total Price</th>

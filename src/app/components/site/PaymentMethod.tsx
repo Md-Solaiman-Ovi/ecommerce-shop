@@ -7,8 +7,8 @@ const PaymentMethod = () => {
       <div className="text-xl font-bold">Payment Method</div>
       <div className="flex flex-col gap-5">
         <div className="flex gap-5 w-full">
-          <label htmlFor="cashon" className="w-full">
-            <div className="flex items-center gap-2 bg-white w-full p-4 rounded group">
+          <label htmlFor="cashon" className="w-full group  cursor-pointer">
+            <div className="flex items-center gap-2 bg-white w-full p-4 rounded  group-hover:cursor-pointer">
               <input
                 id="cashon"
                 type="radio"
@@ -27,8 +27,8 @@ const PaymentMethod = () => {
             </div>
           </label>
 
-          <label htmlFor="bkash" className="w-full">
-            <div className="flex items-center gap-2 bg-white w-full p-4 rounded group">
+          <label htmlFor="bkash" className="w-full group  cursor-pointer">
+            <div className="flex items-center gap-2 bg-white w-full p-4 rounded group-hover:cursor-pointer">
               <input
                 id="bkash"
                 type="radio"
@@ -47,8 +47,8 @@ const PaymentMethod = () => {
           </label>
         </div>
         <div className="flex gap-5 w-full">
-          <label htmlFor="nagad" className="w-full">
-            <div className="flex items-center gap-2 bg-white w-full p-4 rounded group">
+          <label htmlFor="nagad" className="w-full group  cursor-pointer">
+            <div className="flex items-center gap-2 bg-white w-full p-4 rounded group-hover:cursor-pointer">
               <input
                 id="nagad"
                 type="radio"
@@ -66,8 +66,8 @@ const PaymentMethod = () => {
             </div>
           </label>
 
-          <label htmlFor="rocket" className="w-full">
-            <div className="flex items-center gap-2 bg-white w-full p-4 rounded group">
+          <label htmlFor="rocket" className="w-full group  cursor-pointer">
+            <div className="flex items-center gap-2 bg-white w-full p-4 rounded group-hover:cursor-pointer">
               <input
                 id="rocket"
                 type="radio"
@@ -85,8 +85,8 @@ const PaymentMethod = () => {
             </div>
           </label>
         </div>
-        <label htmlFor="card" className="w-full">
-          <div className="flex items-center gap-2 bg-white w-full p-4 rounded group">
+        <label htmlFor="card" className="w-full group  cursor-pointer">
+          <div className="flex items-center gap-2 bg-white w-full p-4 rounded group-hover:cursor-pointer">
             <input
               id="card"
               type="radio"

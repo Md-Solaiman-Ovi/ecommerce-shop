@@ -15,7 +15,7 @@ const CustomerInfo = () => {
           <input
             type="text"
             placeholder="Your Name"
-            className="text-xs w-full h-full focus:outline-none "
+            className="text-xs w-full h-full focus:outline-none pb-2 "
           />
         </div>
         <div className="flex gap-4">
@@ -26,7 +26,7 @@ const CustomerInfo = () => {
             <input
               type="text"
               placeholder="Phone No"
-              className="text-xs w-full h-full focus:outline-none "
+              className="text-xs w-full h-full focus:outline-none pb-2 "
             />
           </div>
           <div className="border-[1px] border-black rounded p-2 w-full">
@@ -36,7 +36,7 @@ const CustomerInfo = () => {
             <input
               type="text"
               placeholder="Contact Email"
-              className="text-xs w-full h-full focus:outline-none "
+              className="text-xs w-full h-full focus:outline-none pb-2 "
             />
           </div>
         </div>
@@ -45,12 +45,12 @@ const CustomerInfo = () => {
             <span className="absolute -translate-y-[17px] translate-x-4 bg-white px-1 text-xs ">
               Division *
             </span>
-            <select className="text-sm focus:outline-none w-full">
+            <select className="text-sm focus:outline-none w-full cursor-pointer">
               {" "}
               <option value="" disabled={true}>
                 Select Category
               </option>
-              <option>City</option>
+              <option>Dhaka</option>
               <option>Sylhet</option>
               <option>Rajshahi</option>
             </select>
@@ -59,7 +59,7 @@ const CustomerInfo = () => {
             <span className="absolute -translate-y-[17px] translate-x-4 bg-white px-1 text-xs ">
               District *
             </span>
-            <select className="text-sm focus:outline-none w-full">
+            <select className="text-sm focus:outline-none w-full cursor-pointer pb-2">
               {" "}
               <option value="" disabled={true}>
                 Select Category
@@ -81,7 +81,7 @@ const CustomerInfo = () => {
               Sub-district (upazila) *
             </span>
             {/* {selctDivision && ( */}
-            <select className="text-sm focus:outline-none w-full ">
+            <select className="text-sm focus:outline-none w-full cursor-pointer ">
               {" "}
               <option value="">Select Category</option>
               <option>Dhaka</option>
@@ -90,7 +90,7 @@ const CustomerInfo = () => {
             </select>
             {/* )} */}
           </div>
-          <div className="flex gap-8  p-2 w-full ">
+          <div className="flex items-center gap-8  w-full ">
             <label htmlFor="inside" className="w-full group">
               <div className="flex items-center gap-2 bg-white w-full p-4 rounded group">
                 <input
@@ -137,7 +137,7 @@ const CustomerInfo = () => {
             <input
               type="text"
               placeholder="Enter Area"
-              className="text-xs w-full h-full focus:outline-none "
+              className="text-xs w-full h-full focus:outline-none pb-2 "
             />
           </div>
           <div className="border-[1px] border-black rounded p-2 w-full">
@@ -147,7 +147,7 @@ const CustomerInfo = () => {
             <input
               type="text"
               placeholder="Enter road no, block/sector"
-              className="text-xs w-full h-full focus:outline-none "
+              className="text-xs w-full h-full focus:outline-none pb-2 "
             />
           </div>
         </div>
@@ -158,7 +158,7 @@ const CustomerInfo = () => {
           <input
             type="text"
             placeholder="Address"
-            className="text-xs w-full h-full focus:outline-none pb-8"
+            className="text-xs w-full h-full focus:outline-none py-1 pb-8"
           />
         </div>
       </div>

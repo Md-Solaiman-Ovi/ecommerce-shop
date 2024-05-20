@@ -33,17 +33,17 @@ const Footer = () => {
         <ServiceDetails />
       </div>
       <div className=" bg-[rgba(35,47,62,1)] flex flex-col gap-10 items-center py-4 md:py-20">
-        <div className=" flex flex-col md:flex-row justify-between gap-8 container text-white font-normal text-sm py-10">
-          <div className=" flex flex-col gap-4 w-full ">
+        <div className=" flex flex-col gap-8  md:flex-row  container text-white font-normal text-sm py-10">
+          <div className=" flex flex-col gap-6 w-full ">
             <div className="font-family-forte text-[30px]">E-commerce</div>
-            <div className="">
+            <div className="text-sm leading-6">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac
               scelerisque leo vel morbi morbi laoreet pulvinar volutpat. Morbi
               ornare netus cum iaculis nunc facilisis egestas. At sed morbi
               orci, in tellus donec faucibus.
             </div>
           </div>
-          <div className=" flex flex-col gap-4 w-full">
+          <div className=" flex flex-col gap-4 w-full ">
             <div className="text-xl font-medium ">Locate Us:</div>
             <div className="flex flex-col gap-4">
               <ContactIcon
@@ -108,7 +108,7 @@ const Footer = () => {
         </div>
         <div className="flex flex-col md:flex-row gap-4  md:gap-24 container ">
           <div className="w-full flex flex-col justify-between">
-            <div className="flex gap-2 text-white items-center w-full border-y border-gray-500 pt-4 pb-4 md:pb-10">
+            <div className="flex gap-2 text-white items-center w-1/2 border-t border-gray-500 pt-4 pb-4 md:pb-10">
               <SocialIcon
                 linkpath="/"
                 icon={<BiLogoFacebook className="w-7 h-7 cursor-pointer" />}
@@ -126,7 +126,7 @@ const Footer = () => {
                 icon={<FaInstagram className="w-7 h-7 cursor-pointer" />}
               />
             </div>
-            <div className="flex  flex-col md:flex-row gap-4 md:gap-10 text-white py-4">
+            <div className="flex  flex-col md:flex-row gap-4 md:gap-10 border-t border-gray-500 text-white py-4">
               <div>PAYMENTS ACCEPTED</div>
               <div className="flex gap-4">
                 <PaymentImage

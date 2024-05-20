@@ -14,7 +14,7 @@ const ProfileInformation = () => {
   const pathname = usePathname();
   return (
     <div className="flex flex-col gap-5 w-1/4 bg-white p-5 ">
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center items-center border-b-[1px] inset-px">
         <div className="rounded-full p-2">
           <Image
             src="/images/Ovi.jpg"
@@ -24,8 +24,8 @@ const ProfileInformation = () => {
             alt=""
           />
         </div>
-        <div>Md Solaiman Ovi</div>
-        <div>msovi480@gmail.com</div>
+        <div className="text-xl font-bold">Md Solaiman Ovi</div>
+        <div className="text-sm mb-5">msovi480@gmail.com</div>
       </div>
       <div className="flex flex-col gap-[10px]">
         <IconButton

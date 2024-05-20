@@ -6,6 +6,7 @@ import {
 import { AppDispatch } from "@/app/redux/store";
 import React from "react";
 import { useDispatch } from "react-redux";
+import HidePasswordSvgIcon from "../svg-icons/HidePasswordSvgIcon";
 
 const CreateNewPassword = () => {
   const dispatch: AppDispatch = useDispatch();
@@ -22,8 +23,8 @@ const CreateNewPassword = () => {
         </div>
       </div>
       <div className="flex flex-col gap-[30px]">
-        <div className="border-[1px] border-black rounded p-2">
-          <span className="absolute -translate-y-[17px] translate-x-4 bg-white px-1 text-sm ">
+        <div className="flex items-center border-[1px] border-black rounded p-2">
+          <span className="absolute -translate-y-[24px] translate-x-4 bg-white px-1 text-sm ">
             Password <span className="text-red-500">*</span>
           </span>
           <input
@@ -31,9 +32,10 @@ const CreateNewPassword = () => {
             placeholder=" Enter your password"
             className="text-sm w-full h-full focus:outline-none py-1 px-4"
           />
+          <HidePasswordSvgIcon />
         </div>
-        <div className="border-[1px] border-black rounded p-2">
-          <span className="absolute -translate-y-[17px] translate-x-4 bg-white px-1 text-sm ">
+        <div className="flex items-center border-[1px] border-black rounded p-2">
+          <span className="absolute -translate-y-[24px] translate-x-4 bg-white px-1 text-sm ">
             Confirm Password <span className="text-red-500">*</span>
           </span>
           <input
@@ -41,6 +43,7 @@ const CreateNewPassword = () => {
             placeholder=" Enter your confirm password"
             className="text-sm w-full h-full focus:outline-none py-1 px-4"
           />
+          <HidePasswordSvgIcon />
         </div>
 
         <div className="flex flex-col ">
