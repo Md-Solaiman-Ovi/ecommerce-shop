@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
-import "./../globals.css";
+import "./../global.css";
 import NavBar from "../components/site/navbar/NavBar";
 import Footer from "../components/site/footer/Footer";
 import Provider from "../redux/Provider";

@@ -54,3 +54,8 @@
 .compact-sidebar {
   transition: width 5s;
 }
+
+accent-button {
+  background-color: #ff0 !important;
+  border-color: transparent !important;
+}

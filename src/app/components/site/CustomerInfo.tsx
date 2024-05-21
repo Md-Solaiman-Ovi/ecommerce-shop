@@ -98,7 +98,7 @@ const CustomerInfo = () => {
                   type="radio"
                   name="location1"
                   placeholder="Select Sub-District"
-                  className="text-xs  w-5 h-5 group-hover:cursor-pointer  accent-[rgba(254,196,0,1)] "
+                  className="text-xs  w-5 h-5 group-hover:cursor-pointer  "
                 />
 
                 <label
@@ -110,13 +110,13 @@ const CustomerInfo = () => {
               </div>
             </label>
             <label htmlFor="outside" className="w-full group">
-              <div className="flex items-center gap-2 bg-white w-full p-4 rounded group">
+              <div className="flex items-center gap-2 bg-white w-full p-4 rounded group ">
                 <input
                   id="outside"
                   type="radio"
                   name="location1"
                   placeholder="Select Sub-District"
-                  className="text-xs focus:outline-none w-5 h-5 group-hover:cursor-pointer  accent-[rgba(254,196,0,1)]"
+                  className="text-xs focus:outline-none w-5 h-5 group-hover:cursor-pointer  "
                 />
 
                 <label
