@@ -50,11 +50,13 @@ const ProductDetailsInfo = (props: Props) => {
         <div className="text-lg font-bold">Payment Options</div>
         <div className="flex gap-5 w-full">
           <PaymentOption
+            option="option1"
             price="95000 TK"
             message="Cash Discount Price"
             paymentOption="Online / Cash Payment"
           />
           <PaymentOption
+            option="option2"
             price="16,917 TK"
             message="Regular Price: 101,500 TK"
             paymentOption="0% EMI for 6 Months"
@@ -69,7 +71,7 @@ const ProductDetailsInfo = (props: Props) => {
           </div>
           <div className="bg-white px-5 py-3 font-bold text-2xl ">+</div>
         </div>
-        <div className="bg-[rgba(24,41,59,1)] text-2xl w-full text-white text-center py-2 rounded self-center">
+        <div className="bg-[rgba(24,41,59,1)] text-2xl w-full text-white text-center py-2 rounded self-center cursor-pointer">
           buy
         </div>
       </div>

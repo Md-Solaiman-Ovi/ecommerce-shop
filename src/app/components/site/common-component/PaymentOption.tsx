@@ -5,35 +5,33 @@ interface PaymentOptionProps {
   price?: string;
   message?: string;
   paymentOption?: string;
+  option: string;
 }
 
 const PaymentOption = ({
   price,
   message,
   paymentOption,
+  option,
 }: PaymentOptionProps) => {
   return (
-    <div
-      className={`flex  items-center gap-4 bg-white p-4 rounded focus:border-[1px]`}
+    <label
+      htmlFor={`${option}`}
+      className={`flex cursor-pointer items-center gap-4 bg-white p-4 rounded `}
     >
       <input
-        id="radio-2"
+        id={`${option}`}
         type="radio"
         name="color"
-        className="text-xs focus:outline-none rounded-full"
+        className="text-xs cursor-pointer"
       />
 
-      <div className="flex flex-col  gap-0">
-        <label
-          htmlFor="radio-1 "
-          className=" cursor-pointer font-bold  text-xl"
-        >
-          {price}
-        </label>
+      <div className="flex flex-col ">
+        <div className="font-bold"> {price}</div>
         <div className="text-xs">{message}</div>
         <div className="text-xs">{paymentOption}</div>
       </div>
-    </div>
+    </label>
   );
 };
 
