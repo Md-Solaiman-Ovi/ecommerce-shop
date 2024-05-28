@@ -6,6 +6,9 @@ interface SignInPopupState {
   isSignUpVisible: boolean;
   restPasswordVisible: boolean;
   newPasswordVisible: boolean;
+  showCategoryButton: boolean;
+  showCategoryList: boolean;
+  openCategoryList: boolean;
 }
 
 const initialState: SignInPopupState = {
@@ -15,6 +18,9 @@ const initialState: SignInPopupState = {
   isSignUpVisible: false,
   restPasswordVisible: false,
   newPasswordVisible: false,
+  showCategoryButton: false,
+  showCategoryList: true,
+  openCategoryList: false,
 };
 
 const globalStateSlice = createSlice({
@@ -39,6 +45,15 @@ const globalStateSlice = createSlice({
     newPasswordVisibility(state, action: PayloadAction<boolean>) {
       state.newPasswordVisible = action.payload;
     },
+    setShowCategoryButton(state, action: PayloadAction<boolean>) {
+      state.showCategoryButton = action.payload;
+    },
+    setShowCategoryList(state, action: PayloadAction<boolean>) {
+      state.showCategoryList = action.payload;
+    },
+    toggleCategoryList(state) {
+      state.openCategoryList = !state.openCategoryList;
+    },
   },
 });
 
@@ -49,6 +64,9 @@ export const {
   signUpVisibility,
   resetPasswordVisibility,
   newPasswordVisibility,
+  setShowCategoryButton,
+  setShowCategoryList,
+  toggleCategoryList,
 } = globalStateSlice.actions;
 
 export default globalStateSlice.reducer;

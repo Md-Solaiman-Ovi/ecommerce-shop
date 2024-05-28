@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useRef, useState } from "react";
 import OptionSelector from "./OptionSelector";
 import PaymentOption from "../common-component/PaymentOption";
 
@@ -10,6 +11,44 @@ interface Props {
 }
 const ProductDetailsInfo = (props: Props) => {
   const { Colors, Storage } = props.options;
+  const [quantityCount, setQuantityCount] = useState(1);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  const increase = () => {
+    setQuantityCount((prevValue) => {
+      const newValue = prevValue + 1;
+      return newValue > 1000 ? 1000 : newValue;
+    });
+  };
+
+  const decrease = () => {
+    setQuantityCount((prevValue) => {
+      const newValue = prevValue - 1;
+      return newValue < 1 ? 1 : newValue;
+    });
+  };
+
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const newValue = parseInt(event.target.value, 10);
+    if (!isNaN(newValue) && newValue <= 1000) {
+      setQuantityCount(newValue);
+    } else if (newValue > 1000) {
+      setQuantityCount(1000);
+    }
+  };
+
+  const handleInputFocus = () => {
+    if (inputRef.current) {
+      inputRef.current.select();
+    }
+  };
+
+  const handleInputClick = (event: React.MouseEvent<HTMLInputElement>) => {
+    event.preventDefault();
+    if (inputRef.current) {
+      inputRef.current.select();
+    }
+  };
 
   return (
     <div className="w-full flex flex-col gap-8">
@@ -63,15 +102,33 @@ const ProductDetailsInfo = (props: Props) => {
           />
         </div>
       </div>
-      <div className="flex gap-10 items-center ">
+      <div className="flex gap-10 items-center  ">
         <div className="flex  items-center rounded">
-          <div className="bg-white px-5 py-3 font-bold text-2xl ">-</div>
-          <div className="bg-white px-5 py-3 font-bold border-x-[1px] text-2xl ">
-            1
+          <div
+            className="bg-white p-2 md:px-5 md:py-3 font-bold text-2xl cursor-pointer "
+            onClick={decrease}
+          >
+            -
           </div>
-          <div className="bg-white px-5 py-3 font-bold text-2xl ">+</div>
+
+          <input
+            className="bg-white p-2 md:py-3 font-bold border-x-[1px] text-2xl  outline-none focus:outline-none text-center w-16 text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700 "
+            ref={inputRef}
+            value={quantityCount}
+            onChange={handleInputChange}
+            onFocus={handleInputFocus}
+            onClick={handleInputClick}
+          ></input>
+
+          <div
+            className="bg-white p-2 md:px-5 md:py-3 font-bold text-2xl cursor-pointer flex"
+            onClick={increase}
+          >
+            +
+          </div>
         </div>
-        <div className="bg-[rgba(24,41,59,1)] text-2xl w-full text-white text-center py-2 rounded self-center cursor-pointer">
+
+        <div className="bg-[rgba(24,41,59,1)] p-3  md:text-2xl w-full text-white text-center md:py-2 rounded self-center cursor-pointer">
           buy
         </div>
       </div>

@@ -12,6 +12,7 @@ const CartItem = () => {
             width={90}
             height={100}
             alt=""
+            className="onject-cover"
           />
         </div>
       </td>

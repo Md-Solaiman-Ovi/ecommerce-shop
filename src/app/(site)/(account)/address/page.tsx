@@ -59,12 +59,12 @@ const Address = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-end items-center">
+      <div className="flex  xl:justify-end items-center">
         <IconButton
           linkpath="/address/add-new-address"
           icon={<HiPlus />}
           title="Add New Address"
-          cssClass="gap-5 justify-center bg-[rgba(24,41,59,1)] py-3 text-lg text-white rounded-lg w-1/3  px-1"
+          cssClass="gap-5 justify-center bg-[rgba(24,41,59,1)] py-3 text-lg text-white rounded-lg w-full px-0 xl:w-1/3 md:px-1"
         />
       </div>
     </div>

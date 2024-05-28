@@ -3,7 +3,7 @@ import OrderHistoryStatus from "./OrderHistoryStatus";
 
 const OrderHistory = () => {
   return (
-    <div className="w-1/3 bg-white flex flex-col gap-5 p-10 rounded">
+    <div className="w-full  md:w-1/3 bg-white flex flex-col gap-5 p-10 rounded">
       <div className="text-xl font-bold">Order History</div>
       <section>
         <div className="">

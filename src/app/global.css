@@ -59,3 +59,6 @@ accent-button {
   background-color: #ff0 !important;
   border-color: transparent !important;
 }
+html {
+  scroll-behavior: smooth;
+}

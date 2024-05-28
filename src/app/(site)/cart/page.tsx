@@ -22,8 +22,8 @@ const Cart = () => {
     <Container className="py-10  ">
       <CategoryTitle title="Shopping Cart" />
       <div className="flex flex-col md:flex-row gap-5 w-full py-10">
-        <div className="w-full md:w-2/3 bg-white rounded p-4 overflow-auto md:overflow-hidden">
-          <table className="w-full ">
+        <div className="w-full md:w-2/3 bg-white rounded p-4 overflow-auto xl:overflow-hidden">
+          <table className="w-full  ">
             <thead className=" table-auto text-center ">
               <tr className="m-4 text-sm">
                 <th></th>

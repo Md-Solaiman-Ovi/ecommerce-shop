@@ -14,13 +14,14 @@ const ProductCardButton = ({
   icon,
 }: ProductCardButtonProps) => {
   return (
-    <Link
-      href={`${linkpath}`}
+    <div
       className={`${cssClass} px-4 py-2 rounded-full cursor-pointer text-xs flex gap-2 items-center`}
     >
-      <div>{icon}</div>
-      <div>{title}</div>
-    </Link>
+      <Link href={`${linkpath}`}>
+        <div>{icon}</div>
+        <div>{title}</div>
+      </Link>
+    </div>
   );
 };
 

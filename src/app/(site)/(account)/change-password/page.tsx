@@ -5,9 +5,11 @@ import React from "react";
 
 const ChangePassword = () => {
   return (
-    <div className="w-2/3 bg-white p-10 flex flex-col gap-[30px] rounded">
+    <div className="w-full xl:w-2/3 bg-white p-4 md:p-10 flex flex-col gap-[30px] rounded">
       <div className="flex flex-col gap-[10px] text-xl font-medium ">
-        <div className="font-bold">Change Password</div>
+        <div className="font-bold text-center md:text-start">
+          Change Password
+        </div>
         <div className="text-sm">
           Please type and confirm to change your current password.{" "}
         </div>

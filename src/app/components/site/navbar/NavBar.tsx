@@ -1,6 +1,6 @@
 "use client";
 import React, { ReactNode, useState } from "react";
-import { BiLogoFacebook } from "react-icons/bi";
+import { BiCategory, BiLogoFacebook } from "react-icons/bi";
 import { BsCart, BsCart3, BsSearch } from "react-icons/bs";
 import { FaInstagram, FaRegUser } from "react-icons/fa";
 import { GrTwitter } from "react-icons/gr";
@@ -24,19 +24,21 @@ import {
   signUpVisibility,
   resetPasswordVisibility,
   newPasswordVisibility,
+  setShowCategoryList,
+  toggleCategoryList,
 } from "@/app/redux/globalStateSlice";
 import SignUp from "../login/SignUp";
 import EnterEmailResetPassword from "../password/EnterEmailResetPassword";
 import CreateNewPassword from "../password/CreateNewPassword";
 import CheckEmail from "../password/CheckEmail";
-import SignInAlert from "../login/SignInAlert";
-
 import ContactSvgIcon from "../svg-icons/ContactSvgIcon";
 import EmailSvgIcon from "../svg-icons/EmailSvgIcon";
 import EarthSvgIcon from "../svg-icons/EarthSvgIcon";
 import WishSvgIcon from "../svg-icons/WishSvgIcon";
 import CartSvgIcon from "../svg-icons/CartSvgIcon";
 import NotificationSvgIcon from "../svg-icons/NotificationSvgIcon";
+import CategoryList from "../home/hero-section/CategoryList";
+
 const NavBar = () => {
   const pathname = usePathname();
   const [menu, setMenu] = useState(false);
@@ -58,6 +60,12 @@ const NavBar = () => {
   const isSignAlertInVisible = useSelector(
     (state: RootState) => state.globalState.isSignInAlertVisible
   );
+  const showCategoryButton = useSelector(
+    (state: RootState) => state.globalState.showCategoryButton
+  );
+  const openCategoryList = useSelector(
+    (state: RootState) => state.globalState.openCategoryList
+  );
   const dispatch: AppDispatch = useDispatch();
 
   const handleToggle = () => {
@@ -67,7 +75,7 @@ const NavBar = () => {
     dispatch(resetPasswordVisibility(false));
     dispatch(newPasswordVisibility(false));
   };
-
+  console.log("category button", openCategoryList);
   return (
     <>
       <div className="top-0 sticky z-50">
@@ -127,6 +135,14 @@ const NavBar = () => {
             >
               E-commerce
             </Link>
+
+            <div
+              className="cursor-pointer hidden md:block"
+              onClick={() => dispatch(toggleCategoryList())}
+            >
+              <BiCategory className="w-5 h-5  " />
+            </div>
+
             <div className="lg:flex hidden w-full max-w-xl border-[1px] border-white rounded ">
               <input
                 className=" px-6 py-2 w-full flex-1"
@@ -176,6 +192,12 @@ const NavBar = () => {
                   cssClass="flex-row gap-4 py-2 border-b-[1px]"
                 />
                 <IconButton
+                  linkpath="/"
+                  icon={<BiCategory className="w-5 h-5" />}
+                  title="Categories"
+                  cssClass="flex-row gap-4 py-2 border-b-[1px]"
+                />
+                <IconButton
                   linkpath="/wishlist"
                   icon={<PiHeartBold className="w-5 h-5" />}
                   title="Wishlist"
@@ -222,6 +244,11 @@ const NavBar = () => {
 
             {/* <SignInAlert /> */}
           </div>
+        </div>
+      )}
+      {openCategoryList && (
+        <div className="fixed top-28 translate-x-[360px] z-50 w-72 ">
+          <CategoryList cssClass="" />
         </div>
       )}
     </>

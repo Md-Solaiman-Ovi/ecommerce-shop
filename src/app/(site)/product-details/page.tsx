@@ -34,7 +34,7 @@ const ProductDetails = () => {
           <ProductDetailsInfo options={options} />
         </div>
       </div>
-      <div className="flex items-center justify-center gap-4 p-4 mt-10">
+      <div className="flex items-center text-sm md:text-base justify-center gap-2 md:gap-4 p-4 mt-10">
         <div
           className={`py-2 px-4  text-center rounded cursor-pointer ${
             selectOption == "Specification"
@@ -63,7 +63,7 @@ const ProductDetails = () => {
           }`}
           onClick={() => setSelectOption("Reviews")}
         >
-          Reviews (0)
+          Reviews(0)
         </div>
       </div>
       {selectOption == "Specification" && <ProductSpecifications />}

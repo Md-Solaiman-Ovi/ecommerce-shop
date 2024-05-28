@@ -4,13 +4,9 @@ import "./../global.css";
 import NavBar from "../components/site/navbar/NavBar";
 import Footer from "../components/site/footer/Footer";
 import Provider from "../redux/Provider";
-import { useDispatch, useSelector } from "react-redux";
-import { AppDispatch, RootState } from "../redux/store";
-import { toggleVisibility } from "../redux/globalStateSlice";
-import SignIn from "../components/site/login/SignIn";
+import MobileBottomNav from "../components/site/custom/MobileBottomNav";
 
 const poppins = Poppins({ weight: "400", subsets: ["latin"] });
-//www.youtube.com/
 
 export const metadata: Metadata = {
   title: "E-commerce shop",
@@ -31,6 +27,9 @@ export default function RootLayout({
           <NavBar />
           <div className={`${className}`}>{children}</div>
           <Footer />
+          <div className="block md:hidden">
+            <MobileBottomNav />
+          </div>
         </body>
       </html>
     </Provider>

@@ -14,7 +14,7 @@ const OrderInformationProductCard = ({
 }: OrderInformationProductCardProps) => {
   return (
     <div className="bg-white border-b-[1px]">
-      <div className="flex justify-between items-center px-5 py-4 text-center">
+      <div className="flex justify-between items-center px-1 xl:px-5 py-4 text-center text-sm md:text-base">
         <div className="flex gap-5 w-full items-center">
           <div className="">
             <Image src={`${productImage}`} alt="" width={60} height={60} />

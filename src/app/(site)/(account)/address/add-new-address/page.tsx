@@ -5,7 +5,7 @@ const AddNewAddress = () => {
     <div className="flex flex-col gap-6 bg-white rounded-lg p-4 ">
       <div className="text-xl font-bold">Add Your Address</div>
       <div className="flex flex-col gap-6">
-        <div className="flex gap-4">
+        <div className="flex flex-col md:flex-row gap-4">
           <div className="border-[1px] border-black rounded p-2 w-full">
             <span className="absolute -translate-y-[17px] translate-x-4 bg-white px-1 text-xs ">
               Division <span className="text-red-500 text-sm">*</span>
@@ -35,7 +35,7 @@ const AddNewAddress = () => {
             </select>
           </div>
         </div>
-        <div className="flex gap-4">
+        <div className="flex flex-col xl:flex-row gap-4">
           <div className="border-[1px] border-black rounded p-2 w-full">
             <span className="absolute -translate-y-[17px] translate-x-4 bg-white px-1 text-xs ">
               Sub-district (upazila){" "}
@@ -89,7 +89,7 @@ const AddNewAddress = () => {
             </label>
           </div>
         </div>
-        <div className="flex gap-4">
+        <div className="flex flex-col xl:flex-row gap-4">
           <div className="border-[1px] border-black rounded p-2 w-full">
             <span className="absolute -translate-y-[17px] translate-x-4 bg-white px-1 text-xs ">
               Area <span className="text-red-500 text-sm">*</span>

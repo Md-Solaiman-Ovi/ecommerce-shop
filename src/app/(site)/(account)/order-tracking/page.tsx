@@ -18,11 +18,11 @@ const OrderTracking = () => {
           <div>Press The "Track" Button.</div>
         </div>
       </div>
-      <div className="flex w-full rounded items-center mt-[50px]">
+      <div className="flex w-full rounded items-center mt-2 xl:mt-[50px]">
         <input
           type="text"
           placeholder="Enter your order ID"
-          className="bg-[rgba(231,234,239,1)] p-3 w-full rounded-l-md"
+          className="bg-[rgba(231,234,239,1)] p-3 w-full rounded-l-xl"
         />
 
         <div className="flex items-center justify-center gap-4 bg-[rgba(254,196,0,1)] text-center w-1/4 p-[10px] rounded-r-md">
@@ -30,9 +30,9 @@ const OrderTracking = () => {
           <div className="text-lg">Track</div>
         </div>
       </div>
-      <div className="flex flex-col gap-5 mt-[50px]">
+      <div className="flex flex-col gap-5 mt-2 xl:mt-[50px]">
         <div className="text-lg font-bold">Update:</div>
-        <div className="flex gap-10 text-sm">
+        <div className="flex flex-col xl:flex-row gap-4 xl:gap-10 text-sm">
           <div className="flex flex-col gap-3 w-2/3">
             <div className="font-bold ">Date:</div>
             <div>12/05/24</div>
@@ -47,17 +47,19 @@ const OrderTracking = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-4 mt-[50px]">
+      <div className="flex flex-col gap-4 mt-2 xl:mt-[50px] object-cover">
         <div className="w-full h-5 bg-[rgba(231,234,239,1)] rounded-full ">
-          <div className={`h-5 bg-[rgba(35,47,62,1)] rounded-full w-72 `}></div>
+          <div
+            className={`h-5 bg-[rgba(35,47,62,1)] rounded-full w-48 xl:w-72 `}
+          ></div>
           <div className="-translate-y-1 translate-x-3 absolute ">
             <IoTriangle className="w-5 h-5 rotate-180 text-[rgba(35,47,62,1)]" />
           </div>
-          <div className="-translate-y-1 translate-x-60 absolute ">
+          <div className="-translate-y-1 translate-x-20 xl:translate-x-60 absolute ">
             <IoTriangle className="w-5 h-5 rotate-180 text-[rgba(35,47,62,1)]" />
           </div>
         </div>
-        <div className="flex justify-between text-xl ">
+        <div className="flex justify-between text-sm xl:text-xl ">
           <div className=" text-start ">Order</div>
           <div className="flex gap-2 items-center text-center">
             <TrackingLocationSvgIcon />

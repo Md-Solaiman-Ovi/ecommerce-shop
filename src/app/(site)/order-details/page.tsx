@@ -6,7 +6,7 @@ import React from "react";
 const OrderDetailsPage = () => {
   return (
     <Container className="py-10">
-      <div className="flex gap-5 ">
+      <div className="flex flex-col md:flex-row gap-5 ">
         <OrderInformation />
         <OrderHistory />
       </div>

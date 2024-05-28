@@ -13,7 +13,7 @@ import OrderCartSvgIcon from "./svg-icons/OrderCartSvgIcon";
 const ProfileInformation = () => {
   const pathname = usePathname();
   return (
-    <div className="flex flex-col gap-5 w-1/4 bg-white p-5 ">
+    <div className="flex flex-col gap-5 w-full md:w-1/3 xl:w-1/4 bg-white p-5 ">
       <div className="flex flex-col justify-center items-center border-b-[1px] inset-px">
         <div className="rounded-full p-2">
           <Image

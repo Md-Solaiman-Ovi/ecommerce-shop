@@ -8,10 +8,10 @@ interface OptionProps {
 
 const Option = ({ name, option }: OptionProps) => {
   return (
-    <label htmlFor="radio-1 text-xs group-hover:cursor-pointer">
+    <label htmlFor={`${option}`} className="text-sm group-hover:cursor-pointer">
       <div className={`flex items-center gap-2 group`}>
         <input
-          id="radio-2"
+          id={`${option}`}
           type="radio"
           name={`${name}`}
           className="text-xs focus:outline-none rounded-full group-hover:cursor-pointer"

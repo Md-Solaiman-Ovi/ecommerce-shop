@@ -6,8 +6,8 @@ import AddReview from "./AddReview";
 
 const ProductReviews = () => {
   return (
-    <div className=" flex flex-col gap-[100px] my-10 ">
-      <div className="flex flex-col md:flex-row gap-[100px]">
+    <div className=" flex flex-col gap-10 md:gap-[100px] my-10 ">
+      <div className="flex flex-col md:flex-row gap-10 md:gap-[100px]">
         <CustomerReviews />
         <div className="w-full">
           <div className="w-full flex flex-col gap-4">
@@ -20,7 +20,7 @@ const ProductReviews = () => {
         </div>
       </div>
       <div className="flex flex-col gap-[50px]">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-[100px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-[100px]">
           <ReviewCard />
           <ReviewCard />
           <ReviewCard />
