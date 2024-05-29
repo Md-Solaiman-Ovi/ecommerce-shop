@@ -1,37 +1,140 @@
 {
-  "users": [
+  "categories": [
     {
-      "name": "laljan",
-
-      "email": "lal@gmail.com",
-
-      "password": "12345"
+      "id": "01",
+      "name": "MacBook",
+      "subcategories": [
+        {
+          "id": "01",
+          "name": "MacBook Air"
+        },
+        {
+          "id": "02",
+          "name": "MacBook Pro"
+        }
+      ]
     },
-
     {
-      "name": "basha",
-
-      "email": "basha@gmail.com",
-
-      "password": "12345"
+      "id": "02",
+      "name": "iPad Pro",
+      "subcategories": [
+        {
+          "id": "01",
+          "name": "11-inch Model"
+        },
+        {
+          "id": "02",
+          "name": "12.9-inch Model"
+        }
+      ]
     },
-
     {
-      "name": "jan",
-
-      "email": "jan@gmail.com",
-
-      "password": "12345"
+      "id": "03",
+      "name": "iPhone",
+      "subcategories": [
+        {
+          "id": "01",
+          "name": "iPhone 14 Series"
+        },
+        {
+          "id": "02",
+          "name": "iPhone SE"
+        },
+        {
+          "id": "03",
+          "name": "iPhone 13 Series"
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "name": "iPad Air",
+      "subcategories": [
+        {
+          "id": "01",
+          "name": "iPad Air (5th Generation)"
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "name": "Apple Watch",
+      "subcategories": [
+        {
+          "id": "01",
+          "name": "Apple Watch Series 8"
+        },
+        {
+          "id": "02",
+          "name": "Apple Watch SE"
+        },
+        {
+          "id": "03",
+          "name": "Apple Watch Ultra"
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "name": "iMac",
+      "subcategories": [
+        {
+          "id": "01",
+          "name": "24-inch iMac"
+        },
+        {
+          "id": "02",
+          "name": "27-inch iMac"
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "name": "AirPods",
+      "subcategories": [
+        {
+          "id": "01",
+          "name": "AirPods (3rd Generation)"
+        },
+        {
+          "id": "02",
+          "name": "AirPods Pro"
+        },
+        {
+          "id": "03",
+          "name": "AirPods Max"
+        },
+        {
+          "id": "04",
+          "name": "AirPods (2nd Generation)"
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "name": "Computer Accessories",
+      "subcategories": [
+        {
+          "id": "01",
+          "name": "Magic Keyboard"
+        },
+        {
+          "id": "02",
+          "name": "Magic Mouse"
+        },
+        {
+          "id": "03",
+          "name": "Magic Trackpad"
+        },
+        {
+          "id": "04",
+          "name": "Adapters and Cables"
+        },
+        {
+          "id": "05",
+          "name": "Displays"
+        }
+      ]
     }
-  ],
-  "Products": [
-    {
-      "id": "",
-      "name": "Apple iPhone 14 Pro Max",
-      "price": "100000",
-      "discountPrice": "90000",
-      "rating": "5"
-    },
-    {}
   ]
 }

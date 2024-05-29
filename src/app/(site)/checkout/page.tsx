@@ -52,7 +52,7 @@ const Checkout = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-between items-center w-full md:w-2/3 pr-0 md:pr-[26px]">
+        <div className="flex flex-col gap-4 md:flex-row md:justify-between items-center w-full md:w-2/3 pr-0 md:pr-[26px]">
           <div className="flex items-center gap-2">
             <input
               id="radio-1"
@@ -66,7 +66,7 @@ const Checkout = () => {
               I have read and agree to the Terms and Conditions
             </label>
           </div>
-          <div className="text-lg py-2 bg-[rgba(24,41,59,1)] rounded text-white w-72 text-center cursor-pointer">
+          <div className="text-lg py-2 bg-[rgba(24,41,59,1)] rounded text-white w-full md:w-72 text-center cursor-pointer">
             Confirm Order
           </div>
         </div>

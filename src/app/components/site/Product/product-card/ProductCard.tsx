@@ -25,7 +25,7 @@ const ProductCard = () => {
           />
           <div className="flex gap-4 items-center invisible group-hover:visible  transform transition-all delay-150 group-hover:scale-105  group-hover:duration-150">
             <ProductCardButton
-              linkpath=""
+              linkpath="/cart"
               title="Add to Cart"
               cssClass=" bg-black text-white"
               icon={<AddToCartSvgIcon />}

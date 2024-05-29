@@ -72,7 +72,7 @@ const CustomerInfo = () => {
         </div>
         <div className="flex gap-4">
           <div
-            className="border-[1px] border-black rounded p-2 w-full"
+            className="border-[1px] border-black rounded p-2 w-1/2 md:w-full"
             // onClick={() => {
             //   setSelectDivision(true);
             // }}
@@ -90,8 +90,8 @@ const CustomerInfo = () => {
             </select>
             {/* )} */}
           </div>
-          <div className="flex items-center gap-8  w-full ">
-            <label htmlFor="inside" className="w-full group">
+          <div className="flex items-center gap-0 md:gap-8  w-1/2 md:w-full ">
+            <label htmlFor="inside" className="w-1/2 md:w-full group">
               <div className="flex items-center gap-2 bg-white w-full p-4 rounded group">
                 <input
                   id="inside"
@@ -103,13 +103,13 @@ const CustomerInfo = () => {
 
                 <label
                   htmlFor="inside"
-                  className="text-sm group-hover:cursor-pointer"
+                  className="text-xs md:text-sm group-hover:cursor-pointer"
                 >
                   Inside City
                 </label>
               </div>
             </label>
-            <label htmlFor="outside" className="w-full group">
+            <label htmlFor="outside" className="w-1/2 md:w-full group">
               <div className="flex items-center gap-2 bg-white w-full p-4 rounded group ">
                 <input
                   id="outside"
@@ -121,7 +121,7 @@ const CustomerInfo = () => {
 
                 <label
                   htmlFor="outside"
-                  className="text-sm group-hover:cursor-pointer"
+                  className="text-xs md:text-sm group-hover:cursor-pointer"
                 >
                   Outside City
                 </label>

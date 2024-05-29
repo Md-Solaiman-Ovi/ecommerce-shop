@@ -80,8 +80,8 @@ const NavBar = () => {
     <>
       <div className="top-0 sticky z-50">
         <div className="h-[40px] bg-[rgba(43,59,77,1)] border-b-[1px] border-gray-600 items-center hidden md:flex">
-          <div className="flex justify-center gap-4 lg:justify-between items-center text-white font-normal text-sm container ">
-            <div className="flex gap-24 ">
+          <div className="flex  gap-4 justify-between items-center text-white font-normal text-sm container ">
+            <div className="flex md:gap-4 xl:gap-24 ">
               <ContactIcon
                 icon={<EmailSvgIcon />}
                 title="youremail@gmail.com"
@@ -92,8 +92,8 @@ const NavBar = () => {
                 title="+12 34 56789 1011"
               />
             </div>
-            <div className="flex gap-10">
-              <div className="flex gap-2 items-center">
+            <div className="flex md:gap-4 xl:gap-10">
+              <div className="flex gap-1 xl:gap-2 items-center">
                 <SocialIcon
                   linkpath="/"
                   icon={<BiLogoFacebook className="w-4 h-4 cursor-pointer" />}
@@ -111,13 +111,13 @@ const NavBar = () => {
                   icon={<FaInstagram className="w-4 h-4 cursor-pointer" />}
                 />
               </div>
-              <div className="flex gap-2 items-center cursor-pointer">
+              <div className="flex gap-1 xl:gap-2 items-center cursor-pointer">
                 <EarthSvgIcon />
                 <div>English</div>
                 <RiArrowDropDownLine className="w-5 h-5 " />
               </div>
               <div
-                className="flex gap-2 items-center cursor-pointer"
+                className="flex gap-1 xl:gap-2 items-center cursor-pointer"
                 onClick={handleToggle}
               >
                 <FaRegUser className="w-4 h-4 " />
@@ -128,24 +128,25 @@ const NavBar = () => {
         </div>
 
         <div className="h-[70px] bg-[rgba(35,47,62,1)] flex items-center ">
-          <div className="flex justify-between items-center  text-white font-normal text-sm container">
-            <Link
-              href="/"
-              className="font-family-forte text-[30px] cursor-pointer "
-            >
-              E-commerce
-            </Link>
+          <div className="flex gap-4 justify-between items-center  text-white font-normal text-sm container">
+            <div className="flex items-center gap-4 ">
+              <Link
+                href="/"
+                className="font-family-forte text-[30px] cursor-pointer "
+              >
+                E-commerce
+              </Link>
 
-            <div
-              className="cursor-pointer hidden md:block"
-              onClick={() => dispatch(toggleCategoryList())}
-            >
-              <BiCategory className="w-5 h-5  " />
+              <div
+                className="cursor-pointer hidden md:block"
+                onClick={() => dispatch(toggleCategoryList())}
+              >
+                <BiCategory className="w-5 h-5  " />
+              </div>
             </div>
-
-            <div className="lg:flex hidden w-full max-w-xl border-[1px] border-white rounded ">
+            <div className="md:flex hidden w-full max-w-xl border-[1px] border-white rounded ">
               <input
-                className=" px-6 py-2 w-full flex-1"
+                className=" px-6 py-2 w-full flex-1 focus:outline-yellow-400"
                 type="text"
                 placeholder="Search "
               />

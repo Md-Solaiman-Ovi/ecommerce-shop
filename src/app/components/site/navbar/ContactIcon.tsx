@@ -23,17 +23,7 @@ const ContactIcon = ({
   title,
 }: ContactIconProps) => {
   return (
-    <div className="flex items-center gap-4">
-      {/* <svg
-        width={`${width}`}
-        height={`${height}`}
-        viewBox="0 0 16 16"
-        fill={`${fill}`}
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path d={`${d}`} stroke={`${stroke}`} stroke-width="1.5" />
-      </svg> */}
-
+    <div className="flex items-center gap-2 xl:gap-4">
       <div>{icon}</div>
       <div className="cursor-text">{title}</div>
     </div>

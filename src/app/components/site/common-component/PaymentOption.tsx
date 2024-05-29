@@ -17,7 +17,7 @@ const PaymentOption = ({
   return (
     <label
       htmlFor={`${option}`}
-      className={`flex cursor-pointer items-center gap-4 bg-white p-4 rounded `}
+      className={`flex cursor-pointer items-center gap-4 bg-white p-4 rounded  `}
     >
       <input
         id={`${option}`}
