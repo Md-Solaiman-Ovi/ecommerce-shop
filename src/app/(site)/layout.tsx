@@ -5,7 +5,7 @@ import NavBar from "../components/site/navbar/NavBar";
 import Footer from "../components/site/footer/Footer";
 import Provider from "../redux/Provider";
 import MobileBottomNav from "../components/site/custom/MobileBottomNav";
-
+import "animate.css";
 const poppins = Poppins({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {

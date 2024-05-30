@@ -23,7 +23,7 @@ const ProductCard = () => {
             height={200}
             alt=""
           />
-          <div className="flex gap-4 items-center invisible group-hover:visible  transform transition-all delay-150 group-hover:scale-105  group-hover:duration-150">
+          <div className="flex gap-4 items-center lg:invisible group-hover:visible  transform transition-all delay-150 md:group-hover:scale-105  group-hover:duration-150">
             <ProductCardButton
               linkpath="/cart"
               title="Add to Cart"

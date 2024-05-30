@@ -11,7 +11,7 @@ interface ServiceIconProps {
 
 const ServiceIcon = ({ icon, title }: ServiceIconProps) => {
   return (
-    <div className="flex flex-col items-center gap-4">
+    <div className="flex flex-col items-center gap-4 text-center">
       <div>{icon}</div>
       <div className="text-[18px]"> {title}</div>
     </div>

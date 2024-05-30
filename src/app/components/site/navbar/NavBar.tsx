@@ -183,7 +183,9 @@ const NavBar = () => {
             {menu && (
               <div
                 className={`block md:hidden cursor-pointer absolute w-full ${
-                  menu ? "transition  " : ""
+                  menu == true
+                    ? "animate__animated animate__fadeInDown "
+                    : "animate__animated animate__fadeOutDown"
                 }flex flex-col text-start left-0 top-[70px] bg-[rgba(0,0,0,0.6)] p-4`}
               >
                 <IconButton
@@ -249,7 +251,7 @@ const NavBar = () => {
       )}
       {openCategoryList && (
         <div className="fixed top-28 translate-x-[360px] z-50 w-72 ">
-          <CategoryList cssClass="" />
+          <CategoryList cssClass="animate__animated animate__fadeInDown" />
         </div>
       )}
     </>

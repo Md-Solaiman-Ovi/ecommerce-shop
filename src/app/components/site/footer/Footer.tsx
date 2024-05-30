@@ -32,9 +32,9 @@ const Footer = () => {
       <div className="h-full py-4 md:py-0 md:h-[150px] bg-[rgba(43,59,77,1)] flex flex-col md:flex-row items-center  ">
         <ServiceDetails />
       </div>
-      <div className=" bg-[rgba(35,47,62,1)] flex flex-col gap-10 items-center py-4 md:py-20">
-        <div className=" flex flex-col gap-8  md:flex-row  container text-white font-normal text-sm py-10">
-          <div className=" flex flex-col gap-6 w-full ">
+      <div className=" bg-[rgba(35,47,62,1)] flex flex-col gap-10 items-center  py-4 md:py-20">
+        <div className=" flex flex-col gap-8  md:flex-row  container text-center md:text-start text-white font-normal text-sm py-10">
+          <div className=" flex flex-col gap-6 w-full items-center md:items-start">
             <div className="font-family-forte text-[30px]">E-commerce</div>
             <div className="text-sm leading-6">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac
@@ -43,9 +43,9 @@ const Footer = () => {
               orci, in tellus donec faucibus.
             </div>
           </div>
-          <div className=" flex flex-col gap-4 w-full ">
+          <div className=" flex flex-col gap-4 w-full  ">
             <div className="text-xl font-medium ">Locate Us:</div>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 items-center md:items-start ">
               <ContactIcon
                 icon={<LocationSvgIcon />}
                 title="28 Bartholomeo street, USA"
@@ -60,9 +60,9 @@ const Footer = () => {
               />
             </div>
           </div>
-          <div className="flex flex-col gap-4 w-full">
+          <div className="flex flex-col gap-4 w-full   ">
             <div className="text-xl font-medium">Get to Know Us:</div>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4  items-center md:items-start">
               <LinkIcon
                 linkpath="/about-us"
                 icon={<MdArrowForwardIos />}
@@ -80,9 +80,9 @@ const Footer = () => {
               />
             </div>
           </div>
-          <div className="flex flex-col gap-4 w-full">
+          <div className="flex flex-col gap-4 w-full text-center md:text-start">
             <div className="text-xl font-medium">Help Zone:</div>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 items-center md:items-start">
               <LinkIcon
                 linkpath="/order-tracking"
                 icon={<OrderTrackingSvgIcon2 width="24" height="24" />}

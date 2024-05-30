@@ -2,18 +2,20 @@ import Link from "next/link";
 import React, { ReactElement } from "react";
 import { MdArrowForwardIos } from "react-icons/md";
 
+type SubCategoryProps = {
+  id: string;
+  name: string;
+};
+interface CategoryListProps {
+  name: string;
+  subcategories: SubCategoryProps[];
+}
+
 interface CategoryLinkIconProps {
   linkpath?: string;
   icon?: ReactElement;
   title?: string;
-  item?: {
-    id: string;
-    name: string;
-    subcategories: {
-      id: string;
-      name: string;
-    };
-  };
+  item?: CategoryListProps;
 }
 
 const CategoryLinkIcon = ({
@@ -35,9 +37,8 @@ const CategoryLinkIcon = ({
           p-4
         >
           {item?.subcategories?.map(
-            (subcategory: { name: string }, index: number) => (
+            (subcategory: SubCategoryProps, index: number) => (
               <div className=" p-3 border-b cursor-pointer" key={index}>
-                {" "}
                 {subcategory.name}
               </div>
             )

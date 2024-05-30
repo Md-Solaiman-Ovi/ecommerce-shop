@@ -19,7 +19,7 @@ const Home = () => {
       {loading ? (
         <Loading />
       ) : (
-        <div className="font-normal text-sm py-[50px] w-full flex flex-col gap-4 scrollbar-hide">
+        <div className="font-normal text-sm py-0  md:py-4 xl:py-[50px] w-full flex flex-col gap-4 scrollbar-hide">
           <HeroSection />
           <CategoryLayout title={"Best selling product"} />
           <CategoryLayout title={"Products"} />
