@@ -21,29 +21,46 @@ const Cart = () => {
   return (
     <Container className="py-10  ">
       <CategoryTitle title="Shopping Cart" />
-      <div className="flex flex-col md:flex-row gap-5 w-full py-10">
-        <div className="w-full md:w-2/3 bg-white rounded p-4 overflow-auto xl:overflow-hidden">
-          <table className="w-full  ">
-            <thead className=" table-auto text-center ">
-              <tr className="m-4 text-sm">
-                <th></th>
-                <th className="text-start p-1 ">Product</th>
-                <th className="text-center p-1 ">Unit Price</th>
-                <th className="text-center p-1 ">Quantity</th>
-                <th className="text-center p-1 ">Total Price</th>
-                {/* <th className="text-center p-1 md:p-4 text-sm"></th> */}
-              </tr>
-            </thead>
-            <tbody>
+      <div className="flex flex-col lg:flex-row gap-5 w-full py-10">
+        <div className="w-full lg:w-2/3 bg-white rounded p-0 md:p-4 overflow-auto xl:overflow-hidden">
+          <div className="flex flex-col items-center w-full ">
+            <div className="w-full border-b py-4">
+              <div className="text-sm font-semibold flex items-center  text-center w-full ">
+                <div className="flex justify-normal items-center w-5/6">
+                  <div className="w-full items-center hidden lg:flex ">
+                    <div className="text-center p-1 w-3/5 flex ">
+                      <div className="w-1/3"></div>
+                      <div className="flex flex-col md:flex-row items-center w-2/3">
+                        <div className="w-full">Product</div>
+                        <div className="text-center p-1 w-full ">
+                          Unit Price
+                        </div>
+                      </div>
+                    </div>
+                    <div className="w-2/5 flex justify-between items-center gap-4  ">
+                      <div className="text-center p-1 w-full">Quantity</div>
+                      <div className="text-center p-1 w-full">Total Price</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex justify-center text-end w-2/6 lg:w-1/6">
+                  <div className=" bg-red-500 text-white font-light rounded py-1 px-2 shadow-lg">
+                    {" "}
+                    clear all
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="w-full flex flex-col">
               <CartItem />
               <CartItem />
               <CartItem />
               <CartItem />
               <CartItem />
-            </tbody>
-          </table>
+            </div>
+          </div>
         </div>
-        <div className="w-full md:w-1/3">
+        <div className="w-full lg:w-1/3">
           <div className="bg-white p-4  rounded-lg max-h-[558px] flex flex-col ">
             <div className="py-4  border-b-[1px] text-xl font-semibold">
               Order Summary
