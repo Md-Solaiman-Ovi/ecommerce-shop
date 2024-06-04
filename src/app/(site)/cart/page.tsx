@@ -16,7 +16,7 @@ const Cart = () => {
   const count = useSelector((state: any) => state.counter.value);
   const dispatch = useDispatch();
 
-  const [vouchar, setVouchar] = useState(false);
+  const [vouchar, setVouchar] = useState(true);
 
   return (
     <Container className="py-10  ">
@@ -44,9 +44,9 @@ const Cart = () => {
                   </div>
                 </div>
                 <div className="flex justify-center text-end w-2/6 lg:w-1/6">
-                  <div className=" bg-red-500 text-white font-light rounded py-1 px-2 shadow-lg">
+                  <div className=" bg-red-500 text-white font-light rounded py-1 px-2 shadow-lg cursor-pointer">
                     {" "}
-                    clear all
+                    Clear All
                   </div>
                 </div>
               </div>
@@ -81,18 +81,22 @@ const Cart = () => {
               <div>Payable Total</div>
               <div>00 TK.</div>
             </div>
-            <div className="flex justify-between items-center text-sm border-b-[1px] py-4">
+            <label
+              htmlFor="vouchar"
+              className="flex justify-between items-center text-sm border-b-[1px] py-4 cursor-pointer "
+              onClick={() => setVouchar(!vouchar)}
+            >
               <div>Add promo code or vouchar</div>
               <RiArrowDropDownLine
                 className={`w-7 h-7 cursor-pointer ${
                   vouchar ? "rotate-180" : ""
                 }`}
-                onClick={() => setVouchar(!vouchar)}
               />
-            </div>
+            </label>
             {vouchar && (
               <div className="flex border-[1px] my-4">
                 <input
+                  id="vouchar"
                   type="text "
                   placeholder=" Enter promo code "
                   className="w-full px-4 text-sm font-light"

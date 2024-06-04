@@ -42,7 +42,7 @@ const CategoryList = ({ cssClass }: CategoryProps) => {
         {categories.map((category: CategoryListProps, index: number) => (
           <CategoryLinkIcon
             key={index}
-            linkpath=""
+            linkpath="/categories"
             // title={category.name}
             item={category}
           />

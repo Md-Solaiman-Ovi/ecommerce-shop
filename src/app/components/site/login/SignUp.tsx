@@ -16,11 +16,11 @@ const SignUp = () => {
   };
   return (
     <div className="bg-white px-[100px] py-[50px] w-[700px]  flex flex-col gap-[60px] rounded-xl">
-      <div className="flex justify-center gap-10 items-center text-xl font-bold">
-        <div className="cursor-pointer" onClick={handleSignInToggle}>
-          SIGN IN{" "}
+      <div className="flex flex-col justify-center items-center  ">
+        <div className="text-3xl text-primary font-bold">SIGN UP</div>
+        <div className="cursor-pointer">
+          Enter Your Details To Create Your Account
         </div>
-        <div className="cursor-pointer  underline">SIGN UP</div>
       </div>
       <div className="flex flex-col gap-[30px]">
         <div className="border-[1px] border-black rounded p-2">

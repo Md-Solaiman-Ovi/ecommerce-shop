@@ -25,7 +25,7 @@ const ContactIcon = ({
   return (
     <div className="flex items-center gap-2 xl:gap-4">
       <div>{icon}</div>
-      <div className="cursor-text">{title}</div>
+      <div className="">{title}</div>
     </div>
   );
 };

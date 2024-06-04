@@ -33,11 +33,9 @@ const SignIn = () => {
   return (
     <>
       <div className="bg-white px-[100px] py-[50px] w-[700px] h-[660px] mx-5 flex flex-col gap-[60px] rounded-xl ">
-        <div className="flex justify-center gap-10 items-center text-xl font-bold">
-          <div className="cursor-pointer underline">SIGN IN </div>
-          <div className="cursor-pointer " onClick={handleSignUpToggle}>
-            SIGN UP
-          </div>
+        <div className="flex flex-col justify-center items-center  ">
+          <div className="text-3xl text-primary font-bold">LOG IN</div>
+          <div className="cursor-pointer ">Sign For The Best Experience</div>
         </div>
         <div className="flex flex-col gap-[30px]">
           <div className="border-[1px] border-black rounded p-2">

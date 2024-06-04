@@ -26,6 +26,7 @@ import {
   newPasswordVisibility,
   setShowCategoryList,
   toggleCategoryList,
+  toggleMenu,
 } from "@/app/redux/globalStateSlice";
 import SignUp from "../login/SignUp";
 import EnterEmailResetPassword from "../password/EnterEmailResetPassword";
@@ -41,10 +42,11 @@ import CategoryList from "../home/hero-section/CategoryList";
 
 const NavBar = () => {
   const pathname = usePathname();
-  const [menu, setMenu] = useState(false);
+  // const [menu, setMenu] = useState(false);
   const isVisible = useSelector(
     (state: RootState) => state.globalState.isVisible
   );
+  const menu = useSelector((state: RootState) => state.globalState.menu);
   const isSignInVisible = useSelector(
     (state: RootState) => state.globalState.isSignInVisible
   );
@@ -82,15 +84,21 @@ const NavBar = () => {
         <div className="h-[40px] bg-[rgba(43,59,77,1)] border-b-[1px] border-gray-600 items-center hidden md:flex">
           <div className="flex  gap-4 justify-between items-center text-white font-normal text-sm container ">
             <div className="flex md:gap-4 xl:gap-24 ">
-              <ContactIcon
-                icon={<EmailSvgIcon />}
-                title="youremail@gmail.com"
-              />
-
-              <ContactIcon
-                icon={<ContactSvgIcon width="18" height="18" />}
-                title="+12 34 56789 1011"
-              />
+              <Link
+                href="mailto:youremail@gmail.com"
+                className="cursor-pointer group "
+              >
+                <ContactIcon
+                  icon={<EmailSvgIcon />}
+                  title="youremail@gmail.com"
+                />
+              </Link>
+              <Link href="tel:+1234567891011">
+                <ContactIcon
+                  icon={<ContactSvgIcon width="18" height="18" />}
+                  title="+12 34 56789 1011"
+                />
+              </Link>
             </div>
             <div className="flex md:gap-4 xl:gap-10">
               <div className="flex gap-1 xl:gap-2 items-center">
@@ -144,9 +152,9 @@ const NavBar = () => {
                 <BiCategory className="w-5 h-5  " />
               </div>
             </div>
-            <div className="md:flex hidden w-full max-w-xl border-[1px] border-white rounded ">
+            <div className="md:flex hidden w-full max-w-xl border-[1px] rounded ">
               <input
-                className=" px-6 py-2 w-full flex-1 focus:outline-yellow-400"
+                className=" px-6 py-2 w-full flex-1 focus:outline-none text-black box-bordeborder-yellow-500"
                 type="text"
                 placeholder="Search "
               />
@@ -176,7 +184,7 @@ const NavBar = () => {
             </div>
             <div
               className="block md:hidden cursor-pointer"
-              onClick={() => setMenu(!menu)}
+              onClick={() => dispatch(toggleMenu())}
             >
               <TfiMenuAlt className="w-5 h-5" />
             </div>
@@ -195,7 +203,7 @@ const NavBar = () => {
                   cssClass="flex-row gap-4 py-2 border-b-[1px]"
                 />
                 <IconButton
-                  linkpath="/"
+                  linkpath="/categories"
                   icon={<BiCategory className="w-5 h-5" />}
                   title="Categories"
                   cssClass="flex-row gap-4 py-2 border-b-[1px]"

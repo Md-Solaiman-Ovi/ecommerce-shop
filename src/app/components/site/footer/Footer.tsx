@@ -33,8 +33,8 @@ const Footer = () => {
         <ServiceDetails />
       </div>
       <div className=" bg-[rgba(35,47,62,1)] flex flex-col gap-10 items-center  py-4 md:py-20">
-        <div className=" flex flex-col gap-8  md:flex-row  container text-center md:text-start text-white font-normal text-sm py-10">
-          <div className=" flex flex-col gap-6 w-full items-center md:items-start">
+        <div className=" flex flex-col gap-8  md:flex-row  container  text-white font-normal text-sm py-10">
+          <div className=" flex flex-col gap-6 w-full ">
             <div className="font-family-forte text-[30px]">E-commerce</div>
             <div className="text-sm leading-6">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac
@@ -45,7 +45,7 @@ const Footer = () => {
           </div>
           <div className=" flex flex-col gap-4 w-full  ">
             <div className="text-xl font-medium ">Locate Us:</div>
-            <div className="flex flex-col gap-4 items-center md:items-start ">
+            <div className="flex flex-col gap-4  ">
               <ContactIcon
                 icon={<LocationSvgIcon />}
                 title="28 Bartholomeo street, USA"
@@ -62,7 +62,7 @@ const Footer = () => {
           </div>
           <div className="flex flex-col gap-4 w-full   ">
             <div className="text-xl font-medium">Get to Know Us:</div>
-            <div className="flex flex-col gap-4  items-center md:items-start">
+            <div className="flex flex-col gap-4  ">
               <LinkIcon
                 linkpath="/about-us"
                 icon={<MdArrowForwardIos />}
@@ -80,9 +80,9 @@ const Footer = () => {
               />
             </div>
           </div>
-          <div className="flex flex-col gap-4 w-full text-center md:text-start">
+          <div className="flex flex-col gap-4 w-full ">
             <div className="text-xl font-medium">Help Zone:</div>
-            <div className="flex flex-col gap-4 items-center md:items-start">
+            <div className="flex flex-col gap-4 ">
               <LinkIcon
                 linkpath="/order-tracking"
                 icon={<OrderTrackingSvgIcon2 width="24" height="24" />}
@@ -106,9 +106,9 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row gap-4  md:gap-24 container ">
-          <div className="w-full flex flex-col justify-between">
-            <div className="flex gap-2 text-white items-center w-1/2 border-t border-gray-500 pt-4 pb-4 md:pb-10">
+        <div className="flex flex-col-reverse md:flex-row gap-4  lg:gap-24 container ">
+          <div className="w-full flex flex-col-reverse md:flex-col justify-between">
+            <div className="flex gap-2 text-white items-center md:w-1/2 border-t border-gray-500 pt-4 pb-4 md:pb-10">
               <SocialIcon
                 linkpath="/"
                 icon={<BiLogoFacebook className="w-7 h-7 cursor-pointer" />}
@@ -126,9 +126,9 @@ const Footer = () => {
                 icon={<FaInstagram className="w-7 h-7 cursor-pointer" />}
               />
             </div>
-            <div className="flex  flex-col md:flex-row gap-4 md:gap-10 border-t border-gray-500 text-white py-4">
-              <div>PAYMENTS ACCEPTED</div>
-              <div className="flex gap-4">
+            <div className="flex flex-col items-center md:items-start md:flex-row gap-4 xl:gap-8 border-t border-gray-500 text-white py-4">
+              <div className="w-full">PAYMENTS ACCEPTED</div>
+              <div className="flex gap-4 w-full">
                 <PaymentImage
                   imageSource="/images/Rectangle66.png"
                   width={40}
