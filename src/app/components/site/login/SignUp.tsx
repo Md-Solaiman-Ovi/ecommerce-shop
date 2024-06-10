@@ -23,54 +23,54 @@ const SignUp = () => {
         </div>
       </div>
       <div className="flex flex-col gap-[30px]">
-        <div className="border-[1px] border-black rounded p-2">
-          <span className="absolute -translate-y-[17px] translate-x-4 bg-white px-1 text-sm ">
+        <div className="border-[1px] border-black rounded ">
+          <span className="absolute -translate-y-3 translate-x-4 bg-white px-1 text-sm ">
             Full Name <span className="text-red-500">*</span>
           </span>
           <input
             type="text"
             placeholder="Enter your full name"
-            className="text-xs w-full h-full focus:outline-none  "
+            className="text-xs w-full h-12 rounded px-4  "
           />
         </div>
-        <div className="border-[1px] border-black rounded p-2">
-          <span className="absolute -translate-y-[17px] translate-x-4 bg-white px-1 text-sm ">
+        <div className="border-[1px] border-black rounded ">
+          <span className="absolute -translate-y-3 translate-x-4 bg-white px-1 text-sm ">
             Phone Number <span className="text-red-500">*</span>
           </span>
           <input
             type="text"
             placeholder="Enter your phone number"
-            className="text-xs w-full h-full focus:outline-none  "
+            className="text-xs w-full h-12 rounded px-4   "
           />
         </div>
-        <div className="border-[1px] border-black rounded p-2">
-          <span className="absolute -translate-y-[17px] translate-x-4 bg-white px-1 text-sm ">
+        <div className="border-[1px] border-black rounded ">
+          <span className="absolute -translate-y-3 translate-x-4 bg-white px-1 text-sm ">
             E-mail <span className="text-red-500">*</span>
           </span>
           <input
             type="email"
             placeholder="Enter your e-mail address"
-            className="text-xs w-full h-full focus:outline-none  "
+            className="text-xs w-full h-12 rounded px-4   "
           />
         </div>
-        <div className="border-[1px] border-black rounded p-2">
-          <span className="absolute -translate-y-[17px] translate-x-4 bg-white px-1 text-sm ">
+        <div className="border-[1px] border-black rounded ">
+          <span className="absolute -translate-y-3 translate-x-4 bg-white px-1 text-sm ">
             Password <span className="text-red-500">*</span>
           </span>
           <input
             type="password"
             placeholder="Enter your password"
-            className="text-xs w-full h-full focus:outline-none  "
+            className="text-xs w-full h-12 rounded px-4   "
           />
         </div>
-        <div className="border-[1px] border-black rounded p-2">
-          <span className="absolute -translate-y-[17px] translate-x-4 bg-white px-1 text-sm ">
+        <div className="border-[1px] border-black rounded ">
+          <span className="absolute -translate-y-3 translate-x-4 bg-white px-1 text-sm ">
             Confirm Password <span className="text-red-500">*</span>
           </span>
           <input
             type="text"
             placeholder="Enter your confirm password"
-            className="text-xs w-full h-full focus:outline-none  "
+            className="text-xs w-full h-12 rounded px-4   "
           />
         </div>
         <div className="flex justify-between">

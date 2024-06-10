@@ -38,26 +38,28 @@ const SignIn = () => {
           <div className="cursor-pointer ">Sign For The Best Experience</div>
         </div>
         <div className="flex flex-col gap-[30px]">
-          <div className="border-[1px] border-black rounded p-2">
-            <span className="absolute -translate-y-[17px] translate-x-4 bg-white px-1 text-sm ">
+          <div className="border-[1px] border-black rounded ">
+            <span className="absolute -translate-y-[10px] translate-x-4 bg-white px-1 text-sm ">
               Email or Phone Number <span className="text-red-500">*</span>
             </span>
             <input
               type="text"
               placeholder="Enter your email or phone number"
-              className="text-sm w-full h-full focus:outline-none my-1 "
+              className="text-sm w-full h-12 rounded px-2 "
             />
           </div>
-          <div className="flex items-center  border-[1px] border-black rounded p-2">
-            <span className="absolute -translate-y-[24px] translate-x-4 bg-white px-1 text-sm ">
+          <div className="relative flex items-center border-[1px] border-black rounded ">
+            <span className="absolute -translate-y-6 translate-x-4 bg-white px-1 text-sm ">
               Password <span className="text-red-500">*</span>
             </span>
             <input
               type="text"
               placeholder="Enter your password"
-              className="text-sm w-full h-full focus:outline-none my-1 "
+              className="text-sm w-full h-12 rounded pl-2 "
             />
-            <HidePasswordSvgIcon />
+            <div className="absolute right-4 ">
+              <HidePasswordSvgIcon />
+            </div>
           </div>
           <div className="flex justify-between">
             <div className="flex items-center gap-2">

@@ -18,14 +18,25 @@ const OrderTracking = () => {
           <div>Press The "Track" Button.</div>
         </div>
       </div>
-      <div className="flex w-full rounded items-center mt-2 xl:mt-[50px]">
+      {/* <div className="flex w-full rounded items-center mt-2 xl:mt-[50px]">
         <input
           type="text"
           placeholder="Enter your order ID"
-          className="bg-[rgba(231,234,239,1)] p-3 w-full rounded-l-xl"
+          className="bg-[rgba(231,234,239,1)] p-3 w-full rounded-l-md focus:outline-none focus:border-y-2 focus:border-l-2 focus:box-border focus:border-yellow-500"
         />
 
         <div className="flex items-center justify-center gap-4 bg-[rgba(254,196,0,1)] text-center w-1/4 p-[10px] rounded-r-md">
+          <BsSearch className="w-5 h-5 text-black" />
+          <div className="text-lg">Track</div>
+        </div>
+      </div> */}
+      <div className="md:flex hidden w-full rounded mt-2 xl:mt-[50px]">
+        <input
+          className="bg-[rgba(231,234,239,1)] p-3 w-full  flex-1 text-black focus:outline-none focus:border-y-2 focus:border-l-2 focus:box-border focus:border-yellow-500 rounded-l"
+          type="text"
+          placeholder="Enter your order ID "
+        />
+        <div className="flex items-center justify-center gap-4 bg-[rgba(254,196,0,1)] text-center w-1/4 p-[10px] rounded-r-md cursor-pointer">
           <BsSearch className="w-5 h-5 text-black" />
           <div className="text-lg">Track</div>
         </div>

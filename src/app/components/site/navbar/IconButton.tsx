@@ -1,3 +1,4 @@
+"use client";
 import { toggleMenu } from "@/app/redux/globalStateSlice";
 import { AppDispatch } from "@/app/redux/store";
 import Link from "next/link";

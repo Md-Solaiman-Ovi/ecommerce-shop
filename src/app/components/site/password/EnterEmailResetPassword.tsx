@@ -23,14 +23,14 @@ const EnterEmailResetPassword = () => {
         </div>
       </div>
       <div className="flex flex-col gap-[30px]">
-        <div className="border-[1px] border-black rounded p-2">
-          <span className="absolute -translate-y-[17px] translate-x-4 bg-white px-1 text-sm ">
+        <div className="border-[1px] border-black rounded ">
+          <span className="absolute -translate-y-3 translate-x-4 bg-white px-1 text-sm ">
             Email <span className="text-red-500">*</span>
           </span>
           <input
             type="text"
-            placeholder=" Enter your email address"
-            className="text-sm w-full h-full focus:outline-none py-2 px-4"
+            placeholder="Enter your email address"
+            className="text-sm w-full h-12 rounded px-4"
           />
         </div>
 

@@ -152,13 +152,13 @@ const NavBar = () => {
                 <BiCategory className="w-5 h-5  " />
               </div>
             </div>
-            <div className="md:flex hidden w-full max-w-xl border-[1px] rounded ">
+            <div className="md:flex hidden w-full max-w-xl rounded ">
               <input
-                className=" px-6 py-2 w-full flex-1 focus:outline-none text-black box-bordeborder-yellow-500"
+                className=" px-6 py-2 w-full flex-1 text-black focus:outline-none focus:border-y-2 focus:border-l-2 focus:box-border focus:border-yellow-500 rounded-l"
                 type="text"
                 placeholder="Search "
               />
-              <div className="bg-yellow-400 rounded-r text-white text-[26px] grid place-items-center px-4 ">
+              <div className="bg-yellow-400 rounded-r text-white text-[26px] grid place-items-center px-4 cursor-pointer">
                 <BsSearch className="w-5 h-5 text-black" />
               </div>
             </div>

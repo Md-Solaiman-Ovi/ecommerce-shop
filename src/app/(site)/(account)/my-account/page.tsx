@@ -9,44 +9,44 @@ const MyAccount = () => {
       <div className="text-xl font-medium">Account information</div>
       <div className="flex flex-col gap-5">
         <div className="flex flex-col xl:flex-row gap-5">
-          <div className="border-[1px] border-black rounded p-2 w-full">
-            <span className="absolute -translate-y-[17px] translate-x-4 bg-white px-1 text-xs ">
+          <div className="border-[1px] border-black rounded w-full">
+            <span className="absolute -translate-y-2 translate-x-4 bg-white px-1 text-xs ">
               First Name <span className="text-red-500">*</span>
             </span>
             <input
               type="text"
               placeholder="Md Solaiman"
-              className="text-xs w-full h-full focus:outline-none "
+              className="text-xs w-full h-12 rounded px-2 "
             />
           </div>
-          <div className="border-[1px] border-black rounded p-2 w-full">
-            <span className="absolute -translate-y-[17px] translate-x-4 bg-white px-1 text-xs ">
+          <div className="border-[1px] border-black rounded w-full">
+            <span className="absolute -translate-y-2 translate-x-4 bg-white px-1 text-xs ">
               Last Name <span className="text-red-500">*</span>
             </span>
             <input
               type="text"
               placeholder="Ovi"
-              className="text-xs w-full h-full focus:outline-none "
+              className="text-xs w-full h-12 rounded px-2 "
             />
           </div>
         </div>
         <div className="flex flex-col xl:flex-row gap-5">
-          <div className="border-[1px] border-black rounded p-2 w-full">
-            <span className="absolute -translate-y-[17px] translate-x-4 bg-white px-1 text-xs ">
+          <div className="border-[1px] border-black rounded w-full">
+            <span className="absolute -translate-y-2 translate-x-4 bg-white px-1 text-xs ">
               Date of Birth <span className="text-red-500">*</span>
             </span>
             <input
               type="text"
               placeholder="01/01/1996"
-              className="text-xs text-black w-full h-full focus:outline-none "
+              className="text-xs text-black w-full h-12 rounded px-2 "
             />
           </div>
-          <div className="border-[1px] border-black rounded p-2 w-full">
-            <span className="absolute -translate-y-[17px] translate-x-4 bg-white px-1 text-xs ">
+          <div className="border-[1px] border-black rounded w-full">
+            <span className="absolute -translate-y-2 translate-x-4 bg-white px-1 text-xs ">
               Gender <span className="text-red-500">*</span>
             </span>
 
-            <div className="flex gap-5 p-1">
+            <div className="flex gap-5 p-2 py-3">
               <label htmlFor="male" className=" group">
                 <div className="flex items-center gap-2 bg-white w-full rounded group">
                   <input
@@ -87,24 +87,24 @@ const MyAccount = () => {
           </div>
         </div>
         <div className="flex flex-col xl:flex-row gap-5">
-          <div className="border-[1px] border-black rounded p-2 w-full">
-            <span className="absolute -translate-y-[17px] translate-x-4 bg-white px-1 text-xs ">
+          <div className="border-[1px] border-black rounded w-full">
+            <span className="absolute -translate-y-2 translate-x-4 bg-white px-1 text-xs ">
               Contact Number <span className="text-red-500">*</span>
             </span>
             <input
               type="text"
               placeholder="+8801840000000"
-              className="text-xs w-full h-full focus:outline-none "
+              className="text-xs w-full h-12 rounded px-2 "
             />
           </div>
-          <div className="border-[1px] border-black rounded p-2 w-full">
-            <span className="absolute -translate-y-[17px] translate-x-4 bg-white px-1 text-xs ">
+          <div className="border-[1px] border-black rounded w-full">
+            <span className="absolute -translate-y-2 translate-x-4 bg-white px-1 text-xs ">
               Email Address <span className="text-red-500">*</span>
             </span>
             <input
               type="text"
               placeholder="msovi480@gmail.com"
-              className="text-xs w-full h-full focus:outline-none "
+              className="text-xs w-full h-12 rounded px-2 "
             />
           </div>
         </div>

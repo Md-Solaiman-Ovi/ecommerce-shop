@@ -23,27 +23,31 @@ const CreateNewPassword = () => {
         </div>
       </div>
       <div className="flex flex-col gap-[30px]">
-        <div className="flex items-center border-[1px] border-black rounded p-2">
-          <span className="absolute -translate-y-[24px] translate-x-4 bg-white px-1 text-sm ">
+        <div className="relative flex items-center border-[1px] border-black rounded ">
+          <span className="absolute -translate-y-6 translate-x-4 bg-white px-1 text-sm ">
             Password <span className="text-red-500">*</span>
           </span>
           <input
-            type="email"
-            placeholder=" Enter your password"
-            className="text-sm w-full h-full focus:outline-none py-1 px-4"
+            type="text"
+            placeholder="Enter your password"
+            className="text-sm w-full h-12 rounded pl-2 "
           />
-          <HidePasswordSvgIcon />
+          <div className="absolute right-4 ">
+            <HidePasswordSvgIcon />
+          </div>
         </div>
-        <div className="flex items-center border-[1px] border-black rounded p-2">
-          <span className="absolute -translate-y-[24px] translate-x-4 bg-white px-1 text-sm ">
+        <div className="relative flex items-center border-[1px] border-black rounded ">
+          <span className="absolute -translate-y-6 translate-x-4 bg-white px-1 text-sm ">
             Confirm Password <span className="text-red-500">*</span>
           </span>
           <input
-            type="password"
-            placeholder=" Enter your confirm password"
-            className="text-sm w-full h-full focus:outline-none py-1 px-4"
+            type="text"
+            placeholder="Enter your confirm password"
+            className="text-sm w-full h-12 rounded pl-2 "
           />
-          <HidePasswordSvgIcon />
+          <div className="absolute right-4 ">
+            <HidePasswordSvgIcon />
+          </div>
         </div>
 
         <div className="flex flex-col ">

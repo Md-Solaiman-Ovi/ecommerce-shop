@@ -6,11 +6,17 @@ const AddNewAddress = () => {
       <div className="text-xl font-bold">Add Your Address</div>
       <div className="flex flex-col gap-6">
         <div className="flex flex-col md:flex-row gap-4">
-          <div className="border-[1px] border-black rounded p-2 w-full">
-            <span className="absolute -translate-y-[17px] translate-x-4 bg-white px-1 text-xs ">
-              Division <span className="text-red-500 text-sm">*</span>
+          <label
+            htmlFor="division"
+            className="border-[1px] border-black rounded w-full group-hover:cursor-pointer group"
+          >
+            <span className="absolute -translate-y-[12px] translate-x-4 bg-white px-1 text-xs ">
+              Division <span className="text-red-500 text-sm ">*</span>
             </span>
-            <select className="text-sm focus:outline-none w-full">
+            <select
+              id="division"
+              className="text-sm focus:outline-none w-full p-2 rounded group-hover:cursor-pointer "
+            >
               {" "}
               <option value="" disabled={true}>
                 Select Category
@@ -19,12 +25,18 @@ const AddNewAddress = () => {
               <option>Sylhet</option>
               <option>Rajshahi</option>
             </select>
-          </div>
-          <div className="border-[1px] border-black rounded p-2 w-full">
-            <span className="absolute -translate-y-[17px] translate-x-4 bg-white px-1 text-xs ">
-              District <span className="text-red-500 text-sm">*</span>
+          </label>
+          <label
+            htmlFor="district"
+            className="border-[1px] border-black rounded w-full group-hover:cursor-pointer group"
+          >
+            <span className="absolute -translate-y-[12px] translate-x-4 bg-white px-1 text-xs ">
+              District <span className="text-red-500 text-sm ">*</span>
             </span>
-            <select className="text-sm focus:outline-none w-full">
+            <select
+              id="district"
+              className="text-sm focus:outline-none w-full p-2 rounded group-hover:cursor-pointer "
+            >
               {" "}
               <option value="" disabled={true}>
                 Select Category
@@ -33,24 +45,31 @@ const AddNewAddress = () => {
               <option>Sylhet</option>
               <option>Rajshahi</option>
             </select>
-          </div>
+          </label>
         </div>
         <div className="flex flex-col xl:flex-row gap-4">
-          <div className="border-[1px] border-black rounded p-2 w-full">
-            <span className="absolute -translate-y-[17px] translate-x-4 bg-white px-1 text-xs ">
+          <label
+            htmlFor="Sub-district"
+            className="border-[1px] border-black rounded w-full group-hover:cursor-pointer group"
+          >
+            <span className="absolute -translate-y-[12px] translate-x-4 bg-white px-1 text-xs ">
               Sub-district (upazila){" "}
-              <span className="text-red-500 text-sm ">* </span>
+              <span className="text-red-500 text-sm ">*</span>
             </span>
-
-            <select className="text-sm focus:outline-none w-full ">
+            <select
+              id="Sub-district"
+              className="text-sm focus:outline-none w-full p-2 rounded group-hover:cursor-pointer "
+            >
               {" "}
-              <option value="">Select Category</option>
+              <option value="" disabled={true}>
+                Select Category
+              </option>
               <option>Dhaka</option>
               <option>Sylhet</option>
               <option>Rajshahi</option>
             </select>
-          </div>
-          <div className="flex gap-8  p-2 w-full ">
+          </label>
+          <div className="flex gap-8 w-full ">
             <label htmlFor="inside" className="w-full group">
               <div className="flex items-center gap-2 bg-white w-full p-4 rounded group">
                 <input
@@ -90,28 +109,39 @@ const AddNewAddress = () => {
           </div>
         </div>
         <div className="flex flex-col xl:flex-row gap-4">
-          <div className="border-[1px] border-black rounded p-2 w-full">
-            <span className="absolute -translate-y-[17px] translate-x-4 bg-white px-1 text-xs ">
+          <div className="border-[1px] border-black rounded  w-full">
+            <span className="absolute -translate-y-3 translate-x-4 bg-white px-1 text-xs ">
               Area <span className="text-red-500 text-sm">*</span>
             </span>
             <input
               type="text"
               placeholder="Enter Area"
-              className="text-xs w-full h-full focus:outline-none "
+              className="text-xs w-full h-12 rounded px-2  "
             />
           </div>
-          <div className="border-[1px] border-black rounded p-2 w-full">
-            <span className="absolute -translate-y-[17px] translate-x-4 bg-white px-1 text-xs ">
+          <div className="border-[1px] border-black rounded  w-full">
+            <span className="absolute -translate-y-3 translate-x-4 bg-white px-1 text-xs ">
               Street Address <span className="text-red-500 text-sm">*</span>
             </span>
             <input
               type="text"
               placeholder="Enter road no, block/sector"
-              className="text-xs w-full h-full focus:outline-none "
+              className="text-xs w-full h-12 rounded px-2  "
             />
           </div>
         </div>
-        <div className="border-[1px] border-black rounded p-2">
+        <div className="border-[1px] border-black rounded w-full">
+          <span className="absolute -translate-y-3 translate-x-4 bg-white px-1 text-xs ">
+            Delivery Instructions{" "}
+            <span className="text-red-500  text-sm">*</span>
+          </span>
+          <input
+            type="text"
+            placeholder="Delivery instructions (Please give us more information about your address)"
+            className="text-xs w-full h-20 rounded px-2   "
+          />
+        </div>
+        {/* <div className="border-[1px] border-black rounded p-2">
           <span className="absolute -translate-y-[17px] translate-x-4 bg-white px-1 text-xs ">
             Delivery Instructions{" "}
             <span className="text-red-500 text-sm">*</span>
@@ -121,8 +151,9 @@ const AddNewAddress = () => {
             placeholder="Delivery instructions (Please give us more information about your address)"
             className="text-xs w-full h-full focus:outline-none pb-8"
           />
-        </div>
+        </div> */}
       </div>
+
       <div className="flex flex-col ">
         <div className="text-lg font-bold ">Pick Up Your Parcel From</div>
         <div className="flex gap-4 items-center">

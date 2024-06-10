@@ -8,44 +8,45 @@ const CustomerInfo = () => {
     <div className="flex flex-col gap-6 bg-white rounded-lg p-4 ">
       <div className="text-xl font-bold">Customer Information</div>
       <div className="flex flex-col gap-6">
-        <div className="border-[1px] border-black rounded p-2">
-          <span className="absolute -translate-y-[17px] translate-x-4 bg-white px-1 text-xs ">
+        <div className="border-[1px] border-black rounded ">
+          <span className="absolute -translate-y-[10px] translate-x-4 bg-white px-1 text-xs ">
             Name *
           </span>
           <input
+            id="name"
             type="text"
             placeholder="Your Name"
-            className="text-xs w-full h-full focus:outline-none pb-2 "
+            className="text-xs w-full h-12 rounded px-4"
           />
         </div>
         <div className="flex gap-4">
-          <div className="border-[1px] border-black rounded p-2 w-full">
-            <span className="absolute -translate-y-[17px] translate-x-4 bg-white px-1 text-xs ">
+          <div className="border-[1px] border-black rounded w-full">
+            <span className="absolute -translate-y-[10px] translate-x-4 bg-white px-1 text-xs ">
               Contact Number *
             </span>
             <input
               type="text"
               placeholder="Phone No"
-              className="text-xs w-full h-full focus:outline-none pb-2 "
+              className="text-xs w-full h-12 rounded px-4"
             />
           </div>
-          <div className="border-[1px] border-black rounded p-2 w-full">
-            <span className="absolute -translate-y-[17px] translate-x-4 bg-white px-1 text-xs ">
+          <div className="border-[1px] border-black rounded w-full">
+            <span className="absolute -translate-y-[10px] translate-x-4 bg-white px-1 text-xs ">
               Contact Email *
             </span>
             <input
               type="text"
               placeholder="Contact Email"
-              className="text-xs w-full h-full focus:outline-none pb-2 "
+              className="text-xs w-full h-12 rounded px-4 "
             />
           </div>
         </div>
         <div className="flex gap-4">
-          <div className="border-[1px] border-black rounded p-2 w-full">
-            <span className="absolute -translate-y-[17px] translate-x-4 bg-white px-1 text-xs ">
+          <div className="border-[1px] border-black rounded w-full">
+            <span className="absolute -translate-y-3 translate-x-4 bg-white p-1 text-xs ">
               Division *
             </span>
-            <select className="text-sm focus:outline-none w-full cursor-pointer">
+            <select className="text-sm focus:outline-none w-full h-12 cursor-pointer rounded p-2 ">
               {" "}
               <option value="" disabled={true}>
                 Select Category
@@ -55,11 +56,11 @@ const CustomerInfo = () => {
               <option>Rajshahi</option>
             </select>
           </div>
-          <div className="border-[1px] border-black rounded p-2 w-full">
-            <span className="absolute -translate-y-[17px] translate-x-4 bg-white px-1 text-xs ">
+          <div className="border-[1px] border-black rounded w-full">
+            <span className="absolute -translate-y-3 translate-x-4 bg-white p-1 text-xs ">
               District *
             </span>
-            <select className="text-sm focus:outline-none w-full cursor-pointer pb-2">
+            <select className="text-sm focus:outline-none w-full h-12 cursor-pointer rounded px-2">
               {" "}
               <option value="" disabled={true}>
                 Select Category
@@ -72,16 +73,16 @@ const CustomerInfo = () => {
         </div>
         <div className="flex gap-4">
           <div
-            className="border-[1px] border-black rounded p-2 w-1/2 md:w-full"
+            className="border-[1px] border-black rounded w-1/2 md:w-full"
             // onClick={() => {
             //   setSelectDivision(true);
             // }}
           >
-            <span className="absolute -translate-y-[17px] translate-x-4 bg-white px-1 text-xs ">
+            <span className="absolute -translate-y-3 translate-x-4 bg-white p-1 text-xs ">
               Sub-district (upazila) *
             </span>
             {/* {selctDivision && ( */}
-            <select className="text-sm focus:outline-none w-full cursor-pointer ">
+            <select className="text-sm focus:outline-none w-full cursor-pointer rounded p-2 ">
               {" "}
               <option value="">Select Category</option>
               <option>Dhaka</option>
@@ -130,35 +131,35 @@ const CustomerInfo = () => {
           </div>
         </div>
         <div className="flex gap-4">
-          <div className="border-[1px] border-black rounded p-2 w-full">
-            <span className="absolute -translate-y-[17px] translate-x-4 bg-white px-1 text-xs ">
+          <div className="border-[1px] border-black rounded w-full">
+            <span className="absolute -translate-y-[10px] translate-x-4 bg-white px-1 text-xs ">
               Area *
             </span>
             <input
               type="text"
               placeholder="Enter Area"
-              className="text-xs w-full h-full focus:outline-none pb-2 "
+              className="text-xs w-full h-12 rounded px-4 "
             />
           </div>
-          <div className="border-[1px] border-black rounded p-2 w-full">
-            <span className="absolute -translate-y-[17px] translate-x-4 bg-white px-1 text-xs ">
+          <div className="border-[1px] border-black rounded w-full">
+            <span className="absolute -translate-y-[10px] translate-x-4 bg-white px-1 text-xs ">
               Street Address *
             </span>
             <input
               type="text"
               placeholder="Enter road no, block/sector"
-              className="text-xs w-full h-full focus:outline-none pb-2 "
+              className="text-xs w-full h-12 rounded px-4 "
             />
           </div>
         </div>
-        <div className="border-[1px] border-black rounded p-2">
-          <span className="absolute -translate-y-[17px] translate-x-4 bg-white px-1 text-xs ">
+        <div className="border-[1px] border-black rounded ">
+          <span className="absolute -translate-y-[10px] translate-x-4 bg-white rounded px-1 text-xs ">
             Address *
           </span>
           <input
             type="text"
-            placeholder="Address"
-            className="text-xs w-full h-full focus:outline-none py-1 pb-8"
+            placeholder="Enter Your Address"
+            className="text-xs w-full h-12 focus:outline-none rounded px-4 pb-8  "
           />
         </div>
       </div>
