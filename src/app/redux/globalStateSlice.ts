@@ -10,6 +10,7 @@ interface SignInPopupState {
   showCategoryList: boolean;
   openCategoryList: boolean;
   menu: boolean;
+  popUpModal: boolean;
 }
 
 const initialState: SignInPopupState = {
@@ -23,6 +24,7 @@ const initialState: SignInPopupState = {
   showCategoryList: true,
   openCategoryList: false,
   menu: false,
+  popUpModal: false,
 };
 
 const globalStateSlice = createSlice({
@@ -59,6 +61,9 @@ const globalStateSlice = createSlice({
     toggleMenu(state) {
       state.menu = !state.menu;
     },
+    togglePopUpModal(state) {
+      state.popUpModal = !state.popUpModal;
+    },
   },
 });
 
@@ -73,6 +78,7 @@ export const {
   setShowCategoryList,
   toggleCategoryList,
   toggleMenu,
+  togglePopUpModal,
 } = globalStateSlice.actions;
 
 export default globalStateSlice.reducer;

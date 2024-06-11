@@ -184,6 +184,3 @@ const SignIn = () => {
 };
 
 export default SignIn;
-function toggleSignUpVisibility(arg0: boolean): any {
-  throw new Error("Function not implemented.");
-}
