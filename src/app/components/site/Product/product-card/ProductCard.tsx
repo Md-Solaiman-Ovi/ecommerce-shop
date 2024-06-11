@@ -1,24 +1,20 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { PiHeartBold, PiHeartFill } from "react-icons/pi";
+import { PiHeartBold } from "react-icons/pi";
 import ProductCardInfo from "./ProductCardInfo";
 import ProductCardButton from "./ProductCardButton";
 import AddToCartSvgIcon from "../../svg-icons/AddToCartSvgIcon";
 import QuickVeiwSvgIcon from "../../svg-icons/QuickVeiwSvgIcon";
 import Link from "next/link";
-import { useDispatch, useSelector } from "react-redux";
-import { AppDispatch, RootState } from "@/app/redux/store";
-import QuickViewCard from "./QuickViewCard";
+import { useDispatch } from "react-redux";
+import { AppDispatch } from "@/app/redux/store";
 import { togglePopUpModal } from "@/app/redux/globalStateSlice";
 const ProductCard = () => {
-  const popUpModal = useSelector(
-    (state: RootState) => state.globalState.popUpModal
-  );
   const dispatch: AppDispatch = useDispatch();
 
   const handleToggle = () => {
-    dispatch(togglePopUpModal());
+    dispatch(togglePopUpModal(true));
   };
   return (
     <>
@@ -57,20 +53,6 @@ const ProductCard = () => {
           </div>
         </Link>
       </div>
-      {popUpModal && (
-        <div
-          className="w-screen h-screen left-0 top-0 bottom-0 bg-black/10  flex flex-col gap-4 justify-center items-center fixed z-50 overflow-hidden"
-          onClick={handleToggle}
-        >
-          <div
-            onClick={(e) => {
-              e.stopPropagation();
-            }}
-          >
-            <QuickViewCard handleToggle={handleToggle} />
-          </div>
-        </div>
-      )}
     </>
   );
 };

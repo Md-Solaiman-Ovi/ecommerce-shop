@@ -61,8 +61,8 @@ const globalStateSlice = createSlice({
     toggleMenu(state) {
       state.menu = !state.menu;
     },
-    togglePopUpModal(state) {
-      state.popUpModal = !state.popUpModal;
+    togglePopUpModal(state, action: PayloadAction<boolean>) {
+      state.popUpModal = action.payload;
     },
   },
 });

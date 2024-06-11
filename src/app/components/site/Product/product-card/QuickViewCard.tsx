@@ -25,8 +25,14 @@ const QuickViewCard = ({ handleToggle }: any) => {
         </div>
         <div className="flex gap-4">
           <div className="flex items-center gap-1">
-            <PiStarBold className="fill-yellow-500" />
-            <div>rating 5.0</div>
+            <div className="flex items-center">
+              <PiStarBold className="fill-yellow-500" />
+              <PiStarBold className="fill-yellow-500" />
+              <PiStarBold className="fill-yellow-500" />
+              <PiStarBold className="fill-yellow-500" />
+              <PiStarBold className="fill-yellow-500" />
+            </div>
+            <div className="text-sm"> 4.0/5.0 Rating </div>
           </div>
           <div className="flex gap-2 items-center">
             <FaRegCircleCheck className="text-green-600" /> In Stock

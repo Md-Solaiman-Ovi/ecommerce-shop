@@ -4,7 +4,11 @@ import { BiCategory, BiLogoFacebook } from "react-icons/bi";
 import { BsCart, BsCart3, BsSearch } from "react-icons/bs";
 import { FaInstagram, FaRegUser } from "react-icons/fa";
 import { GrTwitter } from "react-icons/gr";
-import { MdOutlineEmail, MdOutlineNotificationsActive } from "react-icons/md";
+import {
+  MdArrowForwardIos,
+  MdOutlineEmail,
+  MdOutlineNotificationsActive,
+} from "react-icons/md";
 import { PiHeartBold } from "react-icons/pi";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { TfiMenuAlt, TfiWorld } from "react-icons/tfi";
@@ -27,6 +31,7 @@ import {
   setShowCategoryList,
   toggleCategoryList,
   toggleMenu,
+  togglePopUpModal,
 } from "@/app/redux/globalStateSlice";
 import SignUp from "../login/SignUp";
 import EnterEmailResetPassword from "../password/EnterEmailResetPassword";
@@ -39,6 +44,7 @@ import WishSvgIcon from "../svg-icons/WishSvgIcon";
 import CartSvgIcon from "../svg-icons/CartSvgIcon";
 import NotificationSvgIcon from "../svg-icons/NotificationSvgIcon";
 import CategoryList from "../home/hero-section/CategoryList";
+import QuickViewCard from "../Product/product-card/QuickViewCard";
 
 const NavBar = () => {
   const pathname = usePathname();
@@ -68,6 +74,9 @@ const NavBar = () => {
   const openCategoryList = useSelector(
     (state: RootState) => state.globalState.openCategoryList
   );
+  const popUpModal = useSelector(
+    (state: RootState) => state.globalState.popUpModal
+  );
   const dispatch: AppDispatch = useDispatch();
 
   const handleToggle = () => {
@@ -77,7 +86,7 @@ const NavBar = () => {
     dispatch(resetPasswordVisibility(false));
     dispatch(newPasswordVisibility(false));
   };
-  console.log("category button", openCategoryList);
+
   return (
     <>
       <div className="top-0 sticky z-50">
@@ -153,11 +162,24 @@ const NavBar = () => {
               </div>
             </div>
             <div className="md:flex hidden w-full max-w-xl rounded ">
-              <input
-                className=" px-6 py-2 w-full flex-1 text-black focus:outline-none focus:border-y-2 focus:border-l-2 focus:box-border focus:border-yellow-500 rounded-l"
-                type="text"
-                placeholder="Search "
-              />
+              <div className="relative w-full flex items-center ">
+                <input
+                  className=" pl-2 pr-32 py-2 w-full flex-1 text-black focus:outline-none focus:border-y-2 focus:border-l-2 focus:box-border focus:border-yellow-500 rounded-l"
+                  type="text"
+                  placeholder="Search "
+                />
+                <div className="absolute text-black right-2 flex items-center text-sm gap-1 cursor-pointer">
+                  <select className="text-sm focus:outline-none text-center cursor-pointer rounded ">
+                    <option>All Categories</option>
+                    <option>Macbook</option>
+                    <option>iPhad</option>
+                    <option>iPhone</option>
+                    <option>Apple Watch</option>
+                    <option>Accessories</option>
+                  </select>
+                  {/* <MdArrowForwardIos className="w-3 h-3 rotate-90 cursor-pointer" /> */}
+                </div>
+              </div>
               <div className="bg-yellow-400 rounded-r text-white text-[26px] grid place-items-center px-4 cursor-pointer">
                 <BsSearch className="w-5 h-5 text-black" />
               </div>
@@ -260,6 +282,22 @@ const NavBar = () => {
       {openCategoryList && (
         <div className="fixed top-28 translate-x-[360px] z-50 w-72 ">
           <CategoryList cssClass="animate__animated animate__fadeInDown" />
+        </div>
+      )}
+      {popUpModal && (
+        <div
+          className="w-screen h-screen left-0 top-0 bottom-0 bg-black/60  flex flex-col gap-4 justify-center items-center fixed z-50 overflow-hidden"
+          onClick={() => {
+            dispatch(togglePopUpModal(false));
+          }}
+        >
+          <div
+            onClick={(e) => {
+              e.stopPropagation();
+            }}
+          >
+            <QuickViewCard handleToggle={handleToggle} />
+          </div>
         </div>
       )}
     </>
