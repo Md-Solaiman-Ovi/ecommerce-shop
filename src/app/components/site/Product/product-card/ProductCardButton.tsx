@@ -17,7 +17,7 @@ const ProductCardButton = ({
     <div>
       <Link
         href={`${linkpath}`}
-        className={`${cssClass} px-4 py-2 rounded-full cursor-pointer text-xs flex gap-2 items-center`}
+        className={`${cssClass} px-2 py-2 rounded-full cursor-pointer text-xs flex gap-1 items-center`}
       >
         <div>{icon}</div>
         <div>{title}</div>

@@ -4,7 +4,7 @@ import { FaRegCircleCheck, FaSquareCheck } from "react-icons/fa6";
 import { PiStarBold } from "react-icons/pi";
 import { RiCloseLargeFill } from "react-icons/ri";
 
-const QuickViewCard = ({ handleToggle }: any) => {
+const QuickViewCard = ({ handleQuickViewModal }: any) => {
   return (
     <div className="relative bg-white p-8 md:w-[700px] md:h-96 flex flex-col md:flex-row gap-4 rounded-xl">
       <div className="md:w-1/2 object-cover flex justify-center">
@@ -79,7 +79,7 @@ const QuickViewCard = ({ handleToggle }: any) => {
       </div>
       <div
         className="absolute right-1 top-1 cursor-pointer flex justify-center items-center hover:bg-red-500  w-10 h-10 border-[1px] rounded-full group shadow-md"
-        onClick={handleToggle}
+        onClick={handleQuickViewModal}
       >
         <RiCloseLargeFill className="w-5 h-5 text-red-600 group-hover:text-white" />
       </div>

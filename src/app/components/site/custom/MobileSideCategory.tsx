@@ -12,7 +12,7 @@ interface CategoryListProps {
   name: string;
   subcategories: SubCategoryProps[];
 }
-const MobileSideCategory = ({ handleToggle }: any) => {
+const MobileSideCategory = ({ ToggleCategories }: any) => {
   const [categories, setCategories] = useState([]);
   const [openItemId, setOpenItemId] = useState(null);
 
@@ -29,7 +29,7 @@ const MobileSideCategory = ({ handleToggle }: any) => {
     <div className="flex flex-col gap-4 size-full  p-4 ">
       <div className="flex items-center justify-between font-bold ">
         <div className="text-lg ">Category list</div>
-        <div className="cursor-pointer" onClick={handleToggle}>
+        <div className="cursor-pointer" onClick={ToggleCategories}>
           <IoClose className="size-6 hover:fill-red-600" />
         </div>
       </div>

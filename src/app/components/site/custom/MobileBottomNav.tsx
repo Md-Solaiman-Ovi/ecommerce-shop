@@ -9,14 +9,16 @@ import { MdOutlineNotificationsActive } from "react-icons/md";
 import { FaRegUser } from "react-icons/fa";
 import CategoryLinkIcon from "../home/hero-section/CategoryLinkIcon";
 import MobileSideCategory from "./MobileSideCategory";
+import { Contact } from "lucide";
+import ContactIcon from "../navbar/ContactIcon";
 
 const MobileBottomNav = () => {
   const [showSideCategory, setShowSideCategory] = useState(false);
-  const handleToggle = () => {
+  const ToggleCategories = () => {
     setShowSideCategory(!showSideCategory);
   };
   return (
-    <div className="fixed bottom-0 z-50 bg-slate-50 mx-auto px-4 py-2 w-full flex items-center justify-between text-xs">
+    <div className="fixed bottom-0 z-40 bg-slate-50 mx-auto px-4 py-2 w-full flex items-center justify-between text-xs">
       <IconButton
         linkpath="/"
         icon={<IoHomeOutline className="w-4 h-4" />}
@@ -28,11 +30,10 @@ const MobileBottomNav = () => {
           setShowSideCategory(!showSideCategory);
         }}
       >
-        <IconButton
-          linkpath=""
+        <ContactIcon
           icon={<BiCategory className="w-4 h-4" />}
           title="Categories"
-          cssClass="flex-col gap-1 py-2  focus:text-red-500"
+          cssClass="flex-col gap-1 py-2 cursor-pointer  focus:text-red-500"
         />
       </div>
 
@@ -57,7 +58,7 @@ const MobileBottomNav = () => {
       {showSideCategory && (
         <div
           className="w-screen h-screen  left-0 right-0 top-0 bottom-0 bg-[rgba(0,0,0,0.6)] flex j items-center fixed z-50"
-          onClick={handleToggle}
+          onClick={ToggleCategories}
         >
           <div
             className="h-screen bg-white w-80 animate__animated animate__fadeInLeft"
@@ -65,7 +66,7 @@ const MobileBottomNav = () => {
               e.stopPropagation();
             }}
           >
-            <MobileSideCategory handleToggle={handleToggle} />
+            <MobileSideCategory ToggleCategories={ToggleCategories} />
           </div>
         </div>
       )}

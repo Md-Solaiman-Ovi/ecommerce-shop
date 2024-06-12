@@ -87,6 +87,10 @@ const NavBar = () => {
     dispatch(newPasswordVisibility(false));
   };
 
+  const handleQuickViewModal = () => {
+    dispatch(togglePopUpModal(false));
+  };
+
   return (
     <>
       <div className="top-0 sticky z-50">
@@ -287,16 +291,14 @@ const NavBar = () => {
       {popUpModal && (
         <div
           className="w-screen h-screen left-0 top-0 bottom-0 bg-black/60  flex flex-col gap-4 justify-center items-center fixed z-50 overflow-hidden"
-          onClick={() => {
-            dispatch(togglePopUpModal(false));
-          }}
+          onClick={handleQuickViewModal}
         >
           <div
             onClick={(e) => {
               e.stopPropagation();
             }}
           >
-            <QuickViewCard handleToggle={handleToggle} />
+            <QuickViewCard handleQuickViewModal={handleQuickViewModal} />
           </div>
         </div>
       )}

@@ -109,7 +109,7 @@ const Cart = () => {
               href="/checkout"
               className="bg-[rgba(24,41,59,1)] my-4  py-2 rounded items-center text-white text-center"
             >
-              checkout
+              Checkout
             </Link>
           </div>
         </div>

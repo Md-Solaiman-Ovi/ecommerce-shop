@@ -7,6 +7,7 @@ import { PiHeartBold } from "react-icons/pi";
 interface ContactIconProps {
   icon?: ReactElement;
   title?: string;
+  cssClass?: string;
   // width?: string;
   // height?: string;
   // fill?: string;
@@ -21,9 +22,10 @@ const ContactIcon = ({
   // d,
   // stroke,
   title,
+  cssClass,
 }: ContactIconProps) => {
   return (
-    <div className="flex items-center gap-2 xl:gap-4">
+    <div className={`flex ${cssClass} items-center gap-2 xl:gap-4`}>
       <div>{icon}</div>
       <div className="">{title}</div>
     </div>

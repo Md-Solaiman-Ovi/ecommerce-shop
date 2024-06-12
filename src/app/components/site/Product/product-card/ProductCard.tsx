@@ -12,15 +12,12 @@ import { AppDispatch } from "@/app/redux/store";
 import { togglePopUpModal } from "@/app/redux/globalStateSlice";
 const ProductCard = () => {
   const dispatch: AppDispatch = useDispatch();
-
-  const handleToggle = () => {
-    dispatch(togglePopUpModal(true));
-  };
   return (
     <>
-      <div className="w-full h-[415px]  md:w-[285px] bg-white  rounded-[10px] group">
+      {/* h-[415px]  md:w-[285px] */}
+      <div className="w-full bg-white  rounded-[10px] group shadow-md">
         <Link href="/product-details">
-          <div className="bg-[rgba(233,243,255,0.5)] h-[280px]  flex flex-col justify-center items-center cursor-pointer rounded">
+          <section className="bg-[rgba(233,243,255,0.5)] h-[280px]  flex flex-col justify-center items-center cursor-pointer rounded">
             <div className="bg-white rounded-full items-end self-end mr-4 p-1">
               <PiHeartBold className="w-4 h-4" />
             </div>
@@ -38,7 +35,11 @@ const ProductCard = () => {
                 icon={<AddToCartSvgIcon />}
               />
 
-              <div onClick={handleToggle}>
+              <div
+                onClick={() => {
+                  dispatch(togglePopUpModal(true));
+                }}
+              >
                 <ProductCardButton
                   linkpath=""
                   title="Quick View"
@@ -47,7 +48,7 @@ const ProductCard = () => {
                 />
               </div>
             </div>
-          </div>
+          </section>
           <div>
             <ProductCardInfo />
           </div>
