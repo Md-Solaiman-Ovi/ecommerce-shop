@@ -39,35 +39,37 @@ const AddReview = () => {
       </div>
       <div className="flex flex-col gap-5">
         <div className="flex flex-col md:flex-row gap-4">
-          <div className="border-[1px] border-black rounded p-2 w-full h-[56px]">
-            <span className="absolute -translate-y-[17px] translate-x-4 bg-[rgba(250,250,250,1)] px-1 text-xs ">
+          <div className="border-[1px] border-black rounded w-full h-12">
+            <span className="absolute -translate-y-[10px] translate-x-4 bg-white px-1 text-xs ">
               Name <span className="text-red-500">*</span>
             </span>
             <input
+              id="name"
               type="text"
-              placeholder="Enter your name here"
-              className="text-xs w-full h-full focus:outline-none bg-transparent"
+              placeholder="Your Name"
+              className="text-xs size-full rounded px-4"
             />
           </div>
-          <div className="border-[1px] border-black rounded p-2 w-full h-[56px]">
-            <span className="absolute -translate-y-[17px] translate-x-4 bg-[rgba(250,250,250,1)] px-1 text-xs ">
+          <div className="border-[1px] border-black rounded w-full h-12">
+            <span className="absolute -translate-y-[10px] translate-x-4 bg-white px-1 text-xs ">
               Email <span className="text-red-500">*</span>
             </span>
             <input
+              id="name"
               type="text"
               placeholder="Enter your email address"
-              className="text-xs w-full h-full focus:outline-none bg-transparent"
+              className="text-xs text-start size-full rounded px-4"
             />
           </div>
         </div>
-        <div className="border-[1px] border-black rounded p-2 h-[100px] ">
-          <span className="absolute -translate-y-[17px] translate-x-4 bg-[rgba(250,250,250,1)] px-1 text-xs ">
+        <div className="border-[1px] border-black rounded  h-[100px] ">
+          <span className="absolute -translate-y-[10px] translate-x-4 bg-[rgba(250,250,250,1)] px-1 text-xs ">
             Review <span className="text-red-500">*</span>
           </span>
           <input
             type="text"
             placeholder="Write your review here"
-            className="text-xs  w-full h-full focus:outline-none bg-transparent"
+            className="text-xs size-full px-4 rounded"
           />
         </div>
       </div>

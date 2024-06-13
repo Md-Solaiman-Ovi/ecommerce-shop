@@ -129,7 +129,7 @@ const ProductDetailsInfo = (props: Props) => {
         </div>
 
         <div className="bg-[rgba(24,41,59,1)] p-3  md:text-2xl w-full text-white text-center md:py-2 rounded self-center cursor-pointer">
-          buy
+          Buy
         </div>
       </div>
     </div>

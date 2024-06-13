@@ -41,7 +41,7 @@ const CategoryLinkIcon = ({
         </Link>
         <MdArrowForwardIos />
         <div
-          className="absolute p-1 hidden group-hover:block bg-slate-50 w-full  left-8 top-0 translate-x-64 z-50 rounded"
+          className="absolute p-1 hidden group-hover:block bg-slate-50 w-full  left-8 top-0 translate-x-64 z-30 rounded"
           p-4
         >
           {item?.subcategories?.map(

@@ -17,7 +17,9 @@ const ProductImageSelector = () => {
           -16%
         </div>
         <div>
-          {/* <Image src={imageSource} width={500} alt="" /> */}
+          <div className="block md:hidden">
+            <Image src={imageSource} width={500} alt="" />
+          </div>
           {/* <ReactImageMagnify
             {...{
               smallImage: {
@@ -36,7 +38,7 @@ const ProductImageSelector = () => {
             }}
           /> */}
           <ReactImageMagnify
-            className="relative"
+            className="relative hidden md:block"
             {...{
               smallImage: {
                 alt: "Wristwatch by Ted Baker London",

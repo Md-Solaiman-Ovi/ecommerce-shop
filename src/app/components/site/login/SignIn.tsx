@@ -70,9 +70,14 @@ const SignIn = () => {
                 placeholder="Select Sub-District"
                 className="text-sm focus:outline-none cursor-pointer accent-black"
               />
-              <label htmlFor="radio-1 text-sm">Remember me</label>
+              <label htmlFor="radio-1" className=" text-sm cursor-pointer">
+                Remember me
+              </label>
             </div>
-            <div className="cursor-pointer" onClick={handleResetPasswordToggle}>
+            <div
+              className="cursor-pointer text-red-500"
+              onClick={handleResetPasswordToggle}
+            >
               Forgot Password?
             </div>
           </div>

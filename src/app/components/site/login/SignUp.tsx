@@ -15,14 +15,14 @@ const SignUp = () => {
     dispatch(signUpVisibility(false));
   };
   return (
-    <div className="bg-white px-[100px] py-[50px] w-[700px]  flex flex-col gap-[60px] rounded-xl">
+    <div className="bg-white px-[100px] py-10 w-[700px] h-full flex flex-col gap-10 rounded-xl">
       <div className="flex flex-col justify-center items-center  ">
         <div className="text-3xl text-primary font-bold">SIGN UP</div>
         <div className="cursor-pointer">
           Enter Your Details To Create Your Account
         </div>
       </div>
-      <div className="flex flex-col gap-[30px]">
+      <div className="flex flex-col gap-4">
         <div className="border-[1px] border-black rounded ">
           <span className="absolute -translate-y-3 translate-x-4 bg-white px-1 text-sm ">
             Full Name <span className="text-red-500">*</span>
@@ -82,7 +82,10 @@ const SignUp = () => {
               placeholder="Select Sub-District"
               className="focus:outline-none cursor-pointer accent-black"
             />
-            <label htmlFor="radio-1 " className="text-sm font-bold">
+            <label
+              htmlFor="radio-1"
+              className="text-sm font-bold cursor-pointer"
+            >
               I agree to the Terms and Privacy Policy
             </label>
           </div>
@@ -173,7 +176,6 @@ const SignUp = () => {
             </div>
           </div>
         </div>
-
         <div className="text-center">
           Already have an account?
           <span

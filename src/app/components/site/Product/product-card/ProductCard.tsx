@@ -10,14 +10,15 @@ import Link from "next/link";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "@/app/redux/store";
 import { togglePopUpModal } from "@/app/redux/globalStateSlice";
+import QuickViewButton from "./QuickViewButton";
 const ProductCard = () => {
   const dispatch: AppDispatch = useDispatch();
   return (
     <>
       {/* h-[415px]  md:w-[285px] */}
       <div className="w-full bg-white  rounded-[10px] group shadow-md">
-        <Link href="/product-details">
-          <section className="bg-[rgba(233,243,255,0.5)] h-[280px]  flex flex-col justify-center items-center cursor-pointer rounded">
+        <Link href="/product-details" className="">
+          <div className="bg-[rgba(233,243,255,0.5)] h-[280px]  flex flex-col justify-center items-center cursor-pointer rounded">
             <div className="bg-white rounded-full items-end self-end mr-4 p-1">
               <PiHeartBold className="w-4 h-4" />
             </div>
@@ -27,7 +28,7 @@ const ProductCard = () => {
               height={200}
               alt=""
             />
-            <div className="flex gap-4 items-center lg:invisible group-hover:visible  transform transition-all delay-150 md:group-hover:scale-105  group-hover:duration-150">
+            <button className="flex gap-4 items-center lg:invisible group-hover:visible  transform transition-all delay-150 md:group-hover:scale-105  group-hover:duration-150">
               <ProductCardButton
                 linkpath="/cart"
                 title="Add to Cart"
@@ -39,16 +40,16 @@ const ProductCard = () => {
                 onClick={() => {
                   dispatch(togglePopUpModal(true));
                 }}
+                className="cursor-pointer"
               >
-                <ProductCardButton
-                  linkpath=""
+                <QuickViewButton
                   title="Quick View"
                   cssClass="bg-white"
                   icon={<QuickVeiwSvgIcon />}
                 />
               </div>
-            </div>
-          </section>
+            </button>
+          </div>
           <div>
             <ProductCardInfo />
           </div>

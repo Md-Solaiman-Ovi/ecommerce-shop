@@ -99,7 +99,7 @@ const Cart = () => {
                   id="vouchar"
                   type="text "
                   placeholder=" Enter promo code "
-                  className="w-full px-4 text-sm font-light"
+                  className="w-full px-4 text-sm font-light focus:outline-none focus:border-y-2 focus:border-l-2 focus:box-border focus:border-black"
                 />
                 <div className="bg-black text-white p-2">Apply</div>
               </div>

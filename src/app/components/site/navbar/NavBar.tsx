@@ -48,7 +48,8 @@ import QuickViewCard from "../Product/product-card/QuickViewCard";
 
 const NavBar = () => {
   const pathname = usePathname();
-  // const [menu, setMenu] = useState(false);
+  const [focused, setFocused] = useState(false);
+  const [suggetions, setSuggetions] = useState(false);
   const isVisible = useSelector(
     (state: RootState) => state.globalState.isVisible
   );
@@ -165,28 +166,79 @@ const NavBar = () => {
                 <BiCategory className="w-5 h-5  " />
               </div>
             </div>
-            <div className="md:flex hidden w-full max-w-xl rounded ">
-              <div className="relative w-full flex items-center ">
-                <input
-                  className=" pl-2 pr-32 py-2 w-full flex-1 text-black focus:outline-none focus:border-y-2 focus:border-l-2 focus:box-border focus:border-yellow-500 rounded-l"
-                  type="text"
-                  placeholder="Search "
-                />
-                <div className="absolute text-black right-2 flex items-center text-sm gap-1 cursor-pointer">
-                  <select className="text-sm focus:outline-none text-center cursor-pointer rounded ">
-                    <option>All Categories</option>
-                    <option>Macbook</option>
-                    <option>iPhad</option>
-                    <option>iPhone</option>
-                    <option>Apple Watch</option>
-                    <option>Accessories</option>
-                  </select>
-                  {/* <MdArrowForwardIos className="w-3 h-3 rotate-90 cursor-pointer" /> */}
+            <div
+              className={`relative md:flex flex-col hidden size-full max-w-xl${
+                focused ? " z-50 bg-white rounded" : ""
+              }`}
+            >
+              <div className="flex w-full rounded ">
+                <div className="relative w-full flex items-center ">
+                  <div
+                    className={`w-screen h-screen left-0 top-0 bottom-0 bg-black/30  flex flex-col gap-4 justify-center items-center fixed z-40 overflow-hidden ${
+                      !focused ? "hidden" : "block"
+                    }`}
+                    onClick={() => {
+                      setFocused(false);
+                      setSuggetions(false);
+                    }}
+                  ></div>
+                  <input
+                    className={`pl-2 pr-32 py-2 w-full flex-1 text-black focus:outline-none focus:border-y-2 focus:border-l-2 focus:box-border focus:border-yellow-500 rounded-l z-40 `}
+                    type="text"
+                    placeholder="Search "
+                    onFocus={() => {
+                      setFocused(true);
+                      setSuggetions(true);
+                    }}
+                  />
+                  <div className="absolute text-black right-2 flex items-center text-sm gap-1 cursor-pointer z-40">
+                    <select className="text-sm focus:outline-none text-center cursor-pointer rounded ">
+                      <option>All Categories</option>
+                      <option>Macbook</option>
+                      <option>iPhad</option>
+                      <option>iPhone</option>
+                      <option>Apple Watch</option>
+                      <option>Accessories</option>
+                    </select>
+                    {/* <MdArrowForwardIos className="w-3 h-3 rotate-90 cursor-pointer" /> */}
+                  </div>
+                </div>
+                <div
+                  className={`bg-yellow-400 rounded-r text-white text-[26px] grid place-items-center px-4 cursor-pointer z-40 `}
+                >
+                  <BsSearch className="w-5 h-5 text-black" />
                 </div>
               </div>
-              <div className="bg-yellow-400 rounded-r text-white text-[26px] grid place-items-center px-4 cursor-pointer">
-                <BsSearch className="w-5 h-5 text-black" />
-              </div>
+              {suggetions && (
+                <div
+                  className={`bg-white text-black z-50 w-full flex flex-col gap-2 rounded-b absolute top-10  `}
+                >
+                  <div className="w-full flex flex-col gap-2 ">
+                    <div className="flex flex-col">
+                      <div className="font-bold bg-slate-100 p-2">
+                        Category Suggestions
+                      </div>
+                      <div className="flex flex-col gap-1 px-4 py-2">
+                        <div>ALL categories</div>
+                        <div>MacBook</div>
+                        <div>iPhone</div>
+                      </div>
+                    </div>
+                    <div className="flex flex-col">
+                      <div className="font-bold bg-slate-100 p-2">
+                        Product Suggestions
+                      </div>
+                      <div className="flex flex-col gap-1 px-4 py-2">
+                        <div>Apple iPhone 15 Pro Max </div>
+                        <div>MacBook Air</div>
+                        <div>HP Laptop</div>
+                        <div>Apple Watch</div>
+                        <div>Apple Magic Mouse</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
             <div className="md:flex gap-8 text-xs font-light hidden ">
               <IconButton

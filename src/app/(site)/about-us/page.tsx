@@ -6,14 +6,14 @@ import Container from "@/app/components/site/Container";
 const AboutUs = () => {
   return (
     <Container className="py-10 flex flex-col ">
-      <div className="mb-10">
+      <div className="md:mb-10">
         <CategoryTitle title="About Us" />
-        <div className="flex gap-8 py-10">
+        <div className="flex flex-col items-center md:flex-row  gap-8 py-10">
           <Image src={"/images/aboutUs.png"} width={445} height={300} alt="" />
 
-          <div className="flex flex-col gap-5 p-4">
+          <div className="flex flex-col  gap-5 p-4">
             <div className="text-xl font-bold">Our Story</div>
-            <div className="text-sm leading-[30px] ">
+            <div className="text-sm leading-[30px] text-justify ">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               indust orem Ipsum has been the industry’s standard dummy texever
               since the when anunknown printer took a galley of type and
@@ -27,7 +27,7 @@ const AboutUs = () => {
       </div>
       <div className="my-10">
         <CategoryTitle title="Why Choose Us" />
-        <div className="grid grid-cols-3 justify-center gap-10 py-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 justify-center gap-10 py-10">
           <WhyChooseCard
             icon={
               <svg
