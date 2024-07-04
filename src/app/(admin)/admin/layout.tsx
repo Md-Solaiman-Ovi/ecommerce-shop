@@ -11,16 +11,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  className,
-}: Readonly<{
+}: // className,
+Readonly<{
   children: React.ReactNode;
-  className?: string;
+  // className: string;
 }>) {
   return (
     <html lang="en">
       <body className={` bg-[rgba(250,250,250,1)] ${poppins.className}`}>
         <div
-          className={`${className} bg-red-500 max-w-screen-xl md:mx-auto mx-0 px-4 md:px-14`}
+          className={` bg-red-500 max-w-screen-xl md:mx-auto mx-0 px-4 md:px-14`}
         >
           {children}
         </div>

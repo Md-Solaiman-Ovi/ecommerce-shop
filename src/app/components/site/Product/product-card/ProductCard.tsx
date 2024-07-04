@@ -17,17 +17,20 @@ const ProductCard = () => {
     <>
       {/* h-[415px]  md:w-[285px] */}
       <div className="w-full bg-white  rounded-[10px] group shadow-md">
-        <Link href="/product-details" className="">
+        <div className="">
           <div className="bg-[rgba(233,243,255,0.5)] h-[280px]  flex flex-col justify-center items-center cursor-pointer rounded">
             <div className="bg-white rounded-full items-end self-end mr-4 p-1">
               <PiHeartBold className="w-4 h-4" />
             </div>
-            <Image
-              src={"/images/productImg1.png"}
-              width={200}
-              height={200}
-              alt=""
-            />
+            <Link href="/product-details">
+              <Image
+                src={"/images/productImg1.png"}
+                width={200}
+                height={200}
+                alt=""
+              />
+            </Link>
+
             <button className="flex gap-4 items-center lg:invisible group-hover:visible  transform transition-all delay-150 md:group-hover:scale-105  group-hover:duration-150">
               <ProductCardButton
                 linkpath="/cart"
@@ -50,10 +53,10 @@ const ProductCard = () => {
               </div>
             </button>
           </div>
-          <div>
+          <Link href={"/product-details"}>
             <ProductCardInfo />
-          </div>
-        </Link>
+          </Link>
+        </div>
       </div>
     </>
   );
